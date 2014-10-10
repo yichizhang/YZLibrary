@@ -10,26 +10,26 @@
 
 #import <CoreGraphics/CGGeometry.h>
 
-CGPoint CGPointAdd(CGPoint pointLeft, CGPoint pointRight);
+CGPoint YZCGPointAdd(CGPoint pointLeft, CGPoint pointRight);
 
-CGPoint CGPointSubtract(CGPoint pointLeft, CGPoint pointRight);
+CGPoint YZCGPointSubtract(CGPoint pointLeft, CGPoint pointRight);
 
-CGPoint CGPointMultiplyScalar(CGPoint point, CGFloat value);
+CGPoint YZCGPointMultiplyScalar(CGPoint point, CGFloat value);
 
-CGPoint CGPointDivideScalar(CGPoint point, CGFloat value);
+CGPoint YZCGPointDivideScalar(CGPoint point, CGFloat value);
 
-CGFloat CGPointDotProduct(CGPoint pointLeft, CGPoint pointRight);
+CGFloat YZCGPointDotProduct(CGPoint pointLeft, CGPoint pointRight);
 
-CGFloat CGPointMagnitude(CGPoint point);
+CGFloat YZCGPointMagnitude(CGPoint point);
 
-CGFloat CGPointLength(CGPoint point);
+CGFloat YZCGPointLength(CGPoint point);
 
-CGPoint CGPointNormalize(CGPoint point);
+CGPoint YZCGPointNormalize(CGPoint point);
 
-CGPoint CGPointUnit(CGPoint point);
+CGPoint YZCGPointUnit(CGPoint point);
 
-CGPoint CGPointLimit(CGPoint point, CGFloat value);
+CGPoint YZCGPointLimit(CGPoint point, CGFloat value);
 
-CGFloat CGPointDistance(CGPoint pointStart, CGPoint pointEnd);
+CGFloat YZCGPointDistance(CGPoint pointStart, CGPoint pointEnd);
 
 #endif

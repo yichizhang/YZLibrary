@@ -9,73 +9,73 @@
 #include <math.h>
 
 /*CG_INLINE*/CGPoint 
-CGPointAdd(CGPoint pointLeft, CGPoint pointRight) {
+YZCGPointAdd(CGPoint pointLeft, CGPoint pointRight) {
     return CGPointMake(pointLeft.x+pointRight.x, pointLeft.y+pointRight.y);
 }
 
 /*CG_INLINE*/CGPoint 
-CGPointSubtract(CGPoint pointLeft, CGPoint pointRight) {
+YZCGPointSubtract(CGPoint pointLeft, CGPoint pointRight) {
     return CGPointMake(pointLeft.x-pointRight.x, pointLeft.y-pointRight.y);
 }
 
 /*CG_INLINE*/CGPoint 
-CGPointMultiplyScalar(CGPoint point, CGFloat value) {
+YZCGPointMultiplyScalar(CGPoint point, CGFloat value) {
     return CGPointMake(point.x*value, point.y*value);
     
 }
 
 /*CG_INLINE*/CGPoint 
-CGPointDivideScalar(CGPoint point, CGFloat value) {
+YZCGPointDivideScalar(CGPoint point, CGFloat value) {
     return CGPointMake(point.x/value, point.y/value);
     
 }
 
 /*CG_INLINE*/ CGFloat 
-CGPointDotProduct(CGPoint pointLeft, CGPoint pointRight) {
+YZCGPointDotProduct(CGPoint pointLeft, CGPoint pointRight) {
     return (pointLeft.x*pointRight.x) + (pointLeft.y*pointRight.y) ;
     
 }
 
 /*CG_INLINE*/ CGFloat 
-CGPointMagnitude(CGPoint point) {
-    return sqrtf(CGPointDotProduct(point, point));
+YZCGPointMagnitude(CGPoint point) {
+    return sqrtf(YZCGPointDotProduct(point, point));
 }
 
 
 /*CG_INLINE*/ CGFloat 
-CGPointLength(CGPoint point) {
-    return CGPointMagnitude(point);
+YZCGPointLength(CGPoint point) {
+    return YZCGPointMagnitude(point);
 }
 
 
 /*CG_INLINE*/CGPoint 
-CGPointNormalize(CGPoint point) {
-    CGFloat magnitude = CGPointMagnitude(point);
+YZCGPointNormalize(CGPoint point) {
+    CGFloat magnitude = YZCGPointMagnitude(point);
     CGPoint newPoint = point;
     if(magnitude > 0.f)
-        newPoint = CGPointDivideScalar(point, magnitude);
+        newPoint = YZCGPointDivideScalar(point, magnitude);
     return newPoint;
     
 }
 /*CG_INLINE*/CGPoint 
-CGPointUnit(CGPoint point) {
-    return CGPointNormalize(point);
+YZCGPointUnit(CGPoint point) {
+    return YZCGPointNormalize(point);
 }
 
 
 /*CG_INLINE*/CGPoint 
-CGPointLimit(CGPoint point, CGFloat value) {
-    if(CGPointMagnitude(point) > value) {
-        point = CGPointNormalize(point);
-        point = CGPointMultiplyScalar(point, value);
+YZCGPointLimit(CGPoint point, CGFloat value) {
+    if(YZCGPointMagnitude(point) > value) {
+        point = YZCGPointNormalize(point);
+        point = YZCGPointMultiplyScalar(point, value);
     }
     return point;
     
 }
 
 /*CG_INLINE*/ CGFloat 
-CGPointDistance(CGPoint pointStart, CGPoint pointEnd) {
+YZCGPointDistance(CGPoint pointStart, CGPoint pointEnd) {
     CGFloat deltaX = fabsf(pointStart.x-pointEnd.x);
     CGFloat deltaY = fabsf(pointStart.y-pointEnd.y);
-    return CGPointMagnitude(CGPointMake(deltaX, deltaY));
+    return YZCGPointMagnitude(CGPointMake(deltaX, deltaY));
 }

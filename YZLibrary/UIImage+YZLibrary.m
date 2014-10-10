@@ -70,4 +70,26 @@
     
 }
 
++ (CGSize)yz_scaleSizeAccordingToScreenScale:(CGSize)size{
+    
+    //BOOL hasHighResScreen = NO;
+    
+    if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
+        CGFloat scale = [[UIScreen mainScreen] scale];
+        
+        //if (scale > 1.0) {
+        //hasHighResScreen = YES;
+            
+        CGSize newSize = CGSizeMake(size.width*scale, size.height*scale);
+        return newSize;
+
+        
+    }else {
+        
+        
+        return size;
+    }
+    
+}
+
 @end

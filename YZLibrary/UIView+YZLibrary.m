@@ -10,6 +10,20 @@
 
 @implementation UIView (YZLibrary)
 
+- (UIImage*)yz_captureImage{
+    
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 2.0);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+    /*
+    NSData * data = UIImagePNGRepresentation(image);
+    [data writeToFile:@"image.png" atomically:YES];
+     */
+}
+
 - (void)yz_addShadow{
     
     UIBezierPath *shadowPath =

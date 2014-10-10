@@ -15,5 +15,6 @@
 - (UIImage *)yz_imageScaledToSizeAspectFitsInBox:(CGSize)boxSize;
 - (CGSize)yz_sizeRequiredToAspectFitInBox:(CGSize)boxSize;
 - (CGRect)yz_frameRequiredToAspectFitInFrame:(CGRect)frame;
++ (CGSize)yz_scaleSizeAccordingToScreenScale:(CGSize)size;
 
 @end
