@@ -15,7 +15,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (YZLibrary)
+
 - (UIImage*)yz_captureImage;
 - (void)yz_addShadow;
 - (void)yz_addWhiteFrame;
+
 @end

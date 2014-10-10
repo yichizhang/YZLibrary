@@ -12,12 +12,17 @@
  
  */
 
-#import <Foundation/Foundation.h>
+#import "YZRandom.h"
 
-@interface NSArray (YZLibrary)
+@implementation YZRandom
 
--(id)yz_randomObject;
--(id)yz_nextObject;
-- (NSArray *)yz_shuffledArray;
++ (float)randomFloatFromZeroTo:(float)upper{
+    int num = upper * 1000;
+    return (float)(arc4random() % num)/1000;
+}
 
++ (float)randomFloatFromValueToItsNegValue:(float)value{
+    value = value > 0 ? value : -value;
+    return [self randomFloatFromZeroTo:value*2] - value;
+}
 @end

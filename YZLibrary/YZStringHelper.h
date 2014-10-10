@@ -14,10 +14,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (YZLibrary)
+@interface YZStringHelper : NSObject
 
--(id)yz_randomObject;
--(id)yz_nextObject;
-- (NSArray *)yz_shuffledArray;
++ (NSString*)boolInTrueOrFalseString:(BOOL)bValue;
+
++ (NSString *)letterFromNumber1To26:(NSUInteger)number;
+
++ (BOOL)isStringValid:(NSString*)string;
+
++ (NSString *)stringFromIntNumber:(int)intNumber;
 
 @end

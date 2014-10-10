@@ -14,10 +14,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (YZLibrary)
+@interface YZTimeHelper : NSObject
 
--(id)yz_randomObject;
--(id)yz_nextObject;
-- (NSArray *)yz_shuffledArray;
++ (NSString *)secondsToMinuteString:(int)seconds;
+
++ (NSString *)monthNameFromNumber0To11:(NSUInteger)month;
++ (NSString *)monthNameFromNumber1To12:(NSUInteger)month;
+
++ (NSString*)hmsTimeStringFromSecondsInt:(int)totalSeconds;
++ (NSString*)hmsTimeStringFromSecondsFloat:(float)totalSeconds;
+
++ (int)numberOfDaysSince1970;
 
 @end

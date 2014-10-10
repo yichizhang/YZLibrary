@@ -29,10 +29,11 @@ int currentIndex = 0;
     return [self objectAtIndex:currentIndex++];
 }
 
-- (NSArray *)yz_shuffled
+- (NSArray *)yz_shuffledArray
 {
-	// create temporary autoreleased mutable array
-	NSMutableArray *tmpArray = [NSMutableArray arrayWithCapacity:[self count]];
+	/* Is this the best way to do it?
+     */
+    NSMutableArray *tmpArray = [NSMutableArray arrayWithCapacity:[self count]];
     
 	for (id anObject in self)
 	{
@@ -40,7 +41,7 @@ int currentIndex = 0;
 		[tmpArray insertObject:anObject atIndex:randomPos];
 	}
     
-	return [NSArray arrayWithArray:tmpArray];  // non-mutable autoreleased copy
+	return [NSArray arrayWithArray:tmpArray];
 }
 
 @end

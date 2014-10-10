@@ -12,12 +12,46 @@
  
  */
 
-#import <Foundation/Foundation.h>
+#import "YZStringHelper.h"
 
-@interface NSArray (YZLibrary)
+@implementation YZStringHelper
 
--(id)yz_randomObject;
--(id)yz_nextObject;
-- (NSArray *)yz_shuffledArray;
++ (NSString*)boolInTrueOrFalseString:(BOOL)bValue{
+    
+    return (bValue ? @"true" : @"false");
+    
+}
+
++ (NSString *)letterFromNumber1To26:(NSUInteger)number{
+    
+    NSString* returnName = @"?";
+    
+    NSString *string = @"A";
+    int asciiCodeOfCapitalA = [string characterAtIndex:0];
+    char theChar;
+    
+    if (number>=1 && number<=26) {
+        
+        theChar = asciiCodeOfCapitalA + number - 1;
+        returnName = [NSString stringWithFormat:@"%c", theChar];
+        
+    }
+    
+    return returnName;
+}
+
++ (BOOL)isStringValid:(NSString*)string{
+    if ([string isEqualToString:@""] || string==nil) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
++ (NSString *)stringFromIntNumber:(int)intNumber{
+    
+    return [NSString stringWithFormat:@"%i", intNumber];
+}
+
 
 @end

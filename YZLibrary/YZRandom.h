@@ -14,10 +14,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (YZLibrary)
+@interface YZRandom : NSObject
 
--(id)yz_randomObject;
--(id)yz_nextObject;
-- (NSArray *)yz_shuffledArray;
++ (float)randomFloatFromZeroTo:(float)upper;
+
++ (float)randomFloatFromValueToItsNegValue:(float)value;
 
 @end

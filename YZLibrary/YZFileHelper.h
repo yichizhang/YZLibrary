@@ -14,10 +14,24 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (YZLibrary)
+@interface YZFileHelper : NSObject
 
--(id)yz_randomObject;
--(id)yz_nextObject;
-- (NSArray *)yz_shuffledArray;
++ (NSString *)userDocumentDirectoryPath;
+
++ (BOOL)quickCopyFileInBundle:(NSString*)fileName toDirectory:(NSString*)dirPath;
+
++ (NSString *)pathForFileInDocumentDirectory:(NSString*)fileName;
+
++ (void)copyFileFromBundleToDocumentDirectoryIfNeeded:(NSString*)fileName;
+
++ (BOOL)createDirectoryInHomeDirectory:(NSString*)partialDirToCreate;
+
++ (NSString*)fileSizeStringFromByteCount:(int)value;
+
++ (NSString*)homeDirectoryFilePathForFolder:(NSString*)folder file:(NSString*)file;
+
++ (NSString*)tempHomeDirectoryFilePathForFolder:(NSString*)folder file:(NSString*)file;
+
++ (NSString*)tempFileName:(NSString*)file;
 
 @end
