@@ -21,13 +21,15 @@
 		1220D28F1967109800979E9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1220D2711967109800979E9A /* UIKit.framework */; };
 		1220D2971967109800979E9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1220D2951967109800979E9A /* InfoPlist.strings */; };
 		1220D2991967109800979E9A /* YZLibraryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2981967109800979E9A /* YZLibraryDemoTests.m */; };
-		1220D2B1196710B300979E9A /* NSArray+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2A4196710B300979E9A /* NSArray+YZLibrary.m */; };
-		1220D2B2196710B300979E9A /* UIButton+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2A6196710B300979E9A /* UIButton+YZLibrary.m */; };
-		1220D2B3196710B300979E9A /* UIImage+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2A8196710B300979E9A /* UIImage+YZLibrary.m */; };
-		1220D2B4196710B300979E9A /* UIImageView+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2AA196710B300979E9A /* UIImageView+YZLibrary.m */; };
-		1220D2B5196710B300979E9A /* UIView+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2AC196710B300979E9A /* UIView+YZLibrary.m */; };
-		1220D2B6196710B300979E9A /* YZCGPointExtension.c in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2AD196710B300979E9A /* YZCGPointExtension.c */; };
-		1220D2B7196710B300979E9A /* YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2B0196710B300979E9A /* YZLibrary.m */; };
+		1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */; };
+		1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */; };
+		1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */; };
+		1272010B19E821FC00E4CBFB /* UIImage+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */; };
+		1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */; };
+		1272010D19E821FC00E4CBFB /* UIView+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010119E821FC00E4CBFB /* UIView+YZLibrary.m */; };
+		1272010E19E821FC00E4CBFB /* UIViewController+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010319E821FC00E4CBFB /* UIViewController+YZLibrary.m */; };
+		1272010F19E821FC00E4CBFB /* YZCGPointExtension.c in Sources */ = {isa = PBXBuildFile; fileRef = 1272010419E821FC00E4CBFB /* YZCGPointExtension.c */; };
+		1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010719E821FC00E4CBFB /* YZLibrary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,20 +62,24 @@
 		1220D2941967109800979E9A /* YZLibraryDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YZLibraryDemoTests-Info.plist"; sourceTree = "<group>"; };
 		1220D2961967109800979E9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1220D2981967109800979E9A /* YZLibraryDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZLibraryDemoTests.m; sourceTree = "<group>"; };
-		1220D2A3196710B300979E9A /* NSArray+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YZLibrary.h"; sourceTree = "<group>"; };
-		1220D2A4196710B300979E9A /* NSArray+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YZLibrary.m"; sourceTree = "<group>"; };
-		1220D2A5196710B300979E9A /* UIButton+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YZLibrary.h"; sourceTree = "<group>"; };
-		1220D2A6196710B300979E9A /* UIButton+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YZLibrary.m"; sourceTree = "<group>"; };
-		1220D2A7196710B300979E9A /* UIImage+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YZLibrary.h"; sourceTree = "<group>"; };
-		1220D2A8196710B300979E9A /* UIImage+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YZLibrary.m"; sourceTree = "<group>"; };
-		1220D2A9196710B300979E9A /* UIImageView+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YZLibrary.h"; sourceTree = "<group>"; };
-		1220D2AA196710B300979E9A /* UIImageView+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YZLibrary.m"; sourceTree = "<group>"; };
-		1220D2AB196710B300979E9A /* UIView+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YZLibrary.h"; sourceTree = "<group>"; };
-		1220D2AC196710B300979E9A /* UIView+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YZLibrary.m"; sourceTree = "<group>"; };
-		1220D2AD196710B300979E9A /* YZCGPointExtension.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YZCGPointExtension.c; sourceTree = "<group>"; };
-		1220D2AE196710B300979E9A /* YZCGPointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZCGPointExtension.h; sourceTree = "<group>"; };
-		1220D2AF196710B300979E9A /* YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLibrary.h; sourceTree = "<group>"; };
-		1220D2B0196710B300979E9A /* YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLibrary.m; sourceTree = "<group>"; };
+		127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YZLibrary.h"; sourceTree = "<group>"; };
+		127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YZLibrary.m"; sourceTree = "<group>"; };
+		127200F819E821FC00E4CBFB /* UIButton+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YZLibrary.h"; sourceTree = "<group>"; };
+		127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+YZLibrary.m"; sourceTree = "<group>"; };
+		127200FA19E821FC00E4CBFB /* UIColor+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YZLibrary.h"; sourceTree = "<group>"; };
+		127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YZLibrary.m"; sourceTree = "<group>"; };
+		127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YZLibrary.h"; sourceTree = "<group>"; };
+		127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YZLibrary.m"; sourceTree = "<group>"; };
+		127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YZLibrary.h"; sourceTree = "<group>"; };
+		127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YZLibrary.m"; sourceTree = "<group>"; };
+		1272010019E821FC00E4CBFB /* UIView+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YZLibrary.h"; sourceTree = "<group>"; };
+		1272010119E821FC00E4CBFB /* UIView+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YZLibrary.m"; sourceTree = "<group>"; };
+		1272010219E821FC00E4CBFB /* UIViewController+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YZLibrary.h"; sourceTree = "<group>"; };
+		1272010319E821FC00E4CBFB /* UIViewController+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YZLibrary.m"; sourceTree = "<group>"; };
+		1272010419E821FC00E4CBFB /* YZCGPointExtension.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YZCGPointExtension.c; sourceTree = "<group>"; };
+		1272010519E821FC00E4CBFB /* YZCGPointExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZCGPointExtension.h; sourceTree = "<group>"; };
+		1272010619E821FC00E4CBFB /* YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLibrary.h; sourceTree = "<group>"; };
+		1272010719E821FC00E4CBFB /* YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLibrary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,7 @@
 		1220D2611967109800979E9A = {
 			isa = PBXGroup;
 			children = (
+				127200F519E821FC00E4CBFB /* YZLibrary */,
 				1220D2731967109800979E9A /* YZLibraryDemo */,
 				1220D2921967109800979E9A /* YZLibraryDemoTests */,
 				1220D26C1967109800979E9A /* Frameworks */,
@@ -133,7 +140,6 @@
 		1220D2731967109800979E9A /* YZLibraryDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1220D2A2196710B300979E9A /* YZLibrary */,
 				1220D27C1967109800979E9A /* YZAppDelegate.h */,
 				1220D27D1967109800979E9A /* YZAppDelegate.m */,
 				1220D27F1967109800979E9A /* Main.storyboard */,
@@ -174,26 +180,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1220D2A2196710B300979E9A /* YZLibrary */ = {
+		127200F519E821FC00E4CBFB /* YZLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				1220D2A3196710B300979E9A /* NSArray+YZLibrary.h */,
-				1220D2A4196710B300979E9A /* NSArray+YZLibrary.m */,
-				1220D2A5196710B300979E9A /* UIButton+YZLibrary.h */,
-				1220D2A6196710B300979E9A /* UIButton+YZLibrary.m */,
-				1220D2A7196710B300979E9A /* UIImage+YZLibrary.h */,
-				1220D2A8196710B300979E9A /* UIImage+YZLibrary.m */,
-				1220D2A9196710B300979E9A /* UIImageView+YZLibrary.h */,
-				1220D2AA196710B300979E9A /* UIImageView+YZLibrary.m */,
-				1220D2AB196710B300979E9A /* UIView+YZLibrary.h */,
-				1220D2AC196710B300979E9A /* UIView+YZLibrary.m */,
-				1220D2AD196710B300979E9A /* YZCGPointExtension.c */,
-				1220D2AE196710B300979E9A /* YZCGPointExtension.h */,
-				1220D2AF196710B300979E9A /* YZLibrary.h */,
-				1220D2B0196710B300979E9A /* YZLibrary.m */,
+				127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */,
+				127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */,
+				127200F819E821FC00E4CBFB /* UIButton+YZLibrary.h */,
+				127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */,
+				127200FA19E821FC00E4CBFB /* UIColor+YZLibrary.h */,
+				127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */,
+				127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */,
+				127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */,
+				127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */,
+				127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */,
+				1272010019E821FC00E4CBFB /* UIView+YZLibrary.h */,
+				1272010119E821FC00E4CBFB /* UIView+YZLibrary.m */,
+				1272010219E821FC00E4CBFB /* UIViewController+YZLibrary.h */,
+				1272010319E821FC00E4CBFB /* UIViewController+YZLibrary.m */,
+				1272010419E821FC00E4CBFB /* YZCGPointExtension.c */,
+				1272010519E821FC00E4CBFB /* YZCGPointExtension.h */,
+				1272010619E821FC00E4CBFB /* YZLibrary.h */,
+				1272010719E821FC00E4CBFB /* YZLibrary.m */,
 			);
 			name = YZLibrary;
-			path = ../../YZLibrary;
+			path = ../YZLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,14 +305,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1220D2841967109800979E9A /* YZViewController.m in Sources */,
-				1220D2B5196710B300979E9A /* UIView+YZLibrary.m in Sources */,
-				1220D2B7196710B300979E9A /* YZLibrary.m in Sources */,
-				1220D2B1196710B300979E9A /* NSArray+YZLibrary.m in Sources */,
-				1220D2B4196710B300979E9A /* UIImageView+YZLibrary.m in Sources */,
-				1220D2B2196710B300979E9A /* UIButton+YZLibrary.m in Sources */,
+				1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */,
+				1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */,
+				1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */,
+				1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */,
+				1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */,
+				1272010F19E821FC00E4CBFB /* YZCGPointExtension.c in Sources */,
+				1272010E19E821FC00E4CBFB /* UIViewController+YZLibrary.m in Sources */,
+				1272010B19E821FC00E4CBFB /* UIImage+YZLibrary.m in Sources */,
+				1272010D19E821FC00E4CBFB /* UIView+YZLibrary.m in Sources */,
 				1220D27A1967109800979E9A /* main.m in Sources */,
-				1220D2B6196710B300979E9A /* YZCGPointExtension.c in Sources */,
-				1220D2B3196710B300979E9A /* UIImage+YZLibrary.m in Sources */,
 				1220D27E1967109800979E9A /* YZAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +520,7 @@
 				1220D29E1967109800979E9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1220D29F1967109800979E9A /* Build configuration list for PBXNativeTarget "YZLibraryDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +529,7 @@
 				1220D2A11967109800979E9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
