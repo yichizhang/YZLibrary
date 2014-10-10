@@ -4,7 +4,7 @@ YZLibrary
 This is the code that helped me in the past few years of iOS development.
 
 ## Install
-Using [CocoaPods](http://cocoapods.org/):
+Simply use [CocoaPods](http://cocoapods.org/):
 
 `pod 'YZLibrary'`
 
