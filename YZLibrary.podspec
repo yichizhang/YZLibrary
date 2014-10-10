@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "YZLibrary"
   s.version      = "1.0.0"
-  s.summary      = "A library of code that might help your iOS development."
+  s.summary      = "Some code that helped me in the past few years of iOS development."
   s.homepage     = "https://github.com/yichizhang/YZLibrary"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Yichi Zhang" => "zhang-yi-chi@hotmail.com" }
