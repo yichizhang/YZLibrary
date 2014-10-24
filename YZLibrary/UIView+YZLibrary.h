@@ -17,6 +17,9 @@
 @interface UIView (YZLibrary)
 
 - (UIImage*)yz_captureImage;
+- (UICollectionViewCell *)yz_parentCollectionViewCell;
+- (UITableViewCell *)yz_parentTableViewCell;
+
 - (void)yz_addShadow;
 - (void)yz_addWhiteFrame;
 

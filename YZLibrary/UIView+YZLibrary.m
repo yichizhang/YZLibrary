@@ -30,6 +30,34 @@
      */
 }
 
+- (UICollectionViewCell *)yz_parentCollectionViewCell
+{
+    id viewSuperView = [self superview];
+    while (viewSuperView != nil) {
+        if ([viewSuperView isKindOfClass:[UICollectionViewCell class]]) {
+            return (UICollectionViewCell *)viewSuperView;
+        }
+        else {
+            viewSuperView = [viewSuperView superview];
+        }
+    }
+    return nil;
+}
+
+- (UITableViewCell *)yz_parentTableViewCell
+{
+    id viewSuperView = [self superview];
+    while (viewSuperView != nil) {
+        if ([viewSuperView isKindOfClass:[UITableViewCell class]]) {
+            return (UITableViewCell *)viewSuperView;
+        }
+        else {
+            viewSuperView = [viewSuperView superview];
+        }
+    }
+    return nil;
+}
+
 - (void)yz_addShadow{
     
     UIBezierPath *shadowPath =
