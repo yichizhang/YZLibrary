@@ -17,7 +17,7 @@
 @interface YZRandom : NSObject
 
 + (float)randomFloatFromZeroTo:(float)upper;
-
 + (float)randomFloatFromValueToItsNegValue:(float)value;
++ (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber;
 
 @end
