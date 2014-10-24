@@ -16,19 +16,69 @@
 
 @implementation YZRandom
 
++ (int)intBetweenZeroAnd:(int)upper{
+    return [YZRandom intBetween:0 and:upper];
+}
+
++ (int)intBetweenValueAndItsNegativeValue:(int)value{
+    return [YZRandom intBetween:-value and:value];
+}
+
++ (int)intBetween:(int)lower and:(int)upper{
+    
+    if (lower == upper) {
+        return 0;
+    }
+    
+    if (lower > upper) {
+        
+        int intermediate;
+        intermediate = lower;
+        lower = upper;
+        upper = intermediate;
+    }
+    
+    return lower + arc4random_uniform(upper - lower + 1);
+}
+
+
++ (float)floatBetweenZeroAnd:(float)upper{
+    return [YZRandom floatBetween:0 and:upper];
+}
+
++ (float)floatBetweenValueAndItsNegativeValue:(float)value{
+    return [YZRandom floatBetween:-value and:value];
+}
+
++ (float)floatBetween:(float)lower and:(float)upper{
+    
+    if (lower == upper) {
+        return 0;
+    }
+    
+    if (lower > upper) {
+        
+        float intermediate;
+        intermediate = lower;
+        lower = upper;
+        upper = intermediate;
+    }
+    
+    float diff = upper - lower;
+    return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + lower;
+}
+
+
 + (float)randomFloatFromZeroTo:(float)upper{
-    int num = upper * 1000;
-    return (float)(arc4random() % num)/1000;
+    return [YZRandom floatBetweenZeroAnd:upper];
 }
 
 + (float)randomFloatFromValueToItsNegValue:(float)value{
-    value = value > 0 ? value : -value;
-    return [self randomFloatFromZeroTo:value*2] - value;
+    return [YZRandom floatBetweenValueAndItsNegativeValue:value];
 }
 
-+ (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber {
-    float diff = bigNumber - smallNumber;
-    return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + smallNumber;
++ (float)randomFloatBetween:(float)lower and:(float)upper {
+    return [YZRandom floatBetween:lower and:upper];
 }
 
 @end

@@ -13,6 +13,7 @@
  */
 
 #import "YZViewController.h"
+#import "YZRandom.h"
 
 @interface YZViewController ()
 
@@ -24,6 +25,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    for (int i = 0; i < 100; i ++) {
+        NSLog(@"%f", [YZRandom floatBetween:10 and:20]);
+    }
+    for (int i = 0; i < 100; i ++) {
+        NSLog(@"%i", [YZRandom intBetween:10 and:20]);
+    }
 }
 
 - (void)didReceiveMemoryWarning

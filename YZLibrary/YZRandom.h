@@ -16,8 +16,17 @@
 
 @interface YZRandom : NSObject
 
-+ (float)randomFloatFromZeroTo:(float)upper;
-+ (float)randomFloatFromValueToItsNegValue:(float)value;
-+ (float)randomFloatBetween:(float)smallNumber and:(float)bigNumber;
++ (int)intBetweenZeroAnd:(int)upper;
++ (int)intBetweenValueAndItsNegativeValue:(int)value;
++ (int)intBetween:(int)lower and:(int)upper;
+
++ (float)floatBetweenZeroAnd:(float)upper;
++ (float)floatBetweenValueAndItsNegativeValue:(float)value;
++ (float)floatBetween:(float)lower and:(float)upper;
+
+// Deprecated methods
++ (float)randomFloatFromZeroTo:(float)upper __attribute__ ((deprecated));
++ (float)randomFloatFromValueToItsNegValue:(float)value __attribute__ ((deprecated));
++ (float)randomFloatBetween:(float)lower and:(float)upper __attribute__ ((deprecated));
 
 @end
