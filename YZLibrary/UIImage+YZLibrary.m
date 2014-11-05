@@ -17,7 +17,7 @@
 
 @implementation UIImage (YZLibrary)
 
-+(UIImage *)yz_autoResolutionImageNamed:(NSString *)name{
++ (UIImage *)yz_autoResolutionImageNamed:(NSString *)name{
 
     if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
         CGFloat scale = [[UIScreen mainScreen] scale];

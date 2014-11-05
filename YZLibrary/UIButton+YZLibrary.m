@@ -16,7 +16,6 @@
 
 @implementation UIButton (YZLibrary)
 
-
 - (void)yz_covertToHappyButton{
     [self setTitleColor:[UIColor whiteColor]
                             forState:UIControlStateNormal];

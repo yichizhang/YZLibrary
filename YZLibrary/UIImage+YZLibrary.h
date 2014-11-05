@@ -16,7 +16,7 @@
 
 @interface UIImage (YZLibrary)
 
-+(UIImage *)yz_autoResolutionImageNamed:(NSString *)name;
++ (UIImage *)yz_autoResolutionImageNamed:(NSString *)name;
 - (UIImage *)yz_imageScaledToSize:(CGSize)newSize;
 - (UIImage *)yz_imageScaledToSizeAspectFitsInBox:(CGSize)boxSize;
 - (CGSize)yz_sizeRequiredToAspectFitInBox:(CGSize)boxSize;
