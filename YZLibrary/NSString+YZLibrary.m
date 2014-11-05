@@ -12,20 +12,46 @@
  
  */
 
-#import <Foundation/Foundation.h>
+#import "NSString+YZLibrary.h"
 
-#ifndef YZ_DEPRECATED
-#define YZ_DEPRECATED __attribute__ ((deprecated))
-#endif
+@implementation NSString (YZLibrary)
 
-@interface YZStringHelper : NSObject
+- (BOOL)yz_isStringValid{
+    if ([self isEqualToString:@""] || self==nil) {
+        return NO;
+    }else{
+        return YES;
+    }
+}
 
-+ (NSString*)boolInTrueOrFalseString:(BOOL)bValue YZ_DEPRECATED;
++ (NSString*)yz_stringFromBool:(BOOL)boolValue{
+    
+    return (boolValue ? @"true" : @"false");
+    
+}
 
-+ (NSString *)letterFromNumber1To26:(NSUInteger)number YZ_DEPRECATED;
++ (NSString *)yz_letterStringFromNumber1To26:(int)number{
+    
+    NSString* returnName = @"?";
+    
+    int asciiCodeOfCapitalA = 'A';
+    
+    char theChar;
+    
+    if (number>=1 && number<=26) {
+        
+        theChar = asciiCodeOfCapitalA + number - 1;
+        returnName = [NSString stringWithFormat:@"%c", theChar];
+        
+    }
+    
+    return returnName;
+}
 
-+ (BOOL)isStringValid:(NSString*)string YZ_DEPRECATED;
++ (NSString*)yz_stringFromInt:(int)intNumber{
+    
+    return [NSString stringWithFormat:@"%i", intNumber];
+}
 
-+ (NSString *)stringFromIntNumber:(int)intNumber YZ_DEPRECATED;
 
 @end

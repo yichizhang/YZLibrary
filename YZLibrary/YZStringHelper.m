@@ -13,44 +13,30 @@
  */
 
 #import "YZStringHelper.h"
+#import "NSString+YZLibrary.h"
 
 @implementation YZStringHelper
 
 + (NSString*)boolInTrueOrFalseString:(BOOL)bValue{
     
-    return (bValue ? @"true" : @"false");
+    return [NSString yz_stringFromBool:bValue];
     
 }
 
 + (NSString *)letterFromNumber1To26:(NSUInteger)number{
     
-    NSString* returnName = @"?";
-    
-    NSString *string = @"A";
-    int asciiCodeOfCapitalA = [string characterAtIndex:0];
-    char theChar;
-    
-    if (number>=1 && number<=26) {
-        
-        theChar = asciiCodeOfCapitalA + number - 1;
-        returnName = [NSString stringWithFormat:@"%c", theChar];
-        
-    }
-    
-    return returnName;
+    return [NSString yz_letterStringFromNumber1To26:(int)number];
 }
 
 + (BOOL)isStringValid:(NSString*)string{
-    if ([string isEqualToString:@""] || string==nil) {
-        return NO;
-    }else{
-        return YES;
-    }
+    
+    return [string yz_isStringValid];
+    
 }
 
 + (NSString *)stringFromIntNumber:(int)intNumber{
     
-    return [NSString stringWithFormat:@"%i", intNumber];
+    return [NSString yz_stringFromInt:intNumber];
 }
 
 
