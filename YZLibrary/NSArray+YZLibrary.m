@@ -18,11 +18,20 @@
 
 int currentIndex = 0;
 
--(id)yz_randomObject{
+- (id)yz_objectAtIndex:(NSUInteger)index{
+    
+    if (index < [self count]) {
+        return [self objectAtIndex:index];
+    }
+    return nil;
+    
+}
+
+- (id)yz_randomObject{
     return [ self objectAtIndex: (int) ( arc4random() % [self count] ) ];
 }
 
--(id)yz_nextObject{
+- (id)yz_nextObject{
     if (currentIndex >= [self count]) {
         currentIndex = 0;
     }

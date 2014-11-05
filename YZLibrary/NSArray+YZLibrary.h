@@ -16,8 +16,9 @@
 
 @interface NSArray (YZLibrary)
 
--(id)yz_randomObject;
--(id)yz_nextObject;
+- (id)yz_objectAtIndex:(NSUInteger)index;
+- (id)yz_randomObject;
+- (id)yz_nextObject;
 - (NSArray *)yz_shuffledArray;
 
 @end
