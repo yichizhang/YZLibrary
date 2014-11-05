@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YZRandomControlCell" id="Cxc-5t-i1p" customClass="YZRandomControlCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="175"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="175"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-20" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-UZ-PwH">
+                        <rect key="frame" x="6" y="74" width="288" height="31"/>
+                    </slider>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Q2r-GP-zcX">
+                        <rect key="frame" x="8" y="34" width="284" height="29"/>
+                        <segments>
+                            <segment title="Float"/>
+                            <segment title="Int"/>
+                        </segments>
+                    </segmentedControl>
+                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="-20" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Bos-kL-Sy9">
+                        <rect key="frame" x="6" y="112" width="288" height="31"/>
+                    </slider>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <size key="customSize" width="609" height="38"/>
+            <connections>
+                <outlet property="lowerBoundSlider" destination="oe5-UZ-PwH" id="epW-6m-MH2"/>
+                <outlet property="segmentedControl" destination="Q2r-GP-zcX" id="lIZ-VJ-1qO"/>
+                <outlet property="upperBoundSlider" destination="Bos-kL-Sy9" id="Vbx-7g-u1L"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="33.5"/>
+        </collectionViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

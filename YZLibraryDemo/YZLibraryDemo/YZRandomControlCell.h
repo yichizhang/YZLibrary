@@ -12,8 +12,14 @@
  
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@interface YZViewController : UIViewController
+@interface YZRandomControlCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UISlider *lowerBoundSlider;
+@property (weak, nonatomic) IBOutlet UISlider *upperBoundSlider;
+
+- (void)setupCellWithData:(id)data;
 
 @end

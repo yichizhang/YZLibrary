@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="YZSimpleTextCell" reuseIdentifier="YZSimpleTextCell" id="NWa-0t-wgh" customClass="YZSimpleTextCell">
+            <rect key="frame" x="0.0" y="0.0" width="383" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="iTT-bq-zTd">
+                        <rect key="frame" x="0.0" y="0.0" width="383" height="182"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="iTT-bq-zTd" firstAttribute="leading" secondItem="NWa-0t-wgh" secondAttribute="leading" id="L4N-0i-N1K"/>
+                <constraint firstAttribute="bottom" secondItem="iTT-bq-zTd" secondAttribute="bottom" id="ZTV-YC-38w"/>
+                <constraint firstAttribute="trailing" secondItem="iTT-bq-zTd" secondAttribute="trailing" id="fbp-pf-kyg"/>
+                <constraint firstItem="iTT-bq-zTd" firstAttribute="top" secondItem="NWa-0t-wgh" secondAttribute="top" id="w4G-BQ-zsB"/>
+            </constraints>
+            <size key="customSize" width="383" height="182"/>
+            <connections>
+                <outlet property="mainLabel" destination="iTT-bq-zTd" id="tpe-Hm-aC6"/>
+            </connections>
+            <point key="canvasLocation" x="428.5" y="208"/>
+        </collectionViewCell>
+    </objects>
+</document>

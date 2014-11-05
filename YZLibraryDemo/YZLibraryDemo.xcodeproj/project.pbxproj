@@ -13,7 +13,7 @@
 		1220D27A1967109800979E9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2791967109800979E9A /* main.m */; };
 		1220D27E1967109800979E9A /* YZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D27D1967109800979E9A /* YZAppDelegate.m */; };
 		1220D2811967109800979E9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1220D27F1967109800979E9A /* Main.storyboard */; };
-		1220D2841967109800979E9A /* YZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2831967109800979E9A /* YZViewController.m */; };
+		1220D2841967109800979E9A /* YZViewControllerA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2831967109800979E9A /* YZViewControllerA.m */; };
 		1220D2861967109800979E9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1220D2851967109800979E9A /* Images.xcassets */; };
 		1220D28D1967109800979E9A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1220D28C1967109800979E9A /* XCTest.framework */; };
 		1220D28E1967109800979E9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1220D26D1967109800979E9A /* Foundation.framework */; };
@@ -21,6 +21,12 @@
 		1220D2971967109800979E9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1220D2951967109800979E9A /* InfoPlist.strings */; };
 		1220D2991967109800979E9A /* YZLibraryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2981967109800979E9A /* YZLibraryDemoTests.m */; };
 		1233DFA31A0A3BB300E1638D /* NSString+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFA21A0A3BB300E1638D /* NSString+YZLibrary.m */; };
+		1233DFA61A0A4B4800E1638D /* YZViewControllerB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFA51A0A4B4800E1638D /* YZViewControllerB.m */; };
+		1233DFAA1A0A4B7000E1638D /* YZSimpleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFA81A0A4B7000E1638D /* YZSimpleTextCell.m */; };
+		1233DFAB1A0A4B7000E1638D /* YZSimpleTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1233DFA91A0A4B7000E1638D /* YZSimpleTextCell.xib */; };
+		1233DFAE1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFAD1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m */; };
+		1233DFB21A0A59FC00E1638D /* YZRandomControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFB01A0A59FC00E1638D /* YZRandomControlCell.m */; };
+		1233DFB31A0A59FC00E1638D /* YZRandomControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1233DFB11A0A59FC00E1638D /* YZRandomControlCell.xib */; };
 		1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */; };
 		1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */; };
 		1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */; };
@@ -57,8 +63,8 @@
 		1220D27C1967109800979E9A /* YZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZAppDelegate.h; sourceTree = "<group>"; };
 		1220D27D1967109800979E9A /* YZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZAppDelegate.m; sourceTree = "<group>"; };
 		1220D2801967109800979E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1220D2821967109800979E9A /* YZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZViewController.h; sourceTree = "<group>"; };
-		1220D2831967109800979E9A /* YZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZViewController.m; sourceTree = "<group>"; };
+		1220D2821967109800979E9A /* YZViewControllerA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZViewControllerA.h; sourceTree = "<group>"; };
+		1220D2831967109800979E9A /* YZViewControllerA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZViewControllerA.m; sourceTree = "<group>"; };
 		1220D2851967109800979E9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1220D28B1967109800979E9A /* YZLibraryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YZLibraryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1220D28C1967109800979E9A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -67,6 +73,16 @@
 		1220D2981967109800979E9A /* YZLibraryDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZLibraryDemoTests.m; sourceTree = "<group>"; };
 		1233DFA11A0A3BB300E1638D /* NSString+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YZLibrary.h"; sourceTree = "<group>"; };
 		1233DFA21A0A3BB300E1638D /* NSString+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YZLibrary.m"; sourceTree = "<group>"; };
+		1233DFA41A0A4B4800E1638D /* YZViewControllerB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZViewControllerB.h; sourceTree = "<group>"; };
+		1233DFA51A0A4B4800E1638D /* YZViewControllerB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZViewControllerB.m; sourceTree = "<group>"; };
+		1233DFA71A0A4B7000E1638D /* YZSimpleTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSimpleTextCell.h; sourceTree = "<group>"; };
+		1233DFA81A0A4B7000E1638D /* YZSimpleTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSimpleTextCell.m; sourceTree = "<group>"; };
+		1233DFA91A0A4B7000E1638D /* YZSimpleTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZSimpleTextCell.xib; sourceTree = "<group>"; };
+		1233DFAC1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+YZLibrary.h"; sourceTree = "<group>"; };
+		1233DFAD1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+YZLibrary.m"; sourceTree = "<group>"; };
+		1233DFAF1A0A59FC00E1638D /* YZRandomControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRandomControlCell.h; sourceTree = "<group>"; };
+		1233DFB01A0A59FC00E1638D /* YZRandomControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRandomControlCell.m; sourceTree = "<group>"; };
+		1233DFB11A0A59FC00E1638D /* YZRandomControlCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZRandomControlCell.xib; sourceTree = "<group>"; };
 		127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YZLibrary.h"; sourceTree = "<group>"; };
 		127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YZLibrary.m"; sourceTree = "<group>"; };
 		127200F819E821FC00E4CBFB /* UIButton+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YZLibrary.h"; sourceTree = "<group>"; };
@@ -153,8 +169,16 @@
 				1220D27C1967109800979E9A /* YZAppDelegate.h */,
 				1220D27D1967109800979E9A /* YZAppDelegate.m */,
 				1220D27F1967109800979E9A /* Main.storyboard */,
-				1220D2821967109800979E9A /* YZViewController.h */,
-				1220D2831967109800979E9A /* YZViewController.m */,
+				1220D2821967109800979E9A /* YZViewControllerA.h */,
+				1220D2831967109800979E9A /* YZViewControllerA.m */,
+				1233DFA41A0A4B4800E1638D /* YZViewControllerB.h */,
+				1233DFA51A0A4B4800E1638D /* YZViewControllerB.m */,
+				1233DFA71A0A4B7000E1638D /* YZSimpleTextCell.h */,
+				1233DFA81A0A4B7000E1638D /* YZSimpleTextCell.m */,
+				1233DFA91A0A4B7000E1638D /* YZSimpleTextCell.xib */,
+				1233DFAF1A0A59FC00E1638D /* YZRandomControlCell.h */,
+				1233DFB01A0A59FC00E1638D /* YZRandomControlCell.m */,
+				1233DFB11A0A59FC00E1638D /* YZRandomControlCell.xib */,
 				1220D2851967109800979E9A /* Images.xcassets */,
 				1220D2741967109800979E9A /* Supporting Files */,
 			);
@@ -201,6 +225,8 @@
 				127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */,
 				127200FA19E821FC00E4CBFB /* UIColor+YZLibrary.h */,
 				127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */,
+				1233DFAC1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.h */,
+				1233DFAD1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m */,
 				127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */,
 				127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */,
 				127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */,
@@ -303,7 +329,9 @@
 			files = (
 				1220D2861967109800979E9A /* Images.xcassets in Resources */,
 				1220D2781967109800979E9A /* InfoPlist.strings in Resources */,
+				1233DFB31A0A59FC00E1638D /* YZRandomControlCell.xib in Resources */,
 				1220D2811967109800979E9A /* Main.storyboard in Resources */,
+				1233DFAB1A0A4B7000E1638D /* YZSimpleTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,19 +351,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				1272011619E8319B00E4CBFB /* YZStringHelper.m in Sources */,
-				1220D2841967109800979E9A /* YZViewController.m in Sources */,
+				1220D2841967109800979E9A /* YZViewControllerA.m in Sources */,
 				1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */,
 				1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */,
 				1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */,
 				1272011919E8354F00E4CBFB /* YZTimeHelper.m in Sources */,
 				1272011319E8312300E4CBFB /* YZFileHelper.m in Sources */,
+				1233DFAE1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m in Sources */,
 				1272011C19E8365700E4CBFB /* YZRandom.m in Sources */,
+				1233DFA61A0A4B4800E1638D /* YZViewControllerB.m in Sources */,
 				1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */,
 				1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */,
 				1233DFA31A0A3BB300E1638D /* NSString+YZLibrary.m in Sources */,
 				1272010E19E821FC00E4CBFB /* UIViewController+YZLibrary.m in Sources */,
 				1272010B19E821FC00E4CBFB /* UIImage+YZLibrary.m in Sources */,
 				1272010D19E821FC00E4CBFB /* UIView+YZLibrary.m in Sources */,
+				1233DFAA1A0A4B7000E1638D /* YZSimpleTextCell.m in Sources */,
+				1233DFB21A0A59FC00E1638D /* YZRandomControlCell.m in Sources */,
 				1220D27A1967109800979E9A /* main.m in Sources */,
 				1220D27E1967109800979E9A /* YZAppDelegate.m in Sources */,
 			);
