@@ -27,7 +27,7 @@
 + (int)intBetween:(int)lower and:(int)upper{
     
     if (lower == upper) {
-        return 0;
+        return lower;
     }
     
     if (lower > upper) {
@@ -53,7 +53,7 @@
 + (float)floatBetween:(float)lower and:(float)upper{
     
     if (lower == upper) {
-        return 0;
+        return lower;
     }
     
     if (lower > upper) {
