@@ -14,7 +14,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YZViewControllerB : UICollectionViewController
+@interface YZDemoTwoViewController : UICollectionViewController
 
 
 @end

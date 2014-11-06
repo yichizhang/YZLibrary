@@ -12,26 +12,71 @@
  
  */
 
-#import "YZViewControllerA.h"
-#import "YZRandom.h"
+#import "YZDemoOneViewController.h"
+#import "YZTimeHelper.h"
 
-@interface YZViewControllerA ()
+@interface YZDemoOneViewController ()
 
 @end
 
-@implementation YZViewControllerA
+@implementation YZDemoOneViewController
+
+- (void)commonInit{
+    
+    self.title = @"Demo";
+    self.tabBarItem =
+    [[UITabBarItem alloc]
+     initWithTabBarSystemItem:UITabBarSystemItemFavorites
+     tag:0
+     ];
+}
+
+- (id)initWithCoder:(NSCoder*)aDecoder
+{
+    if(self = [super initWithCoder:aDecoder])
+    {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    [self updateTimeInfo];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)timeSliderUpdated:(id)sender {
+    
+    [self updateTimeInfo];
+    
+}
+
+- (void)updateTimeInfo{
+    
+    self.timeLabel.text =
+    [NSString
+     stringWithFormat:@"%.1fs\n%@",
+     self.timeSlider.value,
+     [YZTimeHelper hmsTimeStringFromSecondsFloat:self.timeSlider.value]
+     ];
+    
 }
 
 @end

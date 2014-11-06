@@ -27,7 +27,6 @@
         <!--Item-->
         <scene sceneID="2mb-W8-dyo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WPJ-ga-Rzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="gQf-we-UvT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NIU-K1-NGD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NhS-vK-kBr">
@@ -38,13 +37,14 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="CZe-hb-T9D"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPJ-ga-Rzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781" y="-846"/>
         </scene>
         <!--Item-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="YZViewControllerA" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="YZDemoOneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -52,10 +52,28 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="0.0" maxValue="3600" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-Kv-Yg2">
+                                <rect key="frame" x="14" y="72" width="292" height="31"/>
+                                <connections>
+                                    <action selector="timeSliderUpdated:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gAG-lh-xEA"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXQ-s5-8EI">
+                                <rect key="frame" x="16" y="110" width="288" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3IS-ZZ-hzz"/>
                     <navigationItem key="navigationItem" id="oux-xk-zh9"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="FXQ-s5-8EI" id="rwJ-og-fDo"/>
+                        <outlet property="timeSlider" destination="DnO-Kv-Yg2" id="JG7-PH-hFq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +99,7 @@
         <!--Item-->
         <scene sceneID="sAC-HA-geP">
             <objects>
-                <collectionViewController id="ORg-3I-Pnd" customClass="YZViewControllerB" sceneMemberID="viewController">
+                <collectionViewController id="ORg-3I-Pnd" customClass="YZDemoTwoViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aEm-9J-gxa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

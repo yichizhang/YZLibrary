@@ -12,7 +12,7 @@
  
  */
 
-#import "YZViewControllerB.h"
+#import "YZDemoTwoViewController.h"
 
 #import "YZRandom.h"
  
@@ -29,6 +29,7 @@
 
 typedef enum{
     YZViewControllerSectionRandomControl = 0,
+    YZViewControllerSectionInfo,
     YZViewControllerSectionRandomNumbers,
     YZViewControllerSectionCount
 }YZViewControllerSection;
@@ -39,7 +40,7 @@ typedef enum{
     YZRandomGenerationOptionCount
 }YZRandomGenerationOption;
 
-@interface YZViewControllerB ()
+@interface YZDemoTwoViewController ()
 
 @property (strong) NSMutableArray *dataArray;
 @property (assign) YZRandomGenerationOption generationOption;
@@ -57,11 +58,16 @@ typedef enum{
 
 @end
 
-@implementation YZViewControllerB
+@implementation YZDemoTwoViewController
 
 - (void)commonInit{
     
-    self.title = @"Demo";
+    self.title = @"Random Numbers";
+    self.tabBarItem =
+    [[UITabBarItem alloc]
+     initWithTabBarSystemItem:UITabBarSystemItemFavorites
+     tag:1
+     ];
     
 }
 
@@ -93,7 +99,15 @@ typedef enum{
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
-    
+   
+    self.updateTimer =
+    [NSTimer scheduledTimerWithTimeInterval:0.1
+                                     target:self
+                                   selector:@selector(timerMethod)
+                                   userInfo:nil
+                                    repeats:YES
+     ];
+    [self.updateTimer fire];
 }
 
 - (void)viewDidLoad {
@@ -119,20 +133,15 @@ typedef enum{
     
     [self reloadContentAndRefreshData];
     
-    self.updateTimer =
-    [NSTimer scheduledTimerWithTimeInterval:0.1
-                                     target:self
-                                   selector:@selector(timerMethod)
-                                   userInfo:nil
-                                    repeats:YES
-     ];
-    [self.updateTimer fire];
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
     
     [super viewDidDisappear:animated];
     
+    [self.updateTimer invalidate];
+    self.updateTimer = nil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -171,10 +180,20 @@ typedef enum{
     [UIView performWithoutAnimation:^{
         
         [self.collectionView reloadSections:
-         [[NSIndexSet alloc] initWithIndex:1]
+         [[NSIndexSet alloc]
+          initWithIndexesInRange:
+          NSMakeRange(YZViewControllerSectionInfo,
+                      YZViewControllerSectionRandomNumbers)
+          ]
          ];
     }];
     
+    
+}
+
+- (void)generateButtonTapped:(id)sender{
+    
+    [self reloadContentAndRefreshData];
     
 }
 
@@ -240,6 +259,8 @@ typedef enum{
         
         
         
+    }else if (section == YZViewControllerSectionInfo){
+        
     }
     
     return UIEdgeInsetsMake(top, left, bottom, right);
@@ -248,20 +269,27 @@ typedef enum{
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     double screenWidth = [[UIScreen mainScreen] bounds].size.width;
-    
-    // 40, 70, 15, 70, 15, 70, 40
-    // 0.125 0.21875 0.046875
+    float w = 70.f;
+    float h = 70.f;
     
     if (indexPath.section == YZViewControllerSectionRandomNumbers) {
         
-        return CGSizeMake(screenWidth/5, screenWidth/5);
+        w = screenWidth * 0.2;
+        h = screenWidth * 0.2;
         
     } else if (indexPath.section == YZViewControllerSectionRandomControl){
-     
-        return CGSizeMake(screenWidth, 175);
+        
+        w = screenWidth;
+        h = 82;
+        
+    } else if (indexPath.section == YZViewControllerSectionInfo){
+        
+        w = screenWidth;
+        h = screenWidth * 0.2;
+        
     }
     
-    return CGSizeMake(70, 70);
+    return CGSizeMake(w, h);
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
@@ -293,6 +321,8 @@ typedef enum{
     if (section == YZViewControllerSectionRandomNumbers) {
         return self.dataCount;
     }else if (section == YZViewControllerSectionRandomControl){
+        return 1;
+    }else if (section == YZViewControllerSectionInfo){
         return 1;
     }
     
@@ -338,6 +368,34 @@ typedef enum{
         
         return cell;
         
+    }else if (indexPath.section == YZViewControllerSectionInfo){
+       
+        YZSimpleTextCell *cell =
+        [YZSimpleTextCell yz_dequeueFromCollectionView:collectionView
+                                          forIndexPath:indexPath
+         ];
+        
+        [cell setupCellWithData:nil];
+        
+        NSString *text;
+        
+        if (self.generationOption == YZRandomGenerationOptionInt) {
+            text = [NSString stringWithFormat:@"%i to %i",
+                    (int)self.lowerBound,
+                    (int)self.upperBound
+                    ];
+        }else{
+            text = [NSString stringWithFormat:@"%.1f to %.1f",
+                    self.lowerBound,
+                    self.upperBound
+                    ];
+        }
+        
+        cell.mainLabel.text = text;
+        cell.backgroundColor = [UIColor whiteColor];
+        
+        return cell;
+        
     }else if(indexPath.section == YZViewControllerSectionRandomControl) {
         
         YZRandomControlCell *cell =
@@ -346,6 +404,11 @@ typedef enum{
          ];
         
         [cell setupCellWithData:nil];
+        
+        [cell.generateButton addTarget:self
+                                action:@selector(generateButtonTapped:)
+                      forControlEvents:UIControlEventTouchDown
+         ];
         
         [cell.segmentedControl addTarget:self
                                   action:@selector(segmentationControlValueUpdated:)

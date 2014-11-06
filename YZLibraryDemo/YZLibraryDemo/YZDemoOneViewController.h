@@ -14,6 +14,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YZViewControllerA : UIViewController
+@interface YZDemoOneViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UISlider *timeSlider;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
