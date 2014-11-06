@@ -65,12 +65,33 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmr-RZ-fPJ">
+                                <rect key="frame" x="16" y="203" width="76" height="30"/>
+                                <state key="normal" title="Pick Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pickImageButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AAs-BA-4jR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sCs-8v-S2O">
+                                <rect key="frame" x="16" y="241" width="90" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDR-qN-L5v">
+                                <rect key="frame" x="214" y="241" width="90" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2SK-at-JoX">
+                                <rect key="frame" x="115" y="241" width="90" height="90"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3IS-ZZ-hzz"/>
                     <navigationItem key="navigationItem" id="oux-xk-zh9"/>
                     <connections>
+                        <outlet property="imageViewA" destination="sCs-8v-S2O" id="sxG-ad-pMy"/>
+                        <outlet property="imageViewB" destination="2SK-at-JoX" id="Qkc-ZY-Zd2"/>
+                        <outlet property="imageViewC" destination="QDR-qN-L5v" id="JK1-AQ-2Kz"/>
                         <outlet property="timeLabel" destination="FXQ-s5-8EI" id="rwJ-og-fDo"/>
                         <outlet property="timeSlider" destination="DnO-Kv-Yg2" id="JG7-PH-hFq"/>
                     </connections>

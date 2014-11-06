@@ -13,6 +13,8 @@
  */
 
 #import "YZDemoOneViewController.h"
+
+#import "UIImage+YZLibrary.h"
 #import "YZTimeHelper.h"
 
 @interface YZDemoOneViewController ()
@@ -60,6 +62,34 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
+    self.imageViewA.image = chosenImage;
+    self.imageViewB.image = [chosenImage yz_imageScaledToSize:CGSizeMake(90, 90)];
+    self.imageViewC.image = [chosenImage yz_imageScaledToSize:CGSizeMake(40, 40)];
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (IBAction)pickImageButtonTapped:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    //picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+    
 }
 
 - (IBAction)timeSliderUpdated:(id)sender {
