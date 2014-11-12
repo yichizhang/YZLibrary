@@ -15,6 +15,7 @@
 #import "YZDemoOneViewController.h"
 
 #import "UIImage+YZLibrary.h"
+#import "NSDictionary+YZLibrary.h"
 #import "YZTimeHelper.h"
 
 @interface YZDemoOneViewController ()
@@ -56,6 +57,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self updateTimeInfo];
+    
+    
+    NSMutableDictionary *dict1 = [@{@"Key1": @"Val1"} mutableCopy];
+    NSMutableDictionary *dict2 = [dict1 yz_dictionaryWithAdditionalEntriesFromDictionary:@{@"Key2": @"Val2"}];
+    
 }
 
 - (void)didReceiveMemoryWarning

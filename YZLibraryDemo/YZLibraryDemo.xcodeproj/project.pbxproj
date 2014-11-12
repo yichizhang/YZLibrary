@@ -27,6 +27,7 @@
 		1233DFAE1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFAD1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m */; };
 		1233DFB21A0A59FC00E1638D /* YZRandomControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFB01A0A59FC00E1638D /* YZRandomControlCell.m */; };
 		1233DFB31A0A59FC00E1638D /* YZRandomControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1233DFB11A0A59FC00E1638D /* YZRandomControlCell.xib */; };
+		12682CDD1A1386B7004EF16F /* NSDictionary+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12682CDC1A1386B7004EF16F /* NSDictionary+YZLibrary.m */; };
 		1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */; };
 		1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */; };
 		1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */; };
@@ -83,6 +84,8 @@
 		1233DFAF1A0A59FC00E1638D /* YZRandomControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRandomControlCell.h; sourceTree = "<group>"; };
 		1233DFB01A0A59FC00E1638D /* YZRandomControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRandomControlCell.m; sourceTree = "<group>"; };
 		1233DFB11A0A59FC00E1638D /* YZRandomControlCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZRandomControlCell.xib; sourceTree = "<group>"; };
+		12682CDB1A1386B7004EF16F /* NSDictionary+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YZLibrary.h"; sourceTree = "<group>"; };
+		12682CDC1A1386B7004EF16F /* NSDictionary+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YZLibrary.m"; sourceTree = "<group>"; };
 		127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YZLibrary.h"; sourceTree = "<group>"; };
 		127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YZLibrary.m"; sourceTree = "<group>"; };
 		127200F819E821FC00E4CBFB /* UIButton+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+YZLibrary.h"; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 				1272011819E8354F00E4CBFB /* YZTimeHelper.m */,
 				1272011A19E8365700E4CBFB /* YZRandom.h */,
 				1272011B19E8365700E4CBFB /* YZRandom.m */,
+				12682CDB1A1386B7004EF16F /* NSDictionary+YZLibrary.h */,
+				12682CDC1A1386B7004EF16F /* NSDictionary+YZLibrary.m */,
 			);
 			name = YZLibrary;
 			path = ../YZLibrary;
@@ -350,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12682CDD1A1386B7004EF16F /* NSDictionary+YZLibrary.m in Sources */,
 				1272011619E8319B00E4CBFB /* YZStringHelper.m in Sources */,
 				1220D2841967109800979E9A /* YZDemoOneViewController.m in Sources */,
 				1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */,
