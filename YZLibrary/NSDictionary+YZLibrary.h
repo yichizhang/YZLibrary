@@ -16,6 +16,7 @@
 
 @interface NSDictionary (YZLibrary)
 
++ (instancetype)yz_dictionaryWithDictionary:(NSDictionary*)dictionary1 joinedWithDictionary:(NSDictionary*)dictionary2;
 - (instancetype)yz_dictionaryWithAdditionalEntriesFromDictionary:(NSDictionary*)aDictionary;
 
 @end

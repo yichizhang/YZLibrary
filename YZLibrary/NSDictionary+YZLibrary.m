@@ -16,14 +16,19 @@
 
 @implementation NSDictionary (YZLibrary)
 
-- (instancetype)yz_dictionaryWithAdditionalEntriesFromDictionary:(NSDictionary*)aDictionary{
++ (instancetype)yz_dictionaryWithDictionary:(NSDictionary*)dictionary1 joinedWithDictionary:(NSDictionary*)dictionary2{
     
     NSMutableDictionary *tempDictionary =
-    [NSMutableDictionary dictionaryWithDictionary:self];
+    [NSMutableDictionary dictionaryWithDictionary:dictionary1];
     
-    [tempDictionary addEntriesFromDictionary:aDictionary];
+    [tempDictionary addEntriesFromDictionary:dictionary2];
     
     return tempDictionary;
+}
+
+- (instancetype)yz_dictionaryWithAdditionalEntriesFromDictionary:(NSDictionary*)aDictionary{
+    
+    return [[self class] yz_dictionaryWithDictionary:self joinedWithDictionary:aDictionary];
 }
 
 @end
