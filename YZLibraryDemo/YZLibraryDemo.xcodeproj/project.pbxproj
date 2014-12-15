@@ -40,6 +40,10 @@
 		1272011619E8319B00E4CBFB /* YZStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011519E8319B00E4CBFB /* YZStringHelper.m */; };
 		1272011919E8354F00E4CBFB /* YZTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011819E8354F00E4CBFB /* YZTimeHelper.m */; };
 		1272011C19E8365700E4CBFB /* YZRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011B19E8365700E4CBFB /* YZRandom.m */; };
+		12EFEFF31A3EDFC10034B70D /* UITableViewCell+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */; };
+		12EFEFF61A3EE1610034B70D /* YZDemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF51A3EE1610034B70D /* YZDemoTableViewController.swift */; };
+		12EFEFFA1A3EE2C10034B70D /* YZDemoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF81A3EE2C10034B70D /* YZDemoImageTableViewCell.swift */; };
+		12EFEFFB1A3EE2C10034B70D /* YZDemoImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12EFEFF91A3EE2C10034B70D /* YZDemoImageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,13 @@
 		1272011819E8354F00E4CBFB /* YZTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZTimeHelper.m; sourceTree = "<group>"; };
 		1272011A19E8365700E4CBFB /* YZRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRandom.h; sourceTree = "<group>"; };
 		1272011B19E8365700E4CBFB /* YZRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRandom.m; sourceTree = "<group>"; };
+		12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YZLibrary.h"; sourceTree = "<group>"; };
+		12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YZLibrary.m"; sourceTree = "<group>"; };
+		12EFEFF41A3EE1600034B70D /* YZLibraryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YZLibraryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		12EFEFF51A3EE1610034B70D /* YZDemoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZDemoTableViewController.swift; sourceTree = "<group>"; };
+		12EFEFF71A3EE1830034B70D /* YZLibraryImportAll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLibraryImportAll.h; sourceTree = "<group>"; };
+		12EFEFF81A3EE2C10034B70D /* YZDemoImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZDemoImageTableViewCell.swift; sourceTree = "<group>"; };
+		12EFEFF91A3EE2C10034B70D /* YZDemoImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZDemoImageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +180,10 @@
 		1220D2731967109800979E9A /* YZLibraryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				12EFEFF51A3EE1610034B70D /* YZDemoTableViewController.swift */,
+				12EFEFF81A3EE2C10034B70D /* YZDemoImageTableViewCell.swift */,
+				12EFEFF91A3EE2C10034B70D /* YZDemoImageTableViewCell.xib */,
+				12EFEFF41A3EE1600034B70D /* YZLibraryDemo-Bridging-Header.h */,
 				1220D27C1967109800979E9A /* YZAppDelegate.h */,
 				1220D27D1967109800979E9A /* YZAppDelegate.m */,
 				1220D27F1967109800979E9A /* Main.storyboard */,
@@ -220,6 +235,7 @@
 		127200F519E821FC00E4CBFB /* YZLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				12EFEFF71A3EE1830034B70D /* YZLibraryImportAll.h */,
 				127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */,
 				127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */,
 				1233DFA11A0A3BB300E1638D /* NSString+YZLibrary.h */,
@@ -230,6 +246,8 @@
 				127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */,
 				1233DFAC1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.h */,
 				1233DFAD1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m */,
+				12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */,
+				12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */,
 				127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */,
 				127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */,
 				127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */,
@@ -337,6 +355,7 @@
 				1233DFB31A0A59FC00E1638D /* YZRandomControlCell.xib in Resources */,
 				1220D2811967109800979E9A /* Main.storyboard in Resources */,
 				1233DFAB1A0A4B7000E1638D /* YZSimpleTextCell.xib in Resources */,
+				12EFEFFB1A3EE2C10034B70D /* YZDemoImageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,9 +388,12 @@
 				1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */,
 				1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */,
 				1233DFA31A0A3BB300E1638D /* NSString+YZLibrary.m in Sources */,
+				12EFEFF31A3EDFC10034B70D /* UITableViewCell+YZLibrary.m in Sources */,
+				12EFEFFA1A3EE2C10034B70D /* YZDemoImageTableViewCell.swift in Sources */,
 				1272010E19E821FC00E4CBFB /* UIViewController+YZLibrary.m in Sources */,
 				1272010B19E821FC00E4CBFB /* UIImage+YZLibrary.m in Sources */,
 				1272010D19E821FC00E4CBFB /* UIView+YZLibrary.m in Sources */,
+				12EFEFF61A3EE1610034B70D /* YZDemoTableViewController.swift in Sources */,
 				1233DFAA1A0A4B7000E1638D /* YZSimpleTextCell.m in Sources */,
 				1233DFB21A0A59FC00E1638D /* YZRandomControlCell.m in Sources */,
 				1220D27A1967109800979E9A /* main.m in Sources */,
@@ -500,10 +522,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YZLibraryDemo/YZLibraryDemo-Prefix.pch";
 				INFOPLIST_FILE = "YZLibraryDemo/YZLibraryDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryDemo/YZLibraryDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -513,10 +539,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YZLibraryDemo/YZLibraryDemo-Prefix.pch";
 				INFOPLIST_FILE = "YZLibraryDemo/YZLibraryDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryDemo/YZLibraryDemo-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
