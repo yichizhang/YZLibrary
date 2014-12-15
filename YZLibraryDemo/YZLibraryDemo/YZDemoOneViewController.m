@@ -29,7 +29,8 @@
     self.title = @"Demo";
     self.tabBarItem =
     [[UITabBarItem alloc]
-     initWithTabBarSystemItem:UITabBarSystemItemFavorites
+	 initWithTitle:self.title
+	 image:[YZLibraryDemoStyleKit imageOfOne]
      tag:0
      ];
 }

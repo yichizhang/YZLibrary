@@ -1,18 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="YZDemoImageTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YZDemoImageTableViewCell" rowHeight="171" id="KGk-i7-Jjw" customClass="YZDemoImageTableViewCell" customModule="YZLibraryDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="171"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUH-Ig-fTn">
+                        <rect key="frame" x="16" y="16" width="379" height="117"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b60-lf-GFZ">
+                        <rect key="frame" x="16" y="141" width="379" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YUH-Ig-fTn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="7GS-ir-jWv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="YUH-Ig-fTn" secondAttribute="trailing" constant="8" id="7IM-fQ-HUe"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="b60-lf-GFZ" secondAttribute="bottom" id="V26-C8-yAJ"/>
+                    <constraint firstItem="b60-lf-GFZ" firstAttribute="top" secondItem="YUH-Ig-fTn" secondAttribute="bottom" constant="8" id="YhR-Zu-LEX"/>
+                    <constraint firstItem="b60-lf-GFZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="amd-iS-EbQ"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="b60-lf-GFZ" secondAttribute="trailing" constant="8" id="jfH-RK-xon"/>
+                    <constraint firstItem="YUH-Ig-fTn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="jr0-fj-lmu"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="b60-lf-GFZ" secondAttribute="bottom" constant="8" id="jxi-zP-T0S"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="YUH-Ig-fTn" secondAttribute="bottom" constant="8" id="oLA-52-2fs"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="oLA-52-2fs"/>
+                        <exclude reference="jxi-zP-T0S"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="b60-lf-GFZ" id="Ws8-GY-L09"/>
+                <outlet property="mainImageView" destination="YUH-Ig-fTn" id="1yV-em-DB2"/>
+            </connections>
+            <point key="canvasLocation" x="508.5" y="374.5"/>
         </tableViewCell>
     </objects>
 </document>

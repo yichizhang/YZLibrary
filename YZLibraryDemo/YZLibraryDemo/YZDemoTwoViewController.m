@@ -64,8 +64,9 @@ typedef enum{
     
     self.title = @"Random Numbers";
     self.tabBarItem =
-    [[UITabBarItem alloc]
-     initWithTabBarSystemItem:UITabBarSystemItemFavorites
+	[[UITabBarItem alloc]
+	 initWithTitle:self.title
+	 image:[YZLibraryDemoStyleKit imageOfTwo]
      tag:1
      ];
     

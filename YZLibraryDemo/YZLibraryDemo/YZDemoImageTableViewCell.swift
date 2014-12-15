@@ -8,7 +8,10 @@
 
 import UIKit
 
-class YZDemoImageTableViewCell: UITableViewCell {
+@objc class YZDemoImageTableViewCell: UITableViewCell {
+
+	@IBOutlet weak var mainImageView: UIImageView!
+	@IBOutlet weak var descriptionLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
