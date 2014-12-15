@@ -13,6 +13,7 @@
  */
 
 #import "UICollectionViewCell+YZLibrary.h"
+#import "NSObject+YZLibrary.h"
 
 @implementation UICollectionViewCell (YZLibrary)
 
@@ -20,7 +21,7 @@
                                 forIndexPath:(NSIndexPath*)indexPath{
     
     return
-    [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(self)
+    [collectionView dequeueReusableCellWithReuseIdentifier:[self yz_className]
                                               forIndexPath:indexPath];
     
 }
@@ -28,8 +29,8 @@
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView{
     
     [self yz_registerForCollectionView:collectionView
-                       withNibFileName:NSStringFromClass(self)
-                    andReuseIdentifier:NSStringFromClass(self)
+                       withNibFileName:[self yz_className]
+					andReuseIdentifier:[self yz_className]
      ];
 }
 

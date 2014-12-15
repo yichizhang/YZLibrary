@@ -13,21 +13,22 @@
  */
 
 #import "UITableViewCell+YZLibrary.h"
+#import "NSObject+YZLibrary.h"
 
 @implementation UITableViewCell (YZLibrary)
 
 + (instancetype)yz_dequeueFromTableView:(UITableView*)tableView
 						   forIndexPath:(NSIndexPath*)indexPath{
 	
-	return [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self) forIndexPath:indexPath];
+	return [tableView dequeueReusableCellWithIdentifier:[self yz_className] forIndexPath:indexPath];
 	
 }
 
 + (void)yz_registerForTableView:(UITableView*)tableView{
 	
 	[self yz_registerForTableView:tableView
-				  withNibFileName:NSStringFromClass(self)
-			   andReuseIdentifier:NSStringFromClass(self)
+				  withNibFileName:[self yz_className]
+			   andReuseIdentifier:[self yz_className]
 	 ];
 	
 }
