@@ -72,12 +72,47 @@ Then you can register NIB and load the cells VERY LAZILIY:
 
 This can save you a lot of time, but it can be a bad practice.
 
-You can provide custom NIB file name and identifier:
+You can provide custom NIB file name and your own identifier:
 
 ```swift
 
-// Needs to be updated
+    
+    let myAwesomeIdentifier = "AwesomeIdentifier"
+    let myAwesomeNibName = "AwesomeNib"
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        ...
+
+        // Register cell classes
+        MyAwesomeCell.yz_registerForCollectionView(
+            self.collectionView,
+            withNibFileName: myAwesomeNibName,
+            andReuseIdentifier: myAwesomeIdentifier
+        )
+        
+        ...
+    }
+
+    override func collectionView(
+        collectionView: UICollectionView,
+        cellForItemAtIndexPath indexPath: NSIndexPath
+        ) -> UICollectionViewCell {
+
+        let cell =
+        MyAwesomeCell.yz_dequeueFromCollectionView(
+            collectionView,
+            forIndexPath: indexPath,
+            andReuseIdentifier: myAwesomeIdentifier
+        )
+    
+        // Configure the cell
+        ...
+    
+        return cell
+    }
 ```
 
 ### NSArray+YZLibrary 
