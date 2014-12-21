@@ -18,6 +18,9 @@
 
 + (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
                                 forIndexPath:(NSIndexPath*)indexPath;
++ (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
+                                forIndexPath:(NSIndexPath*)indexPath
+                          andReuseIdentifier:(NSString*)reuseIdentifier;
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView;
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView
                      withNibFileName:(NSString*)nibFileName

@@ -18,31 +18,41 @@
 @implementation UITableViewCell (YZLibrary)
 
 + (instancetype)yz_dequeueFromTableView:(UITableView*)tableView
-						   forIndexPath:(NSIndexPath*)indexPath{
-	
-	return [tableView dequeueReusableCellWithIdentifier:[self yz_className] forIndexPath:indexPath];
-	
+                           forIndexPath:(NSIndexPath*)indexPath
+{
+
+    return
+        [self yz_dequeueFromTableView:tableView
+                         forIndexPath:indexPath
+                   andReuseIdentifier:[self yz_className]];
 }
 
-+ (void)yz_registerForTableView:(UITableView*)tableView{
-	
-	[self yz_registerForTableView:tableView
-				  withNibFileName:[self yz_className]
-			   andReuseIdentifier:[self yz_className]
-	 ];
-	
++ (instancetype)yz_dequeueFromTableView:(UITableView*)tableView
+                           forIndexPath:(NSIndexPath*)indexPath
+                     andReuseIdentifier:(NSString*)reuseIdentifier
+{
+
+    return [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
 }
 
 + (void)yz_registerForTableView:(UITableView*)tableView
-				withNibFileName:(NSString*)nibFileName
-			 andReuseIdentifier:(NSString*)reuseIdentifier{
-	
-	[tableView registerClass:[self class] forCellReuseIdentifier:reuseIdentifier];
-	
-	UINib *nib = [UINib nibWithNibName:nibFileName bundle:nil];
-	
-	[tableView registerNib:nib forCellReuseIdentifier:reuseIdentifier];
-	
+{
+
+    [self yz_registerForTableView:tableView
+                  withNibFileName:[self yz_className]
+               andReuseIdentifier:[self yz_className]];
+}
+
++ (void)yz_registerForTableView:(UITableView*)tableView
+                withNibFileName:(NSString*)nibFileName
+             andReuseIdentifier:(NSString*)reuseIdentifier
+{
+
+    [tableView registerClass:[self class] forCellReuseIdentifier:reuseIdentifier];
+
+    UINib* nib = [UINib nibWithNibName:nibFileName bundle:nil];
+
+    [tableView registerNib:nib forCellReuseIdentifier:reuseIdentifier];
 }
 
 @end

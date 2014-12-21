@@ -18,43 +18,49 @@
 @implementation UICollectionViewCell (YZLibrary)
 
 + (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
-                                forIndexPath:(NSIndexPath*)indexPath{
-    
+                                forIndexPath:(NSIndexPath*)indexPath
+{
+
     return
-    [collectionView dequeueReusableCellWithReuseIdentifier:[self yz_className]
-                                              forIndexPath:indexPath];
-    
+        [self yz_dequeueFromCollectionView:collectionView
+                              forIndexPath:indexPath
+                        andReuseIdentifier:[self yz_className]];
 }
 
-+ (void)yz_registerForCollectionView:(UICollectionView*)collectionView{
-    
++ (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
+                                forIndexPath:(NSIndexPath*)indexPath
+                          andReuseIdentifier:(NSString*)reuseIdentifier
+{
+
+    return
+        [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
+                                                  forIndexPath:indexPath];
+}
+
++ (void)yz_registerForCollectionView:(UICollectionView*)collectionView
+{
+
     [self yz_registerForCollectionView:collectionView
                        withNibFileName:[self yz_className]
-					andReuseIdentifier:[self yz_className]
-     ];
+                    andReuseIdentifier:[self yz_className]];
 }
 
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView
                      withNibFileName:(NSString*)nibFileName
                   andReuseIdentifier:(NSString*)reuseIdentifier
 {
-    
+
     [collectionView
-     registerClass:[self class]
-     forCellWithReuseIdentifier:reuseIdentifier
-     ];
-    
-    UINib *nib;
-    
-    nib = [UINib
-           nibWithNibName:nibFileName
-           bundle:nil
-           ];
-    
+                     registerClass:[self class]
+        forCellWithReuseIdentifier:reuseIdentifier];
+
+    UINib* nib = [UINib
+        nibWithNibName:nibFileName
+                bundle:nil];
+
     [collectionView
-     registerNib:nib
-     forCellWithReuseIdentifier:reuseIdentifier
-     ];
+                       registerNib:nib
+        forCellWithReuseIdentifier:reuseIdentifier];
 }
 
 @end

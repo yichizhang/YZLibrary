@@ -17,10 +17,13 @@
 @interface UITableViewCell (YZLibrary)
 
 + (instancetype)yz_dequeueFromTableView:(UITableView*)tableView
-								forIndexPath:(NSIndexPath*)indexPath;
+                           forIndexPath:(NSIndexPath*)indexPath;
++ (instancetype)yz_dequeueFromTableView:(UITableView*)tableView
+                           forIndexPath:(NSIndexPath*)indexPath
+                     andReuseIdentifier:(NSString*)reuseIdentifier;
 + (void)yz_registerForTableView:(UITableView*)tableView;
 + (void)yz_registerForTableView:(UITableView*)tableView
-				withNibFileName:(NSString*)nibFileName
-			 andReuseIdentifier:(NSString*)reuseIdentifier;
+                withNibFileName:(NSString*)nibFileName
+             andReuseIdentifier:(NSString*)reuseIdentifier;
 
 @end
