@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YZLibrary"
-  s.version      = "1.0.6"
+  s.version      = "1.0.7"
   s.summary      = "Some code that helped me in the past few years of iOS development."
   s.homepage     = "https://github.com/yichizhang/YZLibrary"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }

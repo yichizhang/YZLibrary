@@ -53,5 +53,12 @@
     return [NSString stringWithFormat:@"%i", intNumber];
 }
 
+- (BOOL)yz_isDigitsOnly
+{
+	NSCharacterSet* setOfNonDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+	NSRange range = [self rangeOfCharacterFromSet: setOfNonDigits];
+	return range.location == NSNotFound;
+}
+
 
 @end
