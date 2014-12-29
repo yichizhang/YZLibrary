@@ -1,11 +1,8 @@
-//
-//  YZDemoImageTableViewCell.swift
-//  YZLibraryDemo
-//
-//  Created by Yichi on 15/12/2014.
-//  Copyright (c) 2014 yichizhang. All rights reserved.
-//
-
+/*
+ 
+ Copyright (c) 2015 Scinece guy
+ 
+ */
 import UIKit
 
 @objc class YZDemoImageTableViewCell: UITableViewCell {
@@ -25,3 +22,4 @@ import UIKit
     }
     
 }
+
