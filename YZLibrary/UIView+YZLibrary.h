@@ -16,6 +16,9 @@
 
 @interface UIView (YZLibrary)
 
++ (instancetype)yz_loadFromNib;
++ (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle;
+
 - (UIImage*)yz_captureImage;
 - (UICollectionViewCell *)yz_parentCollectionViewCell;
 - (UITableViewCell *)yz_parentTableViewCell;

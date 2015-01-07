@@ -13,8 +13,27 @@
  */
 
 #import "UIView+YZLibrary.h"
+#import "NSObject+YZLibrary.h"
 
 @implementation UIView (YZLibrary)
+
++ (instancetype)yz_loadFromNib{
+	
+	return [[self class] yz_loadFromNibNamed:[self yz_className] bundle:nil];
+	
+}
+
++ (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle{
+	
+	static UINib * __nib;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		__nib = [UINib nibWithNibName:nibName bundle:bundle];
+	});
+	
+	id view = [__nib instantiateWithOwner:nil options:nil][0];
+	return view;
+}
 
 - (UIImage*)yz_captureImage{
     

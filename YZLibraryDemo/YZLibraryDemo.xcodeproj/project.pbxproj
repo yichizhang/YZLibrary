@@ -40,6 +40,9 @@
 		1272011619E8319B00E4CBFB /* YZStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011519E8319B00E4CBFB /* YZStringHelper.m */; };
 		1272011919E8354F00E4CBFB /* YZTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011819E8354F00E4CBFB /* YZTimeHelper.m */; };
 		1272011C19E8365700E4CBFB /* YZRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011B19E8365700E4CBFB /* YZRandom.m */; };
+		128122C81A5CCF580079B5C2 /* AwesomeNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128122C71A5CCF580079B5C2 /* AwesomeNibView.swift */; };
+		128122CA1A5CCF6E0079B5C2 /* AwesomeNibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128122C91A5CCF6E0079B5C2 /* AwesomeNibView.xib */; };
+		128122CC1A5CD2550079B5C2 /* YZOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128122CB1A5CD2550079B5C2 /* YZOtherViewController.swift */; };
 		12EFEFF31A3EDFC10034B70D /* UITableViewCell+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */; };
 		12EFEFF61A3EE1610034B70D /* YZDemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF51A3EE1610034B70D /* YZDemoTableViewController.swift */; };
 		12EFEFFA1A3EE2C10034B70D /* YZDemoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF81A3EE2C10034B70D /* YZDemoImageTableViewCell.swift */; };
@@ -122,6 +125,9 @@
 		1272011819E8354F00E4CBFB /* YZTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZTimeHelper.m; sourceTree = "<group>"; };
 		1272011A19E8365700E4CBFB /* YZRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRandom.h; sourceTree = "<group>"; };
 		1272011B19E8365700E4CBFB /* YZRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRandom.m; sourceTree = "<group>"; };
+		128122C71A5CCF580079B5C2 /* AwesomeNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeNibView.swift; sourceTree = "<group>"; };
+		128122C91A5CCF6E0079B5C2 /* AwesomeNibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AwesomeNibView.xib; sourceTree = "<group>"; };
+		128122CB1A5CD2550079B5C2 /* YZOtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZOtherViewController.swift; sourceTree = "<group>"; };
 		12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YZLibrary.h"; sourceTree = "<group>"; };
 		12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YZLibrary.m"; sourceTree = "<group>"; };
 		12EFEFF41A3EE1600034B70D /* YZLibraryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YZLibraryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				12EFEFFC1A3EFD5A0034B70D /* Assets */,
+				128122C71A5CCF580079B5C2 /* AwesomeNibView.swift */,
+				128122C91A5CCF6E0079B5C2 /* AwesomeNibView.xib */,
+				128122CB1A5CD2550079B5C2 /* YZOtherViewController.swift */,
 				12EFEFF81A3EE2C10034B70D /* YZDemoImageTableViewCell.swift */,
 				12EFEFF91A3EE2C10034B70D /* YZDemoImageTableViewCell.xib */,
 				12EFEFF51A3EE1610034B70D /* YZDemoTableViewController.swift */,
@@ -387,6 +396,7 @@
 				1220D2861967109800979E9A /* Images.xcassets in Resources */,
 				1220D2781967109800979E9A /* InfoPlist.strings in Resources */,
 				12EFF0031A3EFD5A0034B70D /* demo-1.jpg in Resources */,
+				128122CA1A5CCF6E0079B5C2 /* AwesomeNibView.xib in Resources */,
 				12EFF0061A3EFD5A0034B70D /* demo-4.jpg in Resources */,
 				1233DFB31A0A59FC00E1638D /* YZRandomControlCell.xib in Resources */,
 				12EFF0081A3EFD5A0034B70D /* demo-6.jpg in Resources */,
@@ -424,7 +434,9 @@
 				1272011319E8312300E4CBFB /* YZFileHelper.m in Sources */,
 				1233DFAE1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m in Sources */,
 				1272011C19E8365700E4CBFB /* YZRandom.m in Sources */,
+				128122CC1A5CD2550079B5C2 /* YZOtherViewController.swift in Sources */,
 				1233DFA61A0A4B4800E1638D /* YZDemoTwoViewController.m in Sources */,
+				128122C81A5CCF580079B5C2 /* AwesomeNibView.swift in Sources */,
 				1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */,
 				1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */,
 				1233DFA31A0A3BB300E1638D /* NSString+YZLibrary.m in Sources */,
