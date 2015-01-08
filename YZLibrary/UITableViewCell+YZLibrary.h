@@ -25,5 +25,7 @@
 + (void)yz_registerForTableView:(UITableView*)tableView
                 withNibFileName:(NSString*)nibFileName
              andReuseIdentifier:(NSString*)reuseIdentifier;
++ (void)yz_registerForTableView:(UITableView*)tableView
+            withReuseIdentifier:(NSString*)reuseIdentifier;
 
 @end

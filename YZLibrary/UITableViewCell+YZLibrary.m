@@ -37,10 +37,20 @@
 
 + (void)yz_registerForTableView:(UITableView*)tableView
 {
+    NSString* defaultNibName = [self yz_className];
+    NSString* defaultReuseId = [self yz_className];
 
-    [self yz_registerForTableView:tableView
-                  withNibFileName:[self yz_className]
-               andReuseIdentifier:[self yz_className]];
+    if ([[NSBundle mainBundle] pathForResource:defaultNibName ofType:@"nib"] != nil) {
+
+        [self yz_registerForTableView:tableView
+                      withNibFileName:defaultNibName
+                   andReuseIdentifier:defaultReuseId];
+    }
+    else {
+
+        [self yz_registerForTableView:tableView
+                  withReuseIdentifier:defaultReuseId];
+    }
 }
 
 + (void)yz_registerForTableView:(UITableView*)tableView
@@ -53,6 +63,13 @@
     UINib* nib = [UINib nibWithNibName:nibFileName bundle:nil];
 
     [tableView registerNib:nib forCellReuseIdentifier:reuseIdentifier];
+}
+
++ (void)yz_registerForTableView:(UITableView*)tableView
+            withReuseIdentifier:(NSString*)reuseIdentifier
+{
+
+    [tableView registerClass:[self class] forCellReuseIdentifier:reuseIdentifier];
 }
 
 @end

@@ -25,5 +25,6 @@
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView
                      withNibFileName:(NSString*)nibFileName
                   andReuseIdentifier:(NSString*)reuseIdentifier;
-
++ (void)yz_registerForCollectionView:(UICollectionView*)collectionView
+                 withReuseIdentifier:(NSString*)reuseIdentifier;
 @end

@@ -14,10 +14,6 @@
 
 #import <Foundation/Foundation.h>
 
-#ifndef YZ_DEPRECATED
-#define YZ_DEPRECATED __attribute__ ((deprecated))
-#endif
-
 @interface YZRandom : NSObject
 
 + (int)intBetweenZeroAnd:(int)upper;
@@ -29,8 +25,8 @@
 + (float)floatBetween:(float)lower and:(float)upper;
 
 // Deprecated methods
-+ (float)randomFloatFromZeroTo:(float)upper YZ_DEPRECATED;
-+ (float)randomFloatFromValueToItsNegValue:(float)value YZ_DEPRECATED;
-+ (float)randomFloatBetween:(float)lower and:(float)upper YZ_DEPRECATED;
++ (float)randomFloatFromZeroTo:(float)upper __attribute__ ((deprecated));
++ (float)randomFloatFromValueToItsNegValue:(float)value __attribute__ ((deprecated));
++ (float)randomFloatBetween:(float)lower and:(float)upper __attribute__ ((deprecated));
 
 @end

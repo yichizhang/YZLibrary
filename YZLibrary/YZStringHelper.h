@@ -14,18 +14,14 @@
 
 #import <Foundation/Foundation.h>
 
-#ifndef YZ_DEPRECATED
-#define YZ_DEPRECATED __attribute__ ((deprecated))
-#endif
-
 @interface YZStringHelper : NSObject
 
-+ (NSString*)boolInTrueOrFalseString:(BOOL)bValue YZ_DEPRECATED;
++ (NSString*)boolInTrueOrFalseString:(BOOL)bValue __attribute__ ((deprecated));
 
-+ (NSString *)letterFromNumber1To26:(NSUInteger)number YZ_DEPRECATED;
++ (NSString *)letterFromNumber1To26:(NSUInteger)number __attribute__ ((deprecated));
 
-+ (BOOL)isStringValid:(NSString*)string YZ_DEPRECATED;
++ (BOOL)isStringValid:(NSString*)string __attribute__ ((deprecated));
 
-+ (NSString *)stringFromIntNumber:(int)intNumber YZ_DEPRECATED;
++ (NSString *)stringFromIntNumber:(int)intNumber __attribute__ ((deprecated));
 
 @end

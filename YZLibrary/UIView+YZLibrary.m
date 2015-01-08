@@ -35,18 +35,25 @@
 	return view;
 }
 
+
 - (UIImage*)yz_captureImage{
-    
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 2.0);
+	
+	return [self yz_captureImageWithScaleFactor:
+			[UIScreen mainScreen].scale
+			];
+}
+
+- (UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor{
+	
+	UIGraphicsBeginImageContextWithOptions(self.bounds.size,
+										   NO,
+										   scaleFactor
+										   );
     [self.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     return image;
-    /*
-    NSData * data = UIImagePNGRepresentation(image);
-    [data writeToFile:@"image.png" atomically:YES];
-     */
 }
 
 - (UICollectionViewCell *)yz_parentCollectionViewCell
@@ -87,7 +94,6 @@
     self.layer.shadowOpacity = 0.5f;
     self.layer.shadowPath = shadowPath.CGPath;
 }
-
 
 - (void)yz_addWhiteFrame{
 

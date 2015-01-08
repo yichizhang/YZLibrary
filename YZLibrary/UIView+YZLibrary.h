@@ -20,6 +20,8 @@
 + (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle;
 
 - (UIImage*)yz_captureImage;
+- (UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor;
+
 - (UICollectionViewCell *)yz_parentCollectionViewCell;
 - (UITableViewCell *)yz_parentTableViewCell;
 
