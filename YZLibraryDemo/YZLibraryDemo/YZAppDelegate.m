@@ -13,11 +13,17 @@
  */
 
 #import "YZAppDelegate.h"
+#import "YZLibraryImportAll.h"
 
 @implementation YZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[self.window yz_preloadKeyboard];
+	
+	NSString* nnn = @"  ";
+	BOOL k = [nnn yz_isStringValid];
+	[UIWindow yz]
     // Override point for customization after application launch.
     return YES;
 }

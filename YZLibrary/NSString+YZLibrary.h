@@ -17,6 +17,7 @@
 @interface NSString (YZLibrary)
 
 - (BOOL)yz_isStringValid;
+
 + (NSString*)yz_stringFromBool:(BOOL)boolValue;
 + (NSString *)yz_letterStringFromNumber1To26:(int)number;
 + (NSString*)yz_stringFromInt:(int)intNumber;

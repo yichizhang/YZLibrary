@@ -10,6 +10,15 @@
 
 @interface NSObject (YZLibrary)
 
+/** Returns the "real" class name without the module name.
+ 
+ NSStringFromClass() now returns the module name, plus class name separated by a dot.
+ For example, if you have a module called "Legend" and a class called "AwesomeClass",
+ it returns "Legend.AwesomeClass". If you are only interested in the "real" class name, use this method.
+ */
 + (NSString*)yz_className;
+
+
+- (BOOL)yz_isEmpty;
 
 @end

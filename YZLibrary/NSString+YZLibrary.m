@@ -13,15 +13,12 @@
  */
 
 #import "NSString+YZLibrary.h"
+#import "NSObject+YZLibrary.h"
 
 @implementation NSString (YZLibrary)
 
 - (BOOL)yz_isStringValid{
-    if ([self isEqualToString:@""] || self==nil) {
-        return NO;
-    }else{
-        return YES;
-    }
+	return ![self yz_isEmpty];
 }
 
 + (NSString*)yz_stringFromBool:(BOOL)boolValue{

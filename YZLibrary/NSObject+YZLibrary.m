@@ -10,14 +10,20 @@
 
 @implementation NSObject (YZLibrary)
 
-+ (NSString*)yz_className{
-	/*
-	 In Swift, NSStringFromClass now returns the bundle name, plus class name separated by a dot.
-	 With this method, you get the 'pure' class name.
-	 */
-	NSString *fullClassName = NSStringFromClass(self);
-	NSArray *classNameComponents = [fullClassName componentsSeparatedByString:@"."];
-	return [classNameComponents lastObject];
++ (NSString*)yz_className
+{
+    NSString* fullClassName = NSStringFromClass(self);
+    NSArray* classNameComponents = [fullClassName componentsSeparatedByString:@"."];
+    return [classNameComponents lastObject];
+}
+
+- (BOOL)yz_isEmpty
+{
+
+    return
+
+        ([self respondsToSelector:@selector(length)] && [(NSData*)self length] == 0)
+        || ([self respondsToSelector:@selector(count)] && [(NSArray*)self count] == 0);
 }
 
 @end

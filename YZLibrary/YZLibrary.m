@@ -20,7 +20,6 @@
     
     CGFloat w,h;
     
-    //23 JUN 2014 11:51:33 PM
     if (size.width / size.height < boxSize.width / boxSize.height) {
         
         h = boxSize.height;

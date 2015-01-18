@@ -37,8 +37,10 @@
         lower = upper;
         upper = intermediate;
     }
-    
-    return lower + arc4random_uniform(upper - lower + 1);
+	
+	u_int32_t upperBound = (u_int32_t)upper - (u_int32_t)lower + 1;
+	
+    return lower + arc4random_uniform(upperBound);
 }
 
 
