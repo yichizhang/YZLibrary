@@ -21,9 +21,6 @@
 {
 	[self.window yz_preloadKeyboard];
 	
-	NSString* nnn = @"  ";
-	BOOL k = [nnn yz_isStringValid];
-	[UIWindow yz]
     // Override point for customization after application launch.
     return YES;
 }
