@@ -101,4 +101,13 @@
     [self.layer setBorderWidth: 5.0];
 }
 
+- (void)yz_preloadKeyboard{
+	
+	UITextField *tempTextField = [[UITextField alloc] init];
+	[self addSubview:tempTextField];
+	[tempTextField becomeFirstResponder];
+	[tempTextField resignFirstResponder];
+	[tempTextField removeFromSuperview];
+}
+
 @end
