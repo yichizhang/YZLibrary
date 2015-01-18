@@ -37,7 +37,6 @@
 		1272010E19E821FC00E4CBFB /* UIViewController+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010319E821FC00E4CBFB /* UIViewController+YZLibrary.m */; };
 		1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010719E821FC00E4CBFB /* YZLibrary.m */; };
 		1272011319E8312300E4CBFB /* YZFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011219E8312300E4CBFB /* YZFileHelper.m */; };
-		1272011619E8319B00E4CBFB /* YZStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011519E8319B00E4CBFB /* YZStringHelper.m */; };
 		1272011919E8354F00E4CBFB /* YZTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011819E8354F00E4CBFB /* YZTimeHelper.m */; };
 		1272011C19E8365700E4CBFB /* YZRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272011B19E8365700E4CBFB /* YZRandom.m */; };
 		128122C81A5CCF580079B5C2 /* AwesomeNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128122C71A5CCF580079B5C2 /* AwesomeNibView.swift */; };
@@ -119,8 +118,6 @@
 		1272010719E821FC00E4CBFB /* YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLibrary.m; sourceTree = "<group>"; };
 		1272011119E8312300E4CBFB /* YZFileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZFileHelper.h; sourceTree = "<group>"; };
 		1272011219E8312300E4CBFB /* YZFileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZFileHelper.m; sourceTree = "<group>"; };
-		1272011419E8319B00E4CBFB /* YZStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZStringHelper.h; sourceTree = "<group>"; };
-		1272011519E8319B00E4CBFB /* YZStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZStringHelper.m; sourceTree = "<group>"; };
 		1272011719E8354F00E4CBFB /* YZTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZTimeHelper.h; sourceTree = "<group>"; };
 		1272011819E8354F00E4CBFB /* YZTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZTimeHelper.m; sourceTree = "<group>"; };
 		1272011A19E8365700E4CBFB /* YZRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRandom.h; sourceTree = "<group>"; };
@@ -288,8 +285,6 @@
 				1272010719E821FC00E4CBFB /* YZLibrary.m */,
 				1272011119E8312300E4CBFB /* YZFileHelper.h */,
 				1272011219E8312300E4CBFB /* YZFileHelper.m */,
-				1272011419E8319B00E4CBFB /* YZStringHelper.h */,
-				1272011519E8319B00E4CBFB /* YZStringHelper.m */,
 				1272011719E8354F00E4CBFB /* YZTimeHelper.h */,
 				1272011819E8354F00E4CBFB /* YZTimeHelper.m */,
 				1272011A19E8365700E4CBFB /* YZRandom.h */,
@@ -425,7 +420,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				12682CDD1A1386B7004EF16F /* NSDictionary+YZLibrary.m in Sources */,
-				1272011619E8319B00E4CBFB /* YZStringHelper.m in Sources */,
 				1220D2841967109800979E9A /* YZDemoOneViewController.m in Sources */,
 				1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */,
 				1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */,

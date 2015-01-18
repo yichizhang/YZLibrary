@@ -18,15 +18,10 @@
 
 + (NSInteger)intBetweenZeroAnd:(NSInteger)upper;
 + (NSInteger)intBetweenValueAndItsNegativeValue:(NSInteger)value;
-+ (NSInteger)intBetween:(NSInteger)lower and:(NSInteger)upper;
++ (NSInteger)intBetweenLower:(NSInteger)lower upper:(NSInteger)upper;
 
 + (float)floatBetweenZeroAnd:(float)upper;
 + (float)floatBetweenValueAndItsNegativeValue:(float)value;
-+ (float)floatBetween:(float)lower and:(float)upper;
-
-// Deprecated methods
-+ (float)randomFloatFromZeroTo:(float)upper __attribute__ ((deprecated));
-+ (float)randomFloatFromValueToItsNegValue:(float)value __attribute__ ((deprecated));
-+ (float)randomFloatBetween:(float)lower and:(float)upper __attribute__ ((deprecated));
++ (float)floatBetweenLower:(float)lower upper:(float)upper;
 
 @end

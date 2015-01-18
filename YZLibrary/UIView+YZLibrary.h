@@ -28,11 +28,15 @@
 - (void)yz_addShadow;
 - (void)yz_addWhiteFrame;
 
-/**  Preload keyboard so that user won't feel the delay when typing for the first time
+/**  Preload keyboard so that user won't feel the delay when typing for the first time.
+ It is recommended to call this method on the key and visible window upon application start-up.
  
- It is recommended to call this method on the key and visible
- window in your app delegate's "application:didFinishLaunchingWithOptions:" method.
- E.g. [self.window makeKeyAndVisible]; [self.window yz_preloadKeyboard];
+ E.g. Put:
+ 
+ [self.window makeKeyAndVisible]; 
+ [self.window yz_preloadKeyboard];
+ 
+ in your app delegate's "application:didFinishLaunchingWithOptions:" method.
  */
 - (void)yz_preloadKeyboard;
 

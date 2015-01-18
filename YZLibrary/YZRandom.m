@@ -17,14 +17,14 @@
 @implementation YZRandom
 
 + (NSInteger)intBetweenZeroAnd:(NSInteger)upper{
-    return [YZRandom intBetween:0 and:upper];
+    return [YZRandom intBetweenLower:0 upper:upper];
 }
 
 + (NSInteger)intBetweenValueAndItsNegativeValue:(NSInteger)value{
-    return [YZRandom intBetween:-value and:value];
+    return [YZRandom intBetweenLower:-value upper:value];
 }
 
-+ (NSInteger)intBetween:(NSInteger)lower and:(NSInteger)upper{
++ (NSInteger)intBetweenLower:(NSInteger)lower upper:(NSInteger)upper{
     
     if (lower == upper) {
         return lower;
@@ -45,14 +45,14 @@
 
 
 + (float)floatBetweenZeroAnd:(float)upper{
-    return [YZRandom floatBetween:0 and:upper];
+    return [YZRandom floatBetweenLower:0 upper:upper];
 }
 
 + (float)floatBetweenValueAndItsNegativeValue:(float)value{
-    return [YZRandom floatBetween:-value and:value];
+    return [YZRandom floatBetweenLower:-value upper:value];
 }
 
-+ (float)floatBetween:(float)lower and:(float)upper{
++ (float)floatBetweenLower:(float)lower upper:(float)upper{
     
     if (lower == upper) {
         return lower;
@@ -68,19 +68,6 @@
     
     float diff = upper - lower;
     return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + lower;
-}
-
-
-+ (float)randomFloatFromZeroTo:(float)upper{
-    return [YZRandom floatBetweenZeroAnd:upper];
-}
-
-+ (float)randomFloatFromValueToItsNegValue:(float)value{
-    return [YZRandom floatBetweenValueAndItsNegativeValue:value];
-}
-
-+ (float)randomFloatBetween:(float)lower and:(float)upper {
-    return [YZRandom floatBetween:lower and:upper];
 }
 
 @end
