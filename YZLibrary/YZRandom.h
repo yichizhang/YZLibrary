@@ -16,9 +16,9 @@
 
 @interface YZRandom : NSObject
 
-+ (int)intBetweenZeroAnd:(int)upper;
-+ (int)intBetweenValueAndItsNegativeValue:(int)value;
-+ (int)intBetween:(int)lower and:(int)upper;
++ (NSInteger)intBetweenZeroAnd:(NSInteger)upper;
++ (NSInteger)intBetweenValueAndItsNegativeValue:(NSInteger)value;
++ (NSInteger)intBetween:(NSInteger)lower and:(NSInteger)upper;
 
 + (float)floatBetweenZeroAnd:(float)upper;
 + (float)floatBetweenValueAndItsNegativeValue:(float)value;

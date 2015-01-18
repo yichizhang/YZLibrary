@@ -16,15 +16,15 @@
 
 @implementation YZRandom
 
-+ (int)intBetweenZeroAnd:(int)upper{
++ (NSInteger)intBetweenZeroAnd:(NSInteger)upper{
     return [YZRandom intBetween:0 and:upper];
 }
 
-+ (int)intBetweenValueAndItsNegativeValue:(int)value{
++ (NSInteger)intBetweenValueAndItsNegativeValue:(NSInteger)value{
     return [YZRandom intBetween:-value and:value];
 }
 
-+ (int)intBetween:(int)lower and:(int)upper{
++ (NSInteger)intBetween:(NSInteger)lower and:(NSInteger)upper{
     
     if (lower == upper) {
         return lower;
@@ -32,7 +32,7 @@
     
     if (lower > upper) {
         
-        int intermediate;
+        NSInteger intermediate;
         intermediate = lower;
         lower = upper;
         upper = intermediate;
