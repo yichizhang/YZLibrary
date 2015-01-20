@@ -57,5 +57,24 @@
 	return range.location == NSNotFound;
 }
 
+- (NSString*)yz_humanReadableString
+{
+	NSString *string = [self stringByReplacingOccurrencesOfString:@"_" withString:@" "];
+	
+	if( [string rangeOfCharacterFromSet:[NSCharacterSet uppercaseLetterCharacterSet]].location != NSNotFound ){
+		
+		NSMutableString *tempString = [NSMutableString string];
+		for (NSInteger i=0; i<string.length; i++){
+			NSString *character = [string substringWithRange:NSMakeRange(i, 1)];
+			if ([character rangeOfCharacterFromSet:[NSCharacterSet uppercaseLetterCharacterSet]].location != NSNotFound) {
+				[tempString appendString:@" "];
+			}
+			[tempString appendString:character];
+		}
+		return [tempString capitalizedString];
+	}
+	
+	return [string capitalizedString];
+}
 
 @end

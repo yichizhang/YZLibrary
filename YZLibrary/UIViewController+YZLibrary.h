@@ -18,4 +18,25 @@
 
 - (void)yz_ios7EdgeForExtendedLayout;
 
+/** Shorthand for "[self presentViewController:vc animated:YES completion:nil];", presenting a view controller with animation but no completion block
+ 
+ */
+- (void)yz_presentViewController:(UIViewController*)vc;
+
+/** Push a view controller onto self (if self is a navigationController) or self's navigationController with animation
+ 
+ Shorthand for "[self.navigationController pushViewController:vc animated:YES];"
+ */
+- (void)yz_pushViewController:(UIViewController*)vc;
+
+/** Dismiss a view controller with animation, but no completion block.
+ 
+ Shorthand for "[self dismissViewControllerAnimated:YES completion:nil];"
+ */
+- (void)yz_dismissViewController;
+
+/** Dismiss the view controller or pop it. If self has a navigationController and the count of its view controllers exceeds 1, pop it from the navigationController; otherwise, dismiss it.
+ */
+- (void)yz_autoDismissViewController;
+
 @end

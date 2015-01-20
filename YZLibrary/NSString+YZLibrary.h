@@ -23,4 +23,10 @@
 + (NSString*)yz_stringFromInt:(int)intNumber;
 - (BOOL)yz_isDigitsOnly;
 
+/** Example: converts "melbourne_dingo_show" or "melbourneDingoShow", or "mebourne_DingoShow" to "Melbourne Dingo Show"
+ 
+ */
+- (NSString*)yz_humanReadableString;
+
+
 @end
