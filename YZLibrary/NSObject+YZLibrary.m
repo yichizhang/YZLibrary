@@ -31,5 +31,12 @@
         || ([self respondsToSelector:@selector(count)] && [(NSArray*)self count] == 0);
 }
 
+- (void)yz_dispatchOnMainQueue:(void (^)(void))block afterDelay:(NSTimeInterval)delay{
+	dispatch_time_t dispatchTime = dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC);
+	dispatch_after(dispatchTime, dispatch_get_main_queue(), ^{
+		block();
+	});
+}
+
 @end
 

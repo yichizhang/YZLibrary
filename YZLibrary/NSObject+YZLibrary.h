@@ -23,8 +23,15 @@
  */
 + (NSString*)yz_className;
 
-
+/** Check an NSString, NSArray, NSDictioary or NSData etc. whether its empty.
+ 
+ */
 - (BOOL)yz_isEmpty;
+
+/** Dispatch on the main queue after delay. Shortcut for dispatch_after(dispatch_time_t when, dispatch_queue_t queue, ^(void)block)} 
+ 
+ */
+- (void)yz_dispatchOnMainQueue:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
 
 @end
 
