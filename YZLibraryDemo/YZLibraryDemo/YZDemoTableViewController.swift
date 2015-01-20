@@ -59,6 +59,12 @@ class YZDemoTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+		
+		
+		self.yz_dispatchOnMainQueue({ () -> Void in
+			println("Disptaching on the main queue")
+		}, afterDelay: NSTimeInterval(1)
+		)
     }
 
     override func didReceiveMemoryWarning() {

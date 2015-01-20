@@ -169,11 +169,11 @@ typedef enum{
         
         if (self.generationOption == YZRandomGenerationOptionInt) {
             [self.dataArray
-             addObject:@([YZRandom intBetween:self.lowerBound and:self.upperBound])
+             addObject:@([YZRandom intBetweenLower:self.lowerBound upper:self.upperBound])
              ];
         }else{
             [self.dataArray
-             addObject:@([YZRandom floatBetween:self.lowerBound and:self.upperBound])
+             addObject:@([YZRandom floatBetweenLower:self.lowerBound upper:self.upperBound])
              ];
         }
     }
