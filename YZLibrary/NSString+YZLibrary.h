@@ -17,6 +17,8 @@
 @interface NSString (YZLibrary)
 
 - (BOOL)yz_isStringValid;
+- (BOOL)yz_isValidEmail;
+- (NSRange)yz_fullRange;
 
 + (NSString*)yz_stringFromBool:(BOOL)boolValue;
 + (NSString *)yz_letterStringFromNumber1To26:(int)number;

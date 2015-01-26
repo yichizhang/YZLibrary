@@ -21,6 +21,28 @@
 	return ![self yz_isEmpty];
 }
 
+- (BOOL)yz_isValidEmail{
+	
+	if([self length]==0){
+		return NO;
+	}
+ 
+	NSString *regExPattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+ 
+	NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
+	NSUInteger regExMatches = [regEx numberOfMatchesInString:self options:0 range:[self yz_fullRange]];
+ 
+	if (regExMatches == 0) {
+		return NO;
+	} else {
+		return YES;
+	}
+}
+
+- (NSRange)yz_fullRange{
+	return NSMakeRange(0, self.length);
+}
+
 + (NSString*)yz_stringFromBool:(BOOL)boolValue{
     
     return (boolValue ? @"true" : @"false");
