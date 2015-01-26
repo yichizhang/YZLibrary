@@ -21,6 +21,24 @@
 {
 	[self.window yz_preloadKeyboard];
 	
+	YZLimitedArray *arr = [YZLimitedArray arrayWithCapacity:10];
+	
+	for (int i = 0; i < 100; i ++) {
+		[arr addObject:[NSString yz_stringFromInt:i]];
+//		NSLog(@"%@", arr);
+	}
+	
+	for (id obj in arr) {
+		NSLog(@"%@---", obj);
+	}
+	
+	NSLog(@"%@", [NSString yz_stringFromBool:[@"" yz_isValidEmail]]);
+	NSLog(@"%@", [NSString yz_stringFromBool:[@"ahtathat" yz_isValidEmail]]);
+	NSLog(@"%@", [NSString yz_stringFromBool:[@"anhtnteh@enne.cm" yz_isValidEmail]]);
+	NSLog(@"%@", [NSString yz_stringFromBool:[@"athnatheo@ne" yz_isValidEmail]]);
+	NSLog(@"%@", [NSString yz_stringFromBool:[@"athnoeo@eeee.mcesacon" yz_isValidEmail]]);
+	
+	
     // Override point for customization after application launch.
     return YES;
 }
