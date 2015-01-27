@@ -17,18 +17,28 @@
 @implementation NSDictionary (YZLibrary)
 
 + (instancetype)yz_dictionaryWithDictionary:(NSDictionary*)dictionary1 joinedWithDictionary:(NSDictionary*)dictionary2{
-    
-    NSMutableDictionary *tempDictionary =
-    [NSMutableDictionary dictionaryWithDictionary:dictionary1];
-    
-    [tempDictionary addEntriesFromDictionary:dictionary2];
-    
-    return tempDictionary;
+	
+	return [self yz_join:dictionary1 :dictionary2];
 }
 
 - (instancetype)yz_dictionaryWithAdditionalEntriesFromDictionary:(NSDictionary*)aDictionary{
     
-    return [[self class] yz_dictionaryWithDictionary:self joinedWithDictionary:aDictionary];
+	return [[self class] yz_join:self :aDictionary];
+}
+
++ (instancetype)yz_join:(NSDictionary*)dictionary1 :(NSDictionary*)dictionary2{
+	
+	NSMutableDictionary *tempDictionary =
+	[NSMutableDictionary dictionaryWithDictionary:dictionary1];
+	
+	[tempDictionary addEntriesFromDictionary:dictionary2];
+	
+	return tempDictionary;
+}
+
+- (instancetype)yz_dictionaryByAdding:(NSDictionary*)aDictionary{
+	
+	return [[self class] yz_join:self :aDictionary];
 }
 
 @end

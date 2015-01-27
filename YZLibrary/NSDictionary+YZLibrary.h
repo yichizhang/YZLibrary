@@ -19,4 +19,7 @@
 + (instancetype)yz_dictionaryWithDictionary:(NSDictionary*)dictionary1 joinedWithDictionary:(NSDictionary*)dictionary2;
 - (instancetype)yz_dictionaryWithAdditionalEntriesFromDictionary:(NSDictionary*)aDictionary;
 
++ (instancetype)yz_join:(NSDictionary*)dictionary1 :(NSDictionary*)dictionary2;
+- (instancetype)yz_dictionaryByAdding:(NSDictionary*)aDictionary;
+
 @end
