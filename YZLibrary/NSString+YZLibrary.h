@@ -20,6 +20,8 @@
 - (BOOL)yz_isValidEmail;
 - (NSRange)yz_fullRange;
 
+- (NSDate*)yz_dateFromString:(NSString*)dateFormat;
+
 + (NSString*)yz_stringFromBool:(BOOL)boolValue;
 + (NSString *)yz_letterStringFromNumber1To26:(int)number;
 + (NSString*)yz_stringFromInt:(int)intNumber;

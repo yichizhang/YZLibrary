@@ -43,6 +43,13 @@
 	return NSMakeRange(0, self.length);
 }
 
+- (NSDate*)yz_dateFromString:(NSString*)dateFormat{
+	
+	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+	formatter.dateFormat = dateFormat;
+	return [formatter dateFromString:self];
+}
+
 + (NSString*)yz_stringFromBool:(BOOL)boolValue{
     
     return (boolValue ? @"true" : @"false");
