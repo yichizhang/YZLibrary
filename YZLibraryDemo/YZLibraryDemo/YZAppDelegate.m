@@ -38,7 +38,30 @@
 	NSLog(@"%@", [NSString yz_stringFromBool:[@"athnatheo@ne" yz_isValidEmail]]);
 	NSLog(@"%@", [NSString yz_stringFromBool:[@"athnoeo@eeee.mcesacon" yz_isValidEmail]]);
 	
+	NSString *string = @"Happily, Objective-C associated  objects come to the rescue.  For example, to add a descriptiveName property to  all the view controllers in a project,  we simply add a computed property  using objc_get/setAssociatedObject() in the backing  get and set blocks:  extension UIViewController { private struct AssociatedKeys  { static var DescriptiveName =  nsh_DescriptiveName} var descriptiveName:  String? { get { return objc_getAssociatedObject(self,  &AssociatedKeys.DescriptiveName) as? String";
+	NSArray *demoStrings = [string componentsSeparatedByString:@"  "];
+
 	
+	NSLog(@" ");
+	for (NSString* str in demoStrings){
+		NSLog(@"%@", [str yz_stringByRemovingNonAlphanumericCharacters]);
+	}
+	NSLog(@" ");
+	for (NSString* str in demoStrings){
+		NSLog(@"%@", [str yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:YES]);
+	}
+	NSLog(@" ");
+	for (NSString* str in demoStrings){
+		NSLog(@"%@", [str yz_humanReadableString]);
+	}
+	NSLog(@" ");
+	for (NSString* str in demoStrings){
+		NSLog(@"%@", [str yz_camelCaseString]);
+	}
+	NSLog(@" ");
+	for (NSString* str in demoStrings){
+		NSLog(@"%@", [str yz_underscoreCaseString]);
+	}
     // Override point for customization after application launch.
     return YES;
 }

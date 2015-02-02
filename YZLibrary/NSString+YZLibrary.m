@@ -86,6 +86,21 @@
 	return range.location == NSNotFound;
 }
 
+- (NSString*)yz_stringByRemovingNonAlphanumericCharacters{
+	return [self yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:NO];
+}
+
+- (NSString*)yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:(BOOL)keepSpaces{
+	NSMutableCharacterSet *set = [[NSCharacterSet alphanumericCharacterSet] mutableCopy];
+	if (keepSpaces){
+		[set addCharactersInString:@" "];
+	}
+	NSCharacterSet* alphahumericSet = [set invertedSet];
+	
+	NSString *joinByString = keepSpaces ? @" " : @"";
+	return [[self componentsSeparatedByCharactersInSet:alphahumericSet] componentsJoinedByString:joinByString];
+}
+
 - (NSString*)yz_humanReadableString
 {
 	NSString *string = [self stringByReplacingOccurrencesOfString:@"_" withString:@" "];
@@ -104,6 +119,24 @@
 	}
 	
 	return [string capitalizedString];
+}
+
+- (NSString*)yz_underscoreCaseString{
+	NSMutableArray *separatedString = [[[[[self yz_humanReadableString] yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:YES] lowercaseString] componentsSeparatedByString:@" "] mutableCopy];
+	[separatedString removeObject:@""];
+	return [separatedString componentsJoinedByString:@"_"];
+}
+
+- (NSString*)yz_camelCaseString{
+	NSArray *separatedString = [[[self yz_humanReadableString] yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:YES] componentsSeparatedByString:@" "];
+	NSString *string= [separatedString componentsJoinedByString:@""];
+	
+	if (self.length > 0){
+		NSString *firstCharacter = [[string substringToIndex:1] lowercaseString];
+		string = [string stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstCharacter];
+	}
+	
+	return string;
 }
 
 @end
