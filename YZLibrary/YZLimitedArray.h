@@ -14,12 +14,21 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, YZLimitedArrayInsertMode) {
+	YZLimitedArrayInsertModeHead = 0,
+	YZLimitedArrayInsertModeTail
+};
+
 @interface YZLimitedArray : NSObject <NSFastEnumeration>
 
 @property (nonatomic, readonly, assign) NSInteger count;
 @property (nonatomic, strong) NSMutableArray *array;
+@property (nonatomic, assign) BOOL uniqueElements;
+@property (nonatomic, assign) BOOL stopsInsertingWhenFull;
+@property (nonatomic, assign) YZLimitedArrayInsertMode insertMode;
 
 - (instancetype)initWithCapacity:(NSUInteger)numItems;
+- (instancetype)initWithCapacity:(NSUInteger)numItems uniqueElements:(BOOL)unique;
 + (instancetype)arrayWithCapacity:(NSUInteger)numItems;
 
 - (void)addObject:(id)anObject;

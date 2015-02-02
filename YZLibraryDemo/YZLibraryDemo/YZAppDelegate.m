@@ -21,15 +21,15 @@
 {
 	[self.window yz_preloadKeyboard];
 	
-	YZLimitedArray *arr = [YZLimitedArray arrayWithCapacity:10];
+	YZLimitedArray *arr = [[YZLimitedArray alloc] initWithCapacity:20 uniqueElements:YES];
+	arr.insertMode = YZLimitedArrayInsertModeHead;
+	arr.stopsInsertingWhenFull = false;
 	
 	for (int i = 0; i < 100; i ++) {
-		[arr addObject:[NSString yz_stringFromInt:i]];
-//		NSLog(@"%@", arr);
-	}
-	
-	for (id obj in arr) {
-		NSLog(@"%@---", obj);
+		[arr addObject:[NSString yz_stringFromInt:i%10]];
+
+		NSLog(@"%@", [arr.array componentsJoinedByString:@","]);
+		
 	}
 	
 	NSLog(@"%@", [NSString yz_stringFromBool:[@"" yz_isValidEmail]]);

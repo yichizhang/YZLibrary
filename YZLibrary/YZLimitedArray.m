@@ -23,10 +23,25 @@
 @implementation YZLimitedArray
 
 - (instancetype)initWithCapacity:(NSUInteger)numItems{
+	self = [self init];
+	if (self) {
+		self.maxCapacity = numItems;
+		self.array = [NSMutableArray arrayWithCapacity:numItems];
+		self.uniqueElements = NO;
+		self.stopsInsertingWhenFull = NO;
+		self.insertMode = YZLimitedArrayInsertModeHead;
+	}
+	return self;
+}
+
+- (instancetype)initWithCapacity:(NSUInteger)numItems uniqueElements:(BOOL)unique{
 	self = [super init];
 	if (self) {
 		self.maxCapacity = numItems;
 		self.array = [NSMutableArray arrayWithCapacity:numItems];
+		self.uniqueElements = unique;
+		self.stopsInsertingWhenFull = NO;
+		self.insertMode = YZLimitedArrayInsertModeHead;
 	}
 	return self;
 }
@@ -57,13 +72,38 @@
 
 - (void)addObject:(id)anObject{
 	
-	if (self.array.count >= self.maxCapacity) {
+	if (self.uniqueElements) {
 		
-		[self.array removeObjectAtIndex:0];
+		id obj = [self hasObject:anObject];
+		if (obj) {
+			
+			[self.array removeObject:obj];
+		}
 		
 	}
 	
-	[self.array addObject:anObject];
+	if (self.array.count >= self.maxCapacity) {
+		
+		if (self.stopsInsertingWhenFull) {
+			return;
+		}
+		
+		if (self.insertMode == YZLimitedArrayInsertModeHead) {
+			
+			[self.array removeLastObject];
+		} else if (self.insertMode == YZLimitedArrayInsertModeTail) {
+			
+			[self.array removeObjectAtIndex:0];
+		}
+	}
+	
+	if (self.insertMode == YZLimitedArrayInsertModeHead) {
+		
+		[self.array insertObject:anObject atIndex:0];
+	} else if (self.insertMode == YZLimitedArrayInsertModeTail) {
+		
+		[self.array addObject:anObject];
+	}
 	
 }
 
@@ -73,6 +113,15 @@
 		[self addObject:obj];
 	}
 	
+}
+
+- (id)hasObject:(id)anObject{
+	for (id obj in self.array) {
+		if ([obj isEqual:anObject]) {
+			return obj;
+		}
+	}
+	return nil;
 }
 
 # pragma mark - Remove
