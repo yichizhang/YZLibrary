@@ -14,6 +14,7 @@
 
 #import "NSString+YZLibrary.h"
 #import "NSObject+YZLibrary.h"
+#import "NSCharacterSet+YZLibrary.h"
 
 @implementation NSString (YZLibrary)
 
@@ -95,10 +96,10 @@
 	if (keepSpaces){
 		[set addCharactersInString:@" "];
 	}
-	NSCharacterSet* alphahumericSet = [set invertedSet];
+	NSCharacterSet* setToRemove = [set invertedSet];
 	
 	NSString *joinByString = keepSpaces ? @" " : @"";
-	return [[self componentsSeparatedByCharactersInSet:alphahumericSet] componentsJoinedByString:joinByString];
+	return [[self componentsSeparatedByCharactersInSet:setToRemove] componentsJoinedByString:joinByString];
 }
 
 - (NSString*)yz_humanReadableString

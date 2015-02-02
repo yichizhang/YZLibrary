@@ -43,6 +43,7 @@
 		128122C81A5CCF580079B5C2 /* AwesomeNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128122C71A5CCF580079B5C2 /* AwesomeNibView.swift */; };
 		128122CA1A5CCF6E0079B5C2 /* AwesomeNibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 128122C91A5CCF6E0079B5C2 /* AwesomeNibView.xib */; };
 		128122CC1A5CD2550079B5C2 /* YZOtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128122CB1A5CD2550079B5C2 /* YZOtherViewController.swift */; };
+		12D3616D1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D3616C1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m */; };
 		12EFEFF31A3EDFC10034B70D /* UITableViewCell+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */; };
 		12EFEFF61A3EE1610034B70D /* YZDemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF51A3EE1610034B70D /* YZDemoTableViewController.swift */; };
 		12EFEFFA1A3EE2C10034B70D /* YZDemoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12EFEFF81A3EE2C10034B70D /* YZDemoImageTableViewCell.swift */; };
@@ -128,6 +129,8 @@
 		128122C71A5CCF580079B5C2 /* AwesomeNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeNibView.swift; sourceTree = "<group>"; };
 		128122C91A5CCF6E0079B5C2 /* AwesomeNibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AwesomeNibView.xib; sourceTree = "<group>"; };
 		128122CB1A5CD2550079B5C2 /* YZOtherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZOtherViewController.swift; sourceTree = "<group>"; };
+		12D3616B1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+YZLibrary.h"; sourceTree = "<group>"; };
+		12D3616C1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+YZLibrary.m"; sourceTree = "<group>"; };
 		12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YZLibrary.h"; sourceTree = "<group>"; };
 		12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+YZLibrary.m"; sourceTree = "<group>"; };
 		12EFEFF41A3EE1600034B70D /* YZLibraryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YZLibraryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -263,41 +266,43 @@
 		127200F519E821FC00E4CBFB /* YZLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				12EFEFF71A3EE1830034B70D /* YZLibraryImportAll.h */,
 				127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */,
 				127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */,
-				1233DFA11A0A3BB300E1638D /* NSString+YZLibrary.h */,
-				1233DFA21A0A3BB300E1638D /* NSString+YZLibrary.m */,
-				127200F819E821FC00E4CBFB /* UIButton+YZLibrary.h */,
-				127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */,
-				127200FA19E821FC00E4CBFB /* UIColor+YZLibrary.h */,
-				127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */,
-				1233DFAC1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.h */,
-				1233DFAD1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m */,
-				12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */,
-				12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */,
-				127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */,
-				127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */,
-				127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */,
-				127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */,
-				1272010019E821FC00E4CBFB /* UIView+YZLibrary.h */,
-				1272010119E821FC00E4CBFB /* UIView+YZLibrary.m */,
-				1272010219E821FC00E4CBFB /* UIViewController+YZLibrary.h */,
-				1272010319E821FC00E4CBFB /* UIViewController+YZLibrary.m */,
-				1272010619E821FC00E4CBFB /* YZLibrary.h */,
-				1272010719E821FC00E4CBFB /* YZLibrary.m */,
-				1272011119E8312300E4CBFB /* YZFileHelper.h */,
-				1272011219E8312300E4CBFB /* YZFileHelper.m */,
-				1272011719E8354F00E4CBFB /* YZTimeHelper.h */,
-				1272011819E8354F00E4CBFB /* YZTimeHelper.m */,
-				1272011A19E8365700E4CBFB /* YZRandom.h */,
-				1272011B19E8365700E4CBFB /* YZRandom.m */,
+				12D3616B1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.h */,
+				12D3616C1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m */,
 				12682CDB1A1386B7004EF16F /* NSDictionary+YZLibrary.h */,
 				12682CDC1A1386B7004EF16F /* NSDictionary+YZLibrary.m */,
 				12EFF0091A3EFE040034B70D /* NSObject+YZLibrary.h */,
 				12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */,
+				1233DFA11A0A3BB300E1638D /* NSString+YZLibrary.h */,
+				1233DFA21A0A3BB300E1638D /* NSString+YZLibrary.m */,
+				127200F819E821FC00E4CBFB /* UIButton+YZLibrary.h */,
+				127200F919E821FC00E4CBFB /* UIButton+YZLibrary.m */,
+				1233DFAC1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.h */,
+				1233DFAD1A0A4BAF00E1638D /* UICollectionViewCell+YZLibrary.m */,
+				127200FA19E821FC00E4CBFB /* UIColor+YZLibrary.h */,
+				127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */,
+				127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */,
+				127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */,
+				127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */,
+				127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */,
+				12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */,
+				12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */,
+				1272010019E821FC00E4CBFB /* UIView+YZLibrary.h */,
+				1272010119E821FC00E4CBFB /* UIView+YZLibrary.m */,
+				1272010219E821FC00E4CBFB /* UIViewController+YZLibrary.h */,
+				1272010319E821FC00E4CBFB /* UIViewController+YZLibrary.m */,
+				1272011119E8312300E4CBFB /* YZFileHelper.h */,
+				1272011219E8312300E4CBFB /* YZFileHelper.m */,
+				1272010619E821FC00E4CBFB /* YZLibrary.h */,
+				1272010719E821FC00E4CBFB /* YZLibrary.m */,
+				12EFEFF71A3EE1830034B70D /* YZLibraryImportAll.h */,
 				1249B0C61A768FCC00F8244F /* YZLimitedArray.h */,
 				1249B0C71A768FCC00F8244F /* YZLimitedArray.m */,
+				1272011A19E8365700E4CBFB /* YZRandom.h */,
+				1272011B19E8365700E4CBFB /* YZRandom.m */,
+				1272011719E8354F00E4CBFB /* YZTimeHelper.h */,
+				1272011819E8354F00E4CBFB /* YZTimeHelper.m */,
 			);
 			name = YZLibrary;
 			path = ../YZLibrary;
@@ -426,6 +431,7 @@
 			files = (
 				12682CDD1A1386B7004EF16F /* NSDictionary+YZLibrary.m in Sources */,
 				1220D2841967109800979E9A /* YZDemoOneViewController.m in Sources */,
+				12D3616D1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m in Sources */,
 				1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */,
 				1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */,
 				1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */,
