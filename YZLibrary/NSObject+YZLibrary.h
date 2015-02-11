@@ -15,6 +15,10 @@
 
 @interface NSObject (YZLibrary)
 
+/** Check if an object is empty by checking its "count" or "length".
+ 
+ */
+BOOL YZ_IS_EMPTY(id obj);
 /** Returns the "real" class name without the module name.
  
  NSStringFromClass() now returns the module name, plus class name separated by a dot.

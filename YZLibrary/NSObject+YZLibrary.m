@@ -15,6 +15,19 @@
 
 @implementation NSObject (YZLibrary)
 
+BOOL YZ_IS_EMPTY(id obj) {
+	
+	if (obj == nil) {
+		return YES;
+	} else {
+		
+		return
+		([obj respondsToSelector:@selector(length)] && [(NSData*)obj length] == 0)
+		|| ([obj respondsToSelector:@selector(count)] && [(NSArray*)obj count] == 0);
+	}
+	
+}
+
 + (NSString*)yz_className
 {
     NSString* fullClassName = NSStringFromClass(self);

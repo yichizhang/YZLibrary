@@ -32,6 +32,20 @@
 		
 	}
 	
+	NSArray *a = @[];
+	NSArray *b = @[ @"" ];
+	NSArray *c = nil;
+	NSDictionary *d = @{};
+	NSString *e = @"";
+	NSString *f = nil;
+	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(a)]);
+	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(b)]);
+	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(c)]);
+	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(d)]);
+	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(e)]);
+	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(f)]);
+	NSLog(@"-------------------------------");
+	
 	NSLog(@"%@", [NSString yz_stringFromBool:[@"" yz_isValidEmail]]);
 	NSLog(@"%@", [NSString yz_stringFromBool:[@"ahtathat" yz_isValidEmail]]);
 	NSLog(@"%@", [NSString yz_stringFromBool:[@"anhtnteh@enne.cm" yz_isValidEmail]]);
