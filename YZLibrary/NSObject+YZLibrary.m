@@ -38,10 +38,12 @@ BOOL YZ_IS_EMPTY(id obj) {
 - (BOOL)yz_isEmpty
 {
 
-    return
+    return YZ_IS_EMPTY(self);
+}
 
-        ([self respondsToSelector:@selector(length)] && [(NSData*)self length] == 0)
-        || ([self respondsToSelector:@selector(count)] && [(NSArray*)self count] == 0);
++ (BOOL)yz_isEmpty:(id) obj{
+	
+	return YZ_IS_EMPTY(obj);
 }
 
 - (void)yz_dispatchOnMainQueue:(void (^)(void))block afterDelay:(NSTimeInterval)delay{

@@ -19,6 +19,7 @@
  
  */
 BOOL YZ_IS_EMPTY(id obj);
+
 /** Returns the "real" class name without the module name.
  
  NSStringFromClass() now returns the module name, plus class name separated by a dot.
@@ -27,10 +28,17 @@ BOOL YZ_IS_EMPTY(id obj);
  */
 + (NSString*)yz_className;
 
-/** Check an NSString, NSArray, NSDictioary or NSData etc. whether its empty.
+/** THIS METHOD IS DEPRECATED. DO NOT USE BECAUSE IT RETURNS FALSE (i.e. not empty) IF THE OBJECT IS NIL. THEN YOU HAVE TO DO SOMETHING "LIKE if( myString != nil && myString [yz_isEmpty] )" WHICH IS TERRIBLE. USE "YZ_IS_EMPTY(id obj)" INSTEADD.
+ 
+ Check an NSString, NSArray, NSDictioary or NSData etc. whether its empty.
  
  */
-- (BOOL)yz_isEmpty;
+- (BOOL)yz_isEmpty DEPRECATED_ATTRIBUTE;
+
+/** Check an object if it is empty. Returns true if the object is nil.
+ 
+ */
++ (BOOL)yz_isEmpty:(id) obj;
 
 /** Dispatch on the main queue after delay. Shortcut for dispatch_after(dispatch_time_t when, dispatch_queue_t queue, ^(void)block)} 
  
