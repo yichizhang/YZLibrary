@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1203366E1A999200007B5A65 /* NSBundle+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1203366D1A999200007B5A65 /* NSBundle+YZLibrary.m */; };
 		1220D26E1967109800979E9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1220D26D1967109800979E9A /* Foundation.framework */; };
 		1220D2721967109800979E9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1220D2711967109800979E9A /* UIKit.framework */; };
 		1220D2781967109800979E9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1220D2761967109800979E9A /* InfoPlist.strings */; };
@@ -69,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1203366C1A999200007B5A65 /* NSBundle+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YZLibrary.h"; sourceTree = "<group>"; };
+		1203366D1A999200007B5A65 /* NSBundle+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+YZLibrary.m"; sourceTree = "<group>"; };
 		1220D26A1967109800979E9A /* YZLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1220D26D1967109800979E9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1220D26F1967109800979E9A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -268,6 +271,8 @@
 			children = (
 				127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */,
 				127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */,
+				1203366C1A999200007B5A65 /* NSBundle+YZLibrary.h */,
+				1203366D1A999200007B5A65 /* NSBundle+YZLibrary.m */,
 				12D3616B1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.h */,
 				12D3616C1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m */,
 				12682CDB1A1386B7004EF16F /* NSDictionary+YZLibrary.h */,
@@ -446,6 +451,7 @@
 				1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */,
 				1272010919E821FC00E4CBFB /* UIButton+YZLibrary.m in Sources */,
 				1233DFA31A0A3BB300E1638D /* NSString+YZLibrary.m in Sources */,
+				1203366E1A999200007B5A65 /* NSBundle+YZLibrary.m in Sources */,
 				12EFEFF31A3EDFC10034B70D /* UITableViewCell+YZLibrary.m in Sources */,
 				12EFEFFA1A3EE2C10034B70D /* YZDemoImageTableViewCell.swift in Sources */,
 				1272010E19E821FC00E4CBFB /* UIViewController+YZLibrary.m in Sources */,

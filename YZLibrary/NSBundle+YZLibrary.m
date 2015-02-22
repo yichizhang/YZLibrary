@@ -12,28 +12,20 @@
  
  */
 
-#ifndef YZLibrary_YZLibraryImportAll_h
-#define YZLibrary_YZLibraryImportAll_h
-
-#import "NSArray+YZLibrary.h"
 #import "NSBundle+YZLibrary.h"
-#import "NSCharacterSet+YZLibrary.h"
-#import "NSDate+YZLibrary.h"
-#import "NSDictionary+YZLibrary.h"
-#import "NSObject+YZLibrary.h"
-#import "NSString+YZLibrary.h"
-#import "UIButton+YZLibrary.h"
-#import "UICollectionViewCell+YZLibrary.h"
-#import "UIColor+YZLibrary.h"
-#import "UIImage+YZLibrary.h"
-#import "UIImageView+YZLibrary.h"
-#import "UITableViewCell+YZLibrary.h"
-#import "UIView+YZLibrary.h"
-#import "UIViewController+YZLibrary.h"
-#import "YZFileHelper.h"
-#import "YZLibrary.h"
-#import "YZRandom.h"
-#import "YZLimitedArray.h"
-#import "YZTimeHelper.h"
 
-#endif
+@implementation NSBundle (YZLibrary)
+
+- (NSURL*)yz_URLForResourceNamed:(NSString*)fullFileName{
+	NSString* resource = [[fullFileName lastPathComponent] stringByDeletingPathExtension];
+	NSString* extension = [fullFileName pathExtension];
+	return [self URLForResource:resource withExtension:extension];
+}
+
+- (NSString*)yz_pathForResourceNamed:(NSString*)fullFileName {
+	NSString* resource = [[fullFileName lastPathComponent] stringByDeletingPathExtension];
+	NSString* extension = [fullFileName pathExtension];
+	return [self pathForResource:resource ofType:extension];
+}
+
+@end
