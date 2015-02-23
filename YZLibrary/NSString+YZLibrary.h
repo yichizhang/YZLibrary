@@ -16,7 +16,7 @@
 
 @interface NSString (YZLibrary)
 
-- (BOOL)yz_isStringValid;
+- (BOOL)yz_isStringValid DEPRECATED_ATTRIBUTE;
 - (BOOL)yz_isValidEmail;
 - (NSRange)yz_fullRange;
 

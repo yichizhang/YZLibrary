@@ -19,7 +19,7 @@
 @implementation NSString (YZLibrary)
 
 - (BOOL)yz_isStringValid{
-	return ![self yz_isEmpty];
+	return !YZ_IS_EMPTY(self);
 }
 
 - (BOOL)yz_isValidEmail{
