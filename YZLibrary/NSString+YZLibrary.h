@@ -20,6 +20,9 @@
 - (BOOL)yz_isValidEmail;
 - (NSRange)yz_fullRange;
 
+- (void)yz_findString:(NSString*)string options:(NSStringCompareOptions)options handlingBlock:(void (^)(NSRange range, NSInteger index, BOOL* stop))handlingBlock;
+- (void)yz_findString:(NSString*)string options:(NSStringCompareOptions)options range:(NSRange)range handlingBlock:(void (^)(NSRange range, NSInteger index, BOOL* stop))handlingBlock;
+
 - (NSDate*)yz_dateFromString:(NSString*)dateFormat;
 
 + (NSString*)yz_stringFromBool:(BOOL)boolValue;

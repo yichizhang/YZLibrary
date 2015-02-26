@@ -44,6 +44,32 @@
 	return NSMakeRange(0, self.length);
 }
 
+- (void)yz_findString:(NSString*)string options:(NSStringCompareOptions)options handlingBlock:(void (^)(NSRange range, NSInteger index, BOOL* stop))handlingBlock {
+	[self yz_findString:string options:options range:[self yz_fullRange] handlingBlock:handlingBlock];
+}
+
+- (void)yz_findString:(NSString*)string options:(NSStringCompareOptions)options range:(NSRange)range handlingBlock:(void (^)(NSRange range, NSInteger index, BOOL* stop))handlingBlock {
+	
+	NSInteger origStart = range.location;
+	NSInteger origLength = range.length;
+	NSInteger count = 0;
+	while (range.location != NSNotFound) {
+		range = [self rangeOfString:string options:options range:range];
+		if (range.location != NSNotFound) {
+			BOOL stop;
+			handlingBlock(range, count, &stop);
+			
+			if (stop) {
+				return;
+			}
+			
+			NSUInteger newStart = range.location + range.length;
+			range = NSMakeRange(newStart, origStart + origLength - newStart);
+			
+		}
+	}
+}
+
 - (NSDate*)yz_dateFromString:(NSString*)dateFormat{
 	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -52,32 +78,32 @@
 }
 
 + (NSString*)yz_stringFromBool:(BOOL)boolValue{
-    
-    return (boolValue ? @"true" : @"false");
-    
+	
+	return (boolValue ? @"true" : @"false");
+	
 }
 
 + (NSString *)yz_letterStringFromNumber1To26:(int)number{
-    
-    NSString* returnName = @"?";
-    
-    int asciiCodeOfCapitalA = 'A';
-    
-    char theChar;
-    
-    if (number>=1 && number<=26) {
-        
-        theChar = asciiCodeOfCapitalA + number - 1;
-        returnName = [NSString stringWithFormat:@"%c", theChar];
-        
-    }
-    
-    return returnName;
+	
+	NSString* returnName = @"?";
+	
+	int asciiCodeOfCapitalA = 'A';
+	
+	char theChar;
+	
+	if (number>=1 && number<=26) {
+		
+		theChar = asciiCodeOfCapitalA + number - 1;
+		returnName = [NSString stringWithFormat:@"%c", theChar];
+		
+	}
+	
+	return returnName;
 }
 
 + (NSString*)yz_stringFromInt:(int)intNumber{
-    
-    return [NSString stringWithFormat:@"%i", intNumber];
+	
+	return [NSString stringWithFormat:@"%i", intNumber];
 }
 
 - (BOOL)yz_isDigitsOnly
