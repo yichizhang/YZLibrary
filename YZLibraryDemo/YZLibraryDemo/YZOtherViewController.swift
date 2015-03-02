@@ -33,8 +33,15 @@ class YZOtherViewController: UIViewController {
 		let awesomeView = AwesomeNibView.yz_loadFromNib()
 		self.view.addSubview(awesomeView)
 		awesomeView.center = self.view.center
+		
     }
 
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		UIAlertView.yz_showWithTitle("Title", message: "Test Message", cancelButtonTitle: "OK")
+	}
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

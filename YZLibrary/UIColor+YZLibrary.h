@@ -18,5 +18,6 @@
 
 + (UIColor*)yz_iOS7BlueColor;
 + (UIColor*)yz_appKeyWindowTintColor;
++ (UIColor*)yz_randomBrightColor;
 
 @end

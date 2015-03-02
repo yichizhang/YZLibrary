@@ -22,6 +22,7 @@
 #import "NSDictionary+YZLibrary.h"
 #import "NSObject+YZLibrary.h"
 #import "NSString+YZLibrary.h"
+#import "UIAlertView+YZLibrary.h"
 #import "UIButton+YZLibrary.h"
 #import "UICollectionViewCell+YZLibrary.h"
 #import "UIColor+YZLibrary.h"

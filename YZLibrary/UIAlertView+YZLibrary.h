@@ -12,27 +12,10 @@
  
  */
 
-#import "UIColor+YZLibrary.h"
-#import "YZRandom.h"
-#import "YZLibrary.h"
+#import <UIKit/UIKit.h>
 
-@implementation UIColor (YZLibrary)
+@interface UIAlertView (YZLibrary)
 
-+ (UIColor*)yz_iOS7BlueColor
-{
-    return [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
-}
-
-+ (UIColor*)yz_appKeyWindowTintColor
-{
-    return [[[UIApplication sharedApplication] keyWindow] tintColor];
-}
-
-+ (UIColor*)yz_randomBrightColor {
-	CGFloat hue = [YZRandom floatBetweenZeroAnd:1.0];
-	CGFloat saturation = [YZRandom floatBetweenLower:0.5 upper:1.0];
-	CGFloat brightness = [YZRandom floatBetweenLower:0.5 upper:1.0];
-	return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1.f];
-}
++ (void)yz_showWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle;
 
 @end
