@@ -11,6 +11,7 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  
  */
+
 #import <Foundation/Foundation.h>
 
 @interface NSObject (YZLibrary)
@@ -44,6 +45,21 @@ BOOL YZ_IS_EMPTY(id obj);
  
  */
 - (void)yz_dispatchOnMainQueue:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
+
+/** Swift access for "[NSObject cancelPreviousPerformRequestsWithTarget:target];"
+ 
+ */
++ (void)yz_cancelPerformSelectorsWithTarget:(id)target;
+
+/** Swift access for "[NSObject cancelPreviousPerformRequestsWithTarget:target selector:selector object:object];"
+ 
+ */
++ (void)yz_cancelPerformSelectorsWithTarget:(id)target selector:(SEL)selector object:(id)object;
+
+/** Swift access for "[self performSelector:selector withObject:object afterDelay:delay];"
+ 
+ */
+- (void)yz_performSelector:(SEL)selector withObject:(id)object afterDelay:(NSTimeInterval)delay;
 
 @end
 

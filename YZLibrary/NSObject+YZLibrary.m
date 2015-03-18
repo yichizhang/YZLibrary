@@ -46,11 +46,23 @@ BOOL YZ_IS_EMPTY(id obj) {
 	return YZ_IS_EMPTY(obj);
 }
 
-- (void)yz_dispatchOnMainQueue:(void (^)(void))block afterDelay:(NSTimeInterval)delay{
+- (void)yz_dispatchOnMainQueue:(void (^)(void))block afterDelay:(NSTimeInterval)delay {
 	dispatch_time_t dispatchTime = dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC);
 	dispatch_after(dispatchTime, dispatch_get_main_queue(), ^{
 		block();
 	});
+}
+
++ (void)yz_cancelPerformSelectorsWithTarget:(id)target {
+	[NSObject cancelPreviousPerformRequestsWithTarget:target];
+}
+
++ (void)yz_cancelPerformSelectorsWithTarget:(id)target selector:(SEL)selector object:(id)object{
+	[NSObject cancelPreviousPerformRequestsWithTarget:target selector:selector object:object];
+}
+
+- (void)yz_performSelector:(SEL)selector withObject:(id)object afterDelay:(NSTimeInterval)delay {
+	[self performSelector:selector withObject:object afterDelay:delay];
 }
 
 @end
