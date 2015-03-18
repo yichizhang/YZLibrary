@@ -12,31 +12,21 @@
  
  */
 
-#ifndef YZLibrary_YZLibraryImportAll_h
-#define YZLibrary_YZLibraryImportAll_h
+#import <Foundation/Foundation.h>
 
-#import "NSArray+YZLibrary.h"
-#import "NSBundle+YZLibrary.h"
-#import "NSCharacterSet+YZLibrary.h"
-#import "NSDate+YZLibrary.h"
-#import "NSDictionary+YZLibrary.h"
-#import "NSURL+YZLibrary.h"
-#import "NSObject+YZLibrary.h"
-#import "NSString+YZLibrary.h"
-#import "UIAlertView+YZLibrary.h"
-#import "UIButton+YZLibrary.h"
-#import "UICollectionViewCell+YZLibrary.h"
-#import "UIColor+YZLibrary.h"
-#import "UIImage+YZLibrary.h"
-#import "UIImageView+YZLibrary.h"
-#import "UITableViewCell+YZLibrary.h"
-#import "UIView+YZLibrary.h"
-#import "UIViewController+YZLibrary.h"
-#import "YZFileHelper.h"
-#import "YZLibrary.h"
-#import "YZProcessInfo.h"
-#import "YZRandom.h"
-#import "YZLimitedArray.h"
-#import "YZTimeHelper.h"
+typedef struct {
+	NSInteger majorVersion;
+	NSInteger minorVersion;
+	NSInteger patchVersion;
+} YZOperatingSystemVersion;
 
-#endif
+@interface YZProcessInfo : NSObject
+
+@property (readonly, copy) NSString *operatingSystemVersionString;
+@property (readonly) YZOperatingSystemVersion operatingSystemVersion;
+
++ (YZProcessInfo *)processInfo;
+- (BOOL)isOperatingSystemAtLeastVersion:(YZOperatingSystemVersion)version;
+- (BOOL)isOperatingSystemAtLeastMajorVersion:(NSInteger)majorVersion;
+
+@end

@@ -21,6 +21,19 @@
 {
 	[self.window yz_preloadKeyboard];
 	
+	NSLog(@"The version of current os: %@", [[YZProcessInfo processInfo] operatingSystemVersionString]);
+	
+	NSLog(@"Major version of current os: %i", [[YZProcessInfo processInfo] operatingSystemVersion].majorVersion);
+	NSLog(@"Minor version of current os: %i", [[YZProcessInfo processInfo] operatingSystemVersion].minorVersion);
+	NSLog(@"Patch version of current os: %i", [[YZProcessInfo processInfo] operatingSystemVersion].patchVersion);
+	for (int i=0; i < 10; i++) {
+		NSLog(@"Current os at least major version %i: %@",
+			  i,
+			  [NSString yz_stringFromBool: [[YZProcessInfo processInfo] isOperatingSystemAtLeastMajorVersion:i]]
+			  );
+	}
+	
+	
 	YZLimitedArray *arr = [[YZLimitedArray alloc] initWithCapacity:20 uniqueElements:YES];
 	arr.insertMode = YZLimitedArrayInsertModeHead;
 	arr.stopsInsertingWhenFull = false;
