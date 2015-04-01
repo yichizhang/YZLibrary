@@ -40,10 +40,7 @@
 	CGFloat hue;
 	[self getHue:&hue saturation:nil brightness:nil alpha:nil];
 	
-	CGFloat newHue = hue + 0.5;
-	if (newHue > 1.0) {
-		newHue -= 1.0;
-	}
+	CGFloat newHue = fmodf(hue + 0.5, 1.0);
 	
 	return [self yz_colorWithHueComponent:newHue];
 }
