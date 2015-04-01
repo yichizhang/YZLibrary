@@ -35,4 +35,28 @@
 	return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1.f];
 }
 
+- (instancetype)yz_complementaryColor {
+	
+	CGFloat hue;
+	[self getHue:&hue saturation:nil brightness:nil alpha:nil];
+	
+	CGFloat newHue = hue + 0.5;
+	if (newHue > 1.0) {
+		newHue -= 1.0;
+	}
+	
+	return [self yz_colorWithHueComponent:newHue];
+}
+
+- (instancetype)yz_colorWithHueComponent:(CGFloat)hue {
+	
+	CGFloat saturation, brightness, alpha;
+	[self getHue:nil saturation:&saturation brightness:&brightness alpha:&alpha];
+	
+	return [[self class] colorWithHue:hue
+						   saturation:saturation
+						   brightness:brightness
+								 alpha:alpha];
+}
+
 @end
