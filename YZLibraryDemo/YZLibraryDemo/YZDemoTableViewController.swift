@@ -51,6 +51,12 @@ class YZDemoTableViewController: UITableViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		let info = YZProcessInfo()
+		if info.isOperatingSystemAtLeastMajorVersion(8) == false {
+			
+			UIAlertView.yz_showWithTitle("You are using iOS\(info.operatingSystemVersion.majorVersion)", message: "Table view auto layout/ auto cell height may not work properly in this version of iOS.", cancelButtonTitle: "OK")
+		}
 
 		YZDemoImageTableViewCell.yz_registerForTableView(self.tableView)
 		self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: demoTableViewDefaultCell)

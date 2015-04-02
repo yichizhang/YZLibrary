@@ -39,7 +39,6 @@ class YZOtherViewController: UIViewController {
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		UIAlertView.yz_showWithTitle("Title", message: "Test Message", cancelButtonTitle: "OK")
 	}
 	
     override func didReceiveMemoryWarning() {
