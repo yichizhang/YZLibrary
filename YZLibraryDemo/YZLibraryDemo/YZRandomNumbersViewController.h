@@ -14,7 +14,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YZDemoTwoViewController : UICollectionViewController
+@interface YZRandomNumbersViewController : UICollectionViewController
 
 
 @end

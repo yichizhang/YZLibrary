@@ -12,17 +12,17 @@
  
  */
 
-#import "YZDemoOneViewController.h"
+#import "YZMainDemoViewController.h"
 
 #import "UIImage+YZLibrary.h"
 #import "NSDictionary+YZLibrary.h"
 #import "YZTimeHelper.h"
 
-@interface YZDemoOneViewController ()
+@interface YZMainDemoViewController ()
 
 @end
 
-@implementation YZDemoOneViewController
+@implementation YZMainDemoViewController
 
 - (void)commonInit{
     

@@ -14,7 +14,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YZDemoOneViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface YZMainDemoViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UISlider *timeSlider;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;

@@ -21,7 +21,7 @@ enum DemoTableViewSection : Int {
 
 import UIKit
 
-class YZDemoTableViewController: UITableViewController {
+class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
 
 	let photoSourceArray:Array<String> =
 	[

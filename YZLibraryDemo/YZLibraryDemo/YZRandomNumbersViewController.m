@@ -12,7 +12,7 @@
  
  */
 
-#import "YZDemoTwoViewController.h"
+#import "YZRandomNumbersViewController.h"
 
 #import "YZRandom.h"
  
@@ -40,7 +40,7 @@ typedef enum{
     YZRandomGenerationOptionCount
 }YZRandomGenerationOption;
 
-@interface YZDemoTwoViewController ()
+@interface YZRandomNumbersViewController ()
 
 @property (strong) NSMutableArray *dataArray;
 @property (assign) YZRandomGenerationOption generationOption;
@@ -58,7 +58,7 @@ typedef enum{
 
 @end
 
-@implementation YZDemoTwoViewController
+@implementation YZRandomNumbersViewController
 
 - (void)commonInit{
     
