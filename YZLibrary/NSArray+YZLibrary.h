@@ -16,8 +16,14 @@
 
 @interface NSArray (YZLibrary)
 
-- (id)yz_objectAtIndex:(NSUInteger)index;
+/** Returns the object at the index. Returns `nil` if the index is out of bounds.
+ */
+- (id)yz_objectAtIndex:(NSInteger)index;
+
+/** Returns a random object in the array.
+ */
 - (id)yz_randomObject;
+
 - (id)yz_nextObject;
 - (NSArray *)yz_shuffledArray;
 

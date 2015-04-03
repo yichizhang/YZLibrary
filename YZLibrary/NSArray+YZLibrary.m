@@ -13,14 +13,15 @@
  */
 
 #import "NSArray+YZLibrary.h"
+#import "YZRandom.h"
 
 @implementation NSArray (YZLibrary)
 
 int currentIndex = 0;
 
-- (id)yz_objectAtIndex:(NSUInteger)index{
+- (id)yz_objectAtIndex:(NSInteger)index{
     
-    if (index < [self count]) {
+    if (index >= 0 && index < [self count]) {
         return [self objectAtIndex:index];
     }
     return nil;
