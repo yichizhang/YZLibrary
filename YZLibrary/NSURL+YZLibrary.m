@@ -16,15 +16,15 @@
 
 @implementation NSURL (YZLibrary)
 
-- (instancetype)yz_telURLWithPhoneNumber:(NSString *)phoneNumberString {
++ (NSURL*)yz_telURLWithPhoneNumber:(NSString *)phoneNumberString {
 	return [NSURL URLWithString:
 			[NSString stringWithFormat:@"tel:%@", [phoneNumberString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
 			];
 }
 
-- (instancetype)yz_mailtoURLWithPhoneNumber:(NSString *)mailtoString {
++ (NSURL*)yz_mailtoURLWithEmail:(NSString *)emailString {
 	return [NSURL URLWithString:
-			[NSString stringWithFormat:@"mailto:%@", [mailtoString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+			[NSString stringWithFormat:@"mailto:%@", [emailString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
 			];
 }
 
