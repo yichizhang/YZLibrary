@@ -29,15 +29,9 @@ BOOL YZ_IS_EMPTY(id obj);
  */
 + (NSString*)yz_className;
 
-/** THIS METHOD IS DEPRECATED. DO NOT USE BECAUSE IT RETURNS FALSE (i.e. not empty) IF THE OBJECT IS NIL. THEN YOU HAVE TO DO SOMETHING "LIKE if( myString != nil && myString [yz_isEmpty] )" WHICH IS TERRIBLE. USE "YZ_IS_EMPTY(id obj)" INSTEADD.
+/** Check an object if it is empty by checking its "count" or "length". Returns true if the object is nil.
  
- Check an NSString, NSArray, NSDictioary or NSData etc. whether its empty.
- 
- */
-- (BOOL)yz_isEmpty DEPRECATED_ATTRIBUTE;
-
-/** Check an object if it is empty. Returns true if the object is nil.
- 
+ Exposing `BOOL YZ_IS_EMPTY(id obj)` to Swift.
  */
 + (BOOL)yz_isEmpty:(id) obj;
 

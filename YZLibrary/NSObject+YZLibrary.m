@@ -35,12 +35,6 @@ BOOL YZ_IS_EMPTY(id obj) {
     return [classNameComponents lastObject];
 }
 
-- (BOOL)yz_isEmpty
-{
-
-    return YZ_IS_EMPTY(self);
-}
-
 + (BOOL)yz_isEmpty:(id) obj{
 	
 	return YZ_IS_EMPTY(obj);
