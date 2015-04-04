@@ -18,10 +18,6 @@
 
 @implementation NSString (YZLibrary)
 
-- (BOOL)yz_isStringValid{
-	return !YZ_IS_EMPTY(self);
-}
-
 - (BOOL)yz_isValidEmail{
 	
 	if([self length]==0){
@@ -83,7 +79,7 @@
 	
 }
 
-+ (NSString *)yz_letterStringFromNumber1To26:(int)number{
++ (NSString *)yz_letterStringFromNumber1To26:(NSInteger)number{
 	
 	NSString* returnName = @"?";
 	
@@ -101,7 +97,7 @@
 	return returnName;
 }
 
-+ (NSString*)yz_stringFromInt:(int)intNumber{
++ (NSString*)yz_stringFromInt:(NSInteger)intNumber{
 	
 	return [NSString stringWithFormat:@"%i", intNumber];
 }

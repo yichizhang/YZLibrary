@@ -16,18 +16,40 @@
 
 @interface NSString (YZLibrary)
 
-- (BOOL)yz_isStringValid DEPRECATED_ATTRIBUTE;
+/** Check if current string is a valid email address
+ */
 - (BOOL)yz_isValidEmail;
+
+/** Returns the full range of the string
+ */
 - (NSRange)yz_fullRange;
 
+/** Find all occurrences of a string; handle the results with a handling block. `index` in the handling block indicates the occurrence of the string, 0 represents the first. Change `stop` in the handling block to stop finding more.
+ */
 - (void)yz_findString:(NSString*)string options:(NSStringCompareOptions)options handlingBlock:(void (^)(NSRange range, NSInteger index, BOOL* stop))handlingBlock;
+
+/** Find all occurrences of a string within defined range. Handle the results with a handling block. `index` in the handling block indicates the occurrence of the string, 0 represents the first. Change `stop` in the handling block to stop finding more.
+ */
 - (void)yz_findString:(NSString*)string options:(NSStringCompareOptions)options range:(NSRange)range handlingBlock:(void (^)(NSRange range, NSInteger index, BOOL* stop))handlingBlock;
 
+/** Parse the current string using the data format provided.
+ */
 - (NSDate*)yz_dateFromString:(NSString*)dateFormat;
 
+/** Returns @"true" if the bool value is `YES`; returns @"false" otherwise
+ */
 + (NSString*)yz_stringFromBool:(BOOL)boolValue;
-+ (NSString *)yz_letterStringFromNumber1To26:(int)number;
-+ (NSString*)yz_stringFromInt:(int)intNumber;
+
+/** Returns @"A" for `1` and @"Z" for `26`. Returns @"?" for values out of bounds.
+ */
++ (NSString*)yz_letterStringFromNumber1To26:(NSInteger)number;
+
+/** Converts an int number to a string with NSString stringWithFormat, using `%i` formatter.
+ */
++ (NSString*)yz_stringFromInt:(NSInteger)intNumber;
+
+/** Checks if the string contains character in [NSCharacterSet decimalDigitCharacterSet] only.
+ */
 - (BOOL)yz_isDigitsOnly;
 
 // FIXME: The implementation contains serious problems
