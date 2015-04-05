@@ -20,7 +20,7 @@
 		1220D28E1967109800979E9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1220D26D1967109800979E9A /* Foundation.framework */; };
 		1220D28F1967109800979E9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1220D2711967109800979E9A /* UIKit.framework */; };
 		1220D2971967109800979E9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1220D2951967109800979E9A /* InfoPlist.strings */; };
-		1220D2991967109800979E9A /* YZLibraryDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2981967109800979E9A /* YZLibraryDemoTests.m */; };
+		1220D2991967109800979E9A /* YZLibrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1220D2981967109800979E9A /* YZLibrayTests.m */; };
 		122941F21AAD52B200782A2C /* NSURL+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 122941F11AAD52B200782A2C /* NSURL+YZLibrary.m */; };
 		1233DFA31A0A3BB300E1638D /* NSString+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFA21A0A3BB300E1638D /* NSString+YZLibrary.m */; };
 		1233DFA61A0A4B4800E1638D /* YZRandomNumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFA51A0A4B4800E1638D /* YZRandomNumbersViewController.m */; };
@@ -94,7 +94,7 @@
 		1220D28C1967109800979E9A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1220D2941967109800979E9A /* YZLibraryDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YZLibraryDemoTests-Info.plist"; sourceTree = "<group>"; };
 		1220D2961967109800979E9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1220D2981967109800979E9A /* YZLibraryDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZLibraryDemoTests.m; sourceTree = "<group>"; };
+		1220D2981967109800979E9A /* YZLibrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZLibrayTests.m; sourceTree = "<group>"; };
 		122941F01AAD52B200782A2C /* NSURL+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+YZLibrary.h"; sourceTree = "<group>"; };
 		122941F11AAD52B200782A2C /* NSURL+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+YZLibrary.m"; sourceTree = "<group>"; };
 		1233DFA11A0A3BB300E1638D /* NSString+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YZLibrary.h"; sourceTree = "<group>"; };
@@ -143,6 +143,7 @@
 		12980DDA1ACD530000B72B4D /* YZColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZColorViewController.swift; sourceTree = "<group>"; };
 		12A212AF1AA3EC9D00C8D9BA /* UIAlertView+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+YZLibrary.h"; sourceTree = "<group>"; };
 		12A212B01AA3EC9D00C8D9BA /* UIAlertView+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+YZLibrary.m"; sourceTree = "<group>"; };
+		12BDB8C51AD1A94C00F394EB /* YZLibraryDemoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YZLibraryDemoTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		12D3616B1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+YZLibrary.h"; sourceTree = "<group>"; };
 		12D3616C1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+YZLibrary.m"; sourceTree = "<group>"; };
 		12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+YZLibrary.h"; sourceTree = "<group>"; };
@@ -247,7 +248,8 @@
 		1220D2921967109800979E9A /* YZLibraryDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				1220D2981967109800979E9A /* YZLibraryDemoTests.m */,
+				12BDB8C51AD1A94C00F394EB /* YZLibraryDemoTests-Bridging-Header.h */,
+				1220D2981967109800979E9A /* YZLibrayTests.m */,
 				1220D2931967109800979E9A /* Supporting Files */,
 			);
 			path = YZLibraryDemoTests;
@@ -509,7 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1220D2991967109800979E9A /* YZLibraryDemoTests.m in Sources */,
+				1220D2991967109800979E9A /* YZLibrayTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +660,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YZLibraryDemo.app/YZLibraryDemo";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -670,7 +673,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "YZLibraryDemoTests/YZLibraryDemoTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryDemoTests/YZLibraryDemoTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -680,6 +686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YZLibraryDemo.app/YZLibraryDemo";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -688,7 +695,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YZLibraryDemo/YZLibraryDemo-Prefix.pch";
 				INFOPLIST_FILE = "YZLibraryDemoTests/YZLibraryDemoTests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryDemoTests/YZLibraryDemoTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};

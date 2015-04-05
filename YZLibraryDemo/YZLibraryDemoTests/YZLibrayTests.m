@@ -13,12 +13,13 @@
  */
 
 #import <XCTest/XCTest.h>
+#import "YZLibraryImportAll.h"
 
-@interface YZLibraryDemoTests : XCTestCase
+@interface YZLibrayTests : XCTestCase
 
 @end
 
-@implementation YZLibraryDemoTests
+@implementation YZLibrayTests
 
 - (void)setUp
 {
@@ -32,9 +33,37 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testIsEmpty
 {
-    
+	NSArray *a = @[];
+	XCTAssertTrue(YZ_IS_EMPTY(a));
+	
+	NSArray *b = @[ @"" ];
+	XCTAssertTrue(YZ_IS_EMPTY(b) == NO);
+	
+	NSArray *c = nil;
+	XCTAssertTrue(YZ_IS_EMPTY(c));
+	
+	NSDictionary *d = @{};
+	XCTAssertTrue(YZ_IS_EMPTY(d));
+	
+	NSString *e = @"";
+	XCTAssertTrue(YZ_IS_EMPTY(e));
+	
+	NSString *f = nil;
+	XCTAssertTrue(YZ_IS_EMPTY(f));
+	
+}
+
+- (void)testEmailValidation {
+	
+	XCTAssertTrue([@"" yz_isValidEmail] == NO);
+	XCTAssertTrue([@"myemail" yz_isValidEmail] == NO);
+	XCTAssertTrue([@"me@email" yz_isValidEmail] == NO);
+	XCTAssertTrue([@"me@email.c" yz_isValidEmail] == NO);
+	
+	XCTAssertTrue([@"me@email.com" yz_isValidEmail] == YES);
+	XCTAssertTrue([@"me@e.co" yz_isValidEmail] == YES);
 }
 
 @end

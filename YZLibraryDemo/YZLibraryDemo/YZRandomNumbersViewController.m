@@ -23,6 +23,8 @@
 #import "UICollectionViewCell+YZLibrary.h"
 #import "NSArray+YZLibrary.h"
 
+#import "YZLibraryDemo-Swift.h"
+
 #define K1 0.125
 #define K2 0.21875
 #define K3 0.046875

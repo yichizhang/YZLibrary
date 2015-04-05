@@ -33,40 +33,26 @@
 			  );
 	}
 	
-	
 	YZLimitedArray *arr = [[YZLimitedArray alloc] initWithCapacity:20 uniqueElements:YES];
 	arr.insertMode = YZLimitedArrayInsertModeHead;
 	arr.stopsInsertingWhenFull = false;
 	
 	for (int i = 0; i < 100; i ++) {
 		[arr addObject:[NSString yz_stringFromInt:i%10]];
-
+		
 		NSLog(@"%@", [arr.array componentsJoinedByString:@","]);
 		
 	}
 	
-	NSArray *a = @[];
-	NSArray *b = @[ @"" ];
-	NSArray *c = nil;
-	NSDictionary *d = @{};
-	NSString *e = @"";
-	NSString *f = nil;
-	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(a)]);
-	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(b)]);
-	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(c)]);
-	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(d)]);
-	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(e)]);
-	NSLog(@"%@", [NSString yz_stringFromBool:YZ_IS_EMPTY(f)]);
-	NSLog(@"-------------------------------");
-	
-	NSLog(@"%@", [NSString yz_stringFromBool:[@"" yz_isValidEmail]]);
-	NSLog(@"%@", [NSString yz_stringFromBool:[@"ahtathat" yz_isValidEmail]]);
-	NSLog(@"%@", [NSString yz_stringFromBool:[@"anhtnteh@enne.cm" yz_isValidEmail]]);
-	NSLog(@"%@", [NSString yz_stringFromBool:[@"athnatheo@ne" yz_isValidEmail]]);
-	NSLog(@"%@", [NSString yz_stringFromBool:[@"athnoeo@eeee.mcesacon" yz_isValidEmail]]);
-	
-	NSString *string = @"Happily, Objective-C associated  objects come to the rescue.  For example, to add a descriptiveName property to  all the view controllers in a project,  we simply add a computed property  using objc_get/setAssociatedObject() in the backing  get and set blocks:  extension UIViewController { private struct AssociatedKeys  { static var DescriptiveName =  nsh_DescriptiveName} var descriptiveName:  String? { get { return objc_getAssociatedObject(self,  &AssociatedKeys.DescriptiveName) as? String";
-	NSArray *demoStrings = [string componentsSeparatedByString:@"  "];
+	NSArray *demoStrings = @[
+	@"Balsamic vinegar flavoured Vegemite",
+	@"Objective-C coding convention",
+	@"UIViewController Secrets",
+	@"{Test failed}, AA 12345",
+	@"Location: #23406A",
+	@"Use `objc_getAssociatedObject(self, &AssociatedKeys.DescriptiveName)`",
+	@"My email is - me@email.com",
+	];
 
 	
 	NSLog(@" ");

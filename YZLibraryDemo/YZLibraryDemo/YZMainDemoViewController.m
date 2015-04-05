@@ -18,6 +18,8 @@
 #import "NSDictionary+YZLibrary.h"
 #import "YZTimeHelper.h"
 
+#import "YZLibraryDemo-Swift.h"
+
 @interface YZMainDemoViewController ()
 
 @end
