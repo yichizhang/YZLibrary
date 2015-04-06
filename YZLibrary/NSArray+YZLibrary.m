@@ -17,8 +17,6 @@
 
 @implementation NSArray (YZLibrary)
 
-int currentIndex = 0;
-
 - (id)yz_objectAtIndex:(NSInteger)index{
     
     if (index >= 0 && index < [self count]) {
@@ -32,26 +30,12 @@ int currentIndex = 0;
     return [ self objectAtIndex: (int) ( arc4random() % [self count] ) ];
 }
 
-- (id)yz_nextObject{
-    if (currentIndex >= [self count]) {
-        currentIndex = 0;
-    }
-    return [self objectAtIndex:currentIndex++];
-}
-
 - (NSArray *)yz_shuffledArray
 {
-	/* Is this the best way to do it?
-     */
-    NSMutableArray *tmpArray = [NSMutableArray arrayWithCapacity:[self count]];
-    
-	for (id anObject in self)
-	{
-		NSUInteger randomPos = arc4random()%([tmpArray count]+1);
-		[tmpArray insertObject:anObject atIndex:randomPos];
-	}
-    
-	return [NSArray arrayWithArray:tmpArray];
+	return [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+		// Return -1, 0, or 1
+		return arc4random()%3 - 1;
+	}];
 }
 
 @end

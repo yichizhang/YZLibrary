@@ -24,7 +24,8 @@
  */
 - (id)yz_randomObject;
 
-- (id)yz_nextObject;
+/** Returns an array with the order of elements shuffled.
+ */
 - (NSArray *)yz_shuffledArray;
 
 @end
