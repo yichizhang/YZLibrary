@@ -66,4 +66,23 @@
 	XCTAssertTrue([@"me@e.co" yz_isValidEmail] == YES);
 }
 
+- (void)testCGRectWithCenterAndSize {
+	
+	CGRect rect;
+	
+	rect = YZ_CGRectWithCenterAndSize(160.f, 50.f, 40.f, 20.f);
+	
+	XCTAssertEqual(rect.origin.x, 140.f);
+	XCTAssertEqual(rect.origin.y, 40.f);
+	XCTAssertEqual(rect.size.width, 40.f);
+	XCTAssertEqual(rect.size.height, 20.f);
+	
+	rect = YZ_CGRectWithCenterAndSize(40.f, 20.f, 120.f, 50.f);
+	
+	XCTAssertEqual(rect.origin.x, -20.f);
+	XCTAssertEqual(rect.origin.y, -5.f);
+	XCTAssertEqual(rect.size.width, 120.f);
+	XCTAssertEqual(rect.size.height, 50.f);
+}
+
 @end
