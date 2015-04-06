@@ -35,6 +35,9 @@
 	return view;
 }
 
+- (void)yz_bringToFront {
+	[[self superview] bringSubviewToFront:self];
+}
 
 - (UIImage*)yz_captureImage{
 	

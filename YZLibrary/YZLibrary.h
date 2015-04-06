@@ -16,11 +16,14 @@
 
 #define YZ_DEGREES_TO_RADIANS(x) (M_PI * (x) / 180.0)
 
-@interface YZLibrary : NSObject{
+/** Check if an object is empty by checking its "count" or "length".
+ 
+ */
+BOOL YZ_IS_EMPTY(id obj);
 
-}
+CGRect YZ_CGRectWithCenterAndSize(CGFloat centerX, CGFloat centerY, CGFloat width, CGFloat height);
 
+@interface YZLibrary : NSObject
 + (CGSize)sizeRequiredForSize:(CGSize)size toAspectFitInBox:(CGSize)boxSize;
-
 
 @end

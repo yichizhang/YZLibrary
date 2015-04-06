@@ -19,6 +19,10 @@
 + (instancetype)yz_loadFromNib;
 + (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle;
 
+/** Bring the view to the front by calling `bringSubviewToFront:` on its superview.
+ */
+- (void)yz_bringToFront;
+
 - (UIImage*)yz_captureImage;
 - (UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor;
 

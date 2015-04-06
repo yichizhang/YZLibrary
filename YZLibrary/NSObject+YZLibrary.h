@@ -16,11 +16,6 @@
 
 @interface NSObject (YZLibrary)
 
-/** Check if an object is empty by checking its "count" or "length".
- 
- */
-BOOL YZ_IS_EMPTY(id obj);
-
 /** Returns the "real" class name without the module name.
  
  NSStringFromClass() now returns the module name, plus class name separated by a dot.
@@ -31,9 +26,9 @@ BOOL YZ_IS_EMPTY(id obj);
 
 /** Check an object if it is empty by checking its "count" or "length". Returns true if the object is nil.
  
- Exposing `BOOL YZ_IS_EMPTY(id obj)` to Swift.
+ I was doing this to expose `BOOL YZ_IS_EMPTY(id obj)` to Swift. However then I figured out it was my fault to put it in `NSObject (YZLibrary)`
  */
-+ (BOOL)yz_isEmpty:(id) obj;
++ (BOOL)yz_isEmpty:(id) obj __attribute__((deprecated));
 
 /** Dispatch on the main queue after delay. Shortcut for dispatch_after(dispatch_time_t when, dispatch_queue_t queue, ^(void)block)} 
  

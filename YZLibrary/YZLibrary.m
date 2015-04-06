@@ -14,6 +14,28 @@
 
 #include "YZLibrary.h"
 
+BOOL YZ_IS_EMPTY(id obj) {
+	
+	if (obj == nil) {
+		return YES;
+	} else {
+		
+		return
+		([obj respondsToSelector:@selector(length)] && [(NSData*)obj length] == 0)
+		|| ([obj respondsToSelector:@selector(count)] && [(NSArray*)obj count] == 0);
+	}
+	
+}
+
+CGRect YZ_CGRectWithCenterAndSize(CGFloat centerX, CGFloat centerY, CGFloat width, CGFloat height) {
+	return CGRectMake(
+					  centerX - width / 2,
+					  centerY - height / 2,
+					  width,
+					  height
+					  );
+}
+
 @implementation YZLibrary
 
 + (CGSize)sizeRequiredForSize:(CGSize)size toAspectFitInBox:(CGSize)boxSize{
@@ -30,7 +52,5 @@
     }
     return CGSizeMake(w, h);
 }
-
-
 
 @end
