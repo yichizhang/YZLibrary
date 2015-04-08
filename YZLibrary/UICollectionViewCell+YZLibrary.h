@@ -27,17 +27,17 @@
                                 forIndexPath:(NSIndexPath*)indexPath
                           andReuseIdentifier:(NSString*)reuseIdentifier;
 
-/** Register a type of collection view cell with the collection view, using the class name (without package name) as the identifier and the name of the nib file.
+/** Register a collection view cell with the collection view, using the class name (without package name) as the identifier and the name of the nib file.
  */
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView;
 
-/** Register a type of collection view cell with the collection view, using custom identifier and custom nib file name.
+/** Register a collection view cell with the collection view, using custom identifier and custom nib file name.
  */
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView
                      withNibFileName:(NSString*)nibFileName
                   andReuseIdentifier:(NSString*)reuseIdentifier;
 
-/** Register a type of collection view cell with the collection view, using custom identifier the class name (without package name) as the name of the nib file.
+/** Register a collection view cell with the collection view, using custom identifier the class name (without package name) as the name of the nib file.
  */
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView
                  withReuseIdentifier:(NSString*)reuseIdentifier;

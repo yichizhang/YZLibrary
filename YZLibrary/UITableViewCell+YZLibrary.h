@@ -16,15 +16,29 @@
 
 @interface UITableViewCell (YZLibrary)
 
+/** Dequeue a table view cell, using default identifier, which is identical to the class name (without package name) of the cell.
+ */
 + (instancetype)yz_dequeueFromTableView:(UITableView*)tableView
                            forIndexPath:(NSIndexPath*)indexPath;
+
+/** Dequeue a table view cell, using custom identifier.
+ */
 + (instancetype)yz_dequeueFromTableView:(UITableView*)tableView
                            forIndexPath:(NSIndexPath*)indexPath
                      andReuseIdentifier:(NSString*)reuseIdentifier;
+
+/** Register a table view cell with the table view, using the class name (without package name) as the identifier and the name of the nib file.
+ */
 + (void)yz_registerForTableView:(UITableView*)tableView;
+
+/** Register a table view cell with the table view, using custom identifier and custom nib file name.
+ */
 + (void)yz_registerForTableView:(UITableView*)tableView
                 withNibFileName:(NSString*)nibFileName
              andReuseIdentifier:(NSString*)reuseIdentifier;
+
+/** Register a table view cell with the table view, using custom identifier and the class name (without package name) as the name of the nib file.
+ */
 + (void)yz_registerForTableView:(UITableView*)tableView
             withReuseIdentifier:(NSString*)reuseIdentifier;
 
