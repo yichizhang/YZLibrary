@@ -16,6 +16,8 @@
 
 @interface NSCharacterSet (YZLibrary)
 
+/** Returns a set of non alphanumeric characters.
+ */
 + (instancetype)yz_nonAlphanumericCharacterSet;
 
 @end

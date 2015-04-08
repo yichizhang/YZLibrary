@@ -16,15 +16,29 @@
 
 @interface UICollectionViewCell (YZLibrary)
 
+/** Dequeue a collection view cell, using default identifier, which is identical to the class name (without package name) of the cell.
+ */
 + (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
                                 forIndexPath:(NSIndexPath*)indexPath;
+
+/** Dequeue a collection view cell, using custom identifier.
+ */
 + (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
                                 forIndexPath:(NSIndexPath*)indexPath
                           andReuseIdentifier:(NSString*)reuseIdentifier;
+
+/** Register a type of collection view cell with the collection view, using the class name (without package name) as the identifier and the name of the nib file.
+ */
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView;
+
+/** Register a type of collection view cell with the collection view, using custom identifier and custom nib file name.
+ */
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView
                      withNibFileName:(NSString*)nibFileName
                   andReuseIdentifier:(NSString*)reuseIdentifier;
+
+/** Register a type of collection view cell with the collection view, using custom identifier the class name (without package name) as the name of the nib file.
+ */
 + (void)yz_registerForCollectionView:(UICollectionView*)collectionView
                  withReuseIdentifier:(NSString*)reuseIdentifier;
 @end

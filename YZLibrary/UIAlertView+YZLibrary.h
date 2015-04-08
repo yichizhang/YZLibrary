@@ -16,6 +16,8 @@
 
 @interface UIAlertView (YZLibrary)
 
+/** Show an alert view with title and message. Use when you just would like to show some information to the user and do not care about the response.
+ */
 + (void)yz_showWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle;
 
 @end
