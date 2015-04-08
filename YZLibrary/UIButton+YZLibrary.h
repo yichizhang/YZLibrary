@@ -16,6 +16,8 @@
 
 @interface UIButton (YZLibrary)
 
-- (void)yz_covertToHappyButton;
+/** Deprecated.
+ */
+- (void)yz_covertToHappyButton __attribute__((deprecated));
 
 @end

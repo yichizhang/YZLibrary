@@ -16,10 +16,20 @@
 
 @interface NSDictionary (YZLibrary)
 
-+ (instancetype)yz_dictionaryWithDictionary:(NSDictionary*)dictionary1 joinedWithDictionary:(NSDictionary*)dictionary2;
-- (instancetype)yz_dictionaryWithAdditionalEntriesFromDictionary:(NSDictionary*)aDictionary;
+/** Joins two dictionaries together.
+ */
++ (instancetype)yz_dictionaryWithDictionary:(NSDictionary*)dictionary1 joinedWithDictionary:(NSDictionary*)dictionary2 __attribute__((deprecated));
 
-+ (instancetype)yz_join:(NSDictionary*)dictionary1 :(NSDictionary*)dictionary2;
-- (instancetype)yz_dictionaryByAdding:(NSDictionary*)aDictionary;
+/** Returns a new dictionary with entries from current dictionary and the other dictionary.
+ */
+- (instancetype)yz_dictionaryWithAdditionalEntriesFromDictionary:(NSDictionary*)aDictionary __attribute__((deprecated));
+
+/** Joins two dictionaries together.
+ */
++ (instancetype)yz_join:(NSDictionary*)dictionary1 :(NSDictionary*)dictionary2 __attribute__((deprecated));
+
+/** Returns a new dictionary with entries from current dictionary and the other dictionary.
+ */
+- (instancetype)yz_dictionaryByAdding:(NSDictionary*)aDictionary __attribute__((deprecated));
 
 @end
