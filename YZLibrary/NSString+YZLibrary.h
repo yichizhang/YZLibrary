@@ -52,21 +52,25 @@
  */
 - (BOOL)yz_isDigitsOnly;
 
-// FIXME: The implementation contains serious problems
-// TODO: Should implement stringByRemovingCharactersInSet
+// TODO: Unnecessary. Remove
 - (NSString*)yz_stringByRemovingNonAlphanumericCharacters;
+
+// TODO: Unnecessary. Remove
 - (NSString*)yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:(BOOL)keepSpaces;
 
+// FIXME: Needs to be fixed
 /** Example: converts "melbourne_dingo_show" or "melbourneDingoShow", or "mebourne_DingoShow" to "Melbourne Dingo Show"
  
  */
 - (NSString*)yz_humanReadableString;
 
+// FIXME: Needs to be fixed
 /** Example: converts "Melbourne Dingo Show" to "melbourne_dingo_show"
  
  */
 - (NSString*)yz_underscoreCaseString;
 
+// FIXME: Needs to be fixed
 /** Example: converts "Melbourne Dingo Show" to "melbourneDingoShow"
  
  */
