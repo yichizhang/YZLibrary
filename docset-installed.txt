@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/yichi/Library/Developer/Shared/Documentation/DocSets/com.yichizhang.YZLibrary.docset
+Time: 2015-04-04 13:26:37 +0000

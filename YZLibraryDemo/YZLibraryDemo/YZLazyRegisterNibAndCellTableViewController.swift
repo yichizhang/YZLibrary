@@ -35,7 +35,6 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
 	
 	func commonInit(){
 		self.title = "Table View";
-		self.tabBarItem = UITabBarItem(title: self.title, image: YZLibraryDemoStyleKit.imageOfThree, tag: 2)
 	}
 	
 	override init(style: UITableViewStyle) {
@@ -125,7 +124,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
 			}
 		}
 		
-		let cell = tableView.dequeueReusableCellWithIdentifier(demoTableViewDefaultCell, forIndexPath: indexPath) as UITableViewCell
+		let cell = tableView.dequeueReusableCellWithIdentifier(demoTableViewDefaultCell, forIndexPath: indexPath) as! UITableViewCell
 		
 		cell.textLabel?.numberOfLines = 0
 		cell.textLabel?.text =

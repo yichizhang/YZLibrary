@@ -65,13 +65,6 @@ typedef enum{
 - (void)commonInit{
     
     self.title = @"Random Numbers";
-    self.tabBarItem =
-	[[UITabBarItem alloc]
-	 initWithTitle:self.title
-	 image:[YZLibraryDemoStyleKit imageOfTwo]
-     tag:1
-     ];
-    
 }
 
 - (id)initWithCoder:(NSCoder*)aDecoder
@@ -354,7 +347,7 @@ typedef enum{
         }
         
         float percentage = (data.floatValue-self.minValue) / (self.maxValue - self.minValue);
-        NSLog(@"%f", percentage);
+        
         if (percentage < 0) {
             percentage = -percentage;
         }

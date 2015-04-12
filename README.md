@@ -13,32 +13,32 @@ If you are using Swift, add this to your bridging header:
 ```objc
 #import <YZLibrary/YZLibraryImportAll.h>
 ```
+Documentation
+=============
 
+You can view the documentation at <http://www.yichizhang.info/YZLibrary/doc/>
 
-## Some sample usage
+Examples
+========
+
+## Random object from an array
 
 ```objc
 NSArray *fruitArray = @[@"Apple", @"Banana", @"Cherry"];
 NSString *fruitForToday = [fruitArray yz_randomObject];
 ```
 
+## Lazy Loading of Table View/ Collection View Cells
 
-Files
-=============
- 
-
-### UICollectionViewCell+YZLibrary 
-### UITableViewCell+YZLibrary
-
-These are for the Lazy Loading of Table View/ Collection View Cells.
-
-Usage:
+Files:
+UICollectionViewCell+YZLibrary 
+UITableViewCell+YZLibrary
 
 Set the NIB file name and the identifier to be the same as the class name of the cell.
 
 For example, your custom Table View/ Collection View Cell class is 'MyAwesomeCell'. Put the user interface in 'MyAwesomeCell.xib'; change the cell identifier to 'MyAwesomeCell'.
 
-Then you can register NIB and load the cells VERY LAZILIY:
+Then you can register the nib and load the cells VERY LAZILIY:
 
 ```swift
     override func viewDidLoad() {
@@ -70,7 +70,7 @@ Then you can register NIB and load the cells VERY LAZILIY:
     }
 ```
 
-This can save you a lot of time, but it can be a bad practice.
+This may be a bad practice but can save you a lot of time.
 
 You can provide custom NIB file name and your own identifier:
 
@@ -114,19 +114,3 @@ You can provide custom NIB file name and your own identifier:
         return cell
     }
 ```
-
-### NSArray+YZLibrary 
-### NSDictionary+YZLibrary 
-### NSObject+YZLibrary 
-### NSString+YZLibrary 
-### UIButton+YZLibrary 
-### UIColor+YZLibrary 
-### UIImage+YZLibrary 
-### UIImageView+YZLibrary  
-### UIView+YZLibrary 
-### UIViewController+YZLibrary 
-### YZFileHelper 
-### YZLibrary 
-### YZRandom 
-### YZStringHelper 
-### YZTimeHelper 

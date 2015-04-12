@@ -18,7 +18,6 @@ class YZLoadViewFromNibViewController: UIViewController {
 
 	func commonInit(){
 		self.title = "Load view from nib"
-		self.tabBarItem = UITabBarItem(title: self.title, image: YZLibraryDemoStyleKit.imageOfFour, tag: 3)
 	}
 	
 	required override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {

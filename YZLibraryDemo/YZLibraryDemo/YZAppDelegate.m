@@ -75,6 +75,11 @@
 	for (NSString* str in demoStrings){
 		NSLog(@"%@", [str yz_underscoreCaseString]);
 	}
+	
+	NSArray *a = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
+	NSLog(@"%@", a);
+	NSLog(@"%@", [a yz_shuffledArray]);
+	
     // Override point for customization after application launch.
     return YES;
 }
