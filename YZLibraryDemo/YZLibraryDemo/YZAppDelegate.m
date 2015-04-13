@@ -67,19 +67,20 @@
 	for (NSString* str in demoStrings){
 		NSLog(@"%@", [str yz_humanReadableString]);
 	}
-	NSLog(@" ");
-	for (NSString* str in demoStrings){
-		NSLog(@"%@", [str yz_camelCaseString]);
-	}
-	NSLog(@" ");
+	NSLog(@" "); NSLog(@"Original"); NSLog(@" ");
 	for (NSString* str in demoStrings){
 		NSLog(@"%@", str);
 	}
-	NSLog(@" ");
+	NSLog(@" "); NSLog(@"Camel Case"); NSLog(@" ");
+	for (NSString* str in demoStrings){
+		NSLog(@"%@", [str yz_camelCaseString]);
+	}
+	NSLog(@" "); NSLog(@"Underscore case"); NSLog(@" ");
 	for (NSString* str in demoStrings){
 		NSLog(@"%@", [str yz_underscoreCaseString]);
 	}
 	
+	NSLog(@" "); NSLog(@" ");
 	NSArray *a = @[@1,@2,@3,@4,@5,@6,@7,@8,@9,@10];
 	NSLog(@"%@", a);
 	NSLog(@"%@", [a yz_shuffledArray]);

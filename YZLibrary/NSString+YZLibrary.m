@@ -99,7 +99,7 @@
 
 + (NSString*)yz_stringFromInt:(NSInteger)intNumber{
 	
-	return [NSString stringWithFormat:@"%i", intNumber];
+	return [NSString stringWithFormat:@"%li", (long)intNumber];
 }
 
 - (BOOL)yz_isDigitsOnly
@@ -145,62 +145,84 @@
 }
 
 - (NSString*)yz_underscoreCaseString{
-	NSScanner *scanner = [NSScanner scannerWithString:self];
-	NSMutableString *newString = [NSMutableString new];
-	
-	NSCharacterSet *lowercaseSet = [NSCharacterSet lowercaseLetterCharacterSet];
-	NSCharacterSet *uppercaseSet = [NSCharacterSet uppercaseLetterCharacterSet];
-	NSCharacterSet *ignoreSet = [NSCharacterSet characterSetWithCharactersInString:@"\'\""];
-	
-	BOOL needToAppendUnderscore = NO;
-	BOOL needToBeAppended = NO;
-	
-	while (scanner.scanLocation < scanner.string.length) {
-		unichar currentChar = [scanner.string characterAtIndex:scanner.scanLocation];
-		
-		if ( [lowercaseSet characterIsMember:currentChar] ) {
-			// A lowercase letter
-			needToBeAppended = YES;
-		} else if ( [uppercaseSet characterIsMember:currentChar] ) {
-			// An uppercase letter
-			needToAppendUnderscore = YES;
-			needToBeAppended = YES;
-		} else if ( [ignoreSet characterIsMember:currentChar] ) {
-			// Symbols to be "ignored"
-			needToBeAppended = NO;
-		} else {
-			// Symbols to be replaced with underscore
-			needToAppendUnderscore = YES;
-			needToBeAppended = NO;
+	NSMutableString *newString = [@"" mutableCopy];
+	[self yz_enumerateCVariableNameWordsUsingBlock:^(NSString *word, BOOL *stop) {
+		if (newString.length > 0) {
+			[newString appendString:@"_"];
 		}
-		
-		if (needToBeAppended) {
-			if (needToAppendUnderscore) {
-				if (newString.length > 0) {
-					[newString appendString:@"_"];
-				}
-				needToAppendUnderscore = NO;
-			}
-			NSString *charString = [[NSString stringWithFormat:@"%c", currentChar] lowercaseString];
-			[newString appendString:charString];
-		}
-		
-		scanner.scanLocation++;
-	}
-	
-	return newString;
+		[newString appendString:[word lowercaseString]];
+	}];
+	return [newString copy];
 }
 
 - (NSString*)yz_camelCaseString{
-	NSArray *separatedString = [[[self yz_humanReadableString] yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:YES] componentsSeparatedByString:@" "];
-	NSString *string= [separatedString componentsJoinedByString:@""];
+	NSMutableString *newString = [@"" mutableCopy];
+	[self yz_enumerateCVariableNameWordsUsingBlock:^(NSString *word, BOOL *stop) {
+		[newString appendString:[word capitalizedString]];
+	}];
+	return [newString copy];
+}
+
+- (void)yz_enumerateCVariableNameWordsUsingBlock:(void (^)(NSString *word, BOOL* stop))handlingBlock {
 	
-	if (self.length > 0){
-		NSString *firstCharacter = [[string substringToIndex:1] lowercaseString];
-		string = [string stringByReplacingCharactersInRange:NSMakeRange(0,1) withString:firstCharacter];
+	NSMutableString *currentWord = [NSMutableString new];
+	
+	NSMutableCharacterSet *lowercaseAndDigitsSet = [[NSCharacterSet lowercaseLetterCharacterSet] mutableCopy];
+	[lowercaseAndDigitsSet formUnionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
+	NSCharacterSet *uppercaseSet = [NSCharacterSet uppercaseLetterCharacterSet];
+	NSCharacterSet *ignoreSet = [NSCharacterSet characterSetWithCharactersInString:@"\'\""];
+	
+	BOOL outputCurrentWord = NO;
+	BOOL appendCurrentChar = NO;
+	BOOL appendBeforeOutput = NO;
+	BOOL stop = NO;
+	
+	for (NSInteger location = 0; location < self.length; location ++) {
+		unichar currentChar = [self characterAtIndex:location];
+		
+		appendCurrentChar = NO;
+		if ( [uppercaseSet characterIsMember:currentChar] ) {
+			// An uppercase letter
+			outputCurrentWord = YES;
+			appendCurrentChar = YES;
+			appendBeforeOutput = NO;
+		} else if ( [lowercaseAndDigitsSet characterIsMember:currentChar] ) {
+			// A lowercase letter
+			appendCurrentChar = YES;
+			appendBeforeOutput = YES;
+		} else if ( [ignoreSet characterIsMember:currentChar] ){
+			// Symbols to be "ignored"
+			outputCurrentWord = NO;
+			appendCurrentChar = NO;
+		} else {
+			// Symbols to be replaced with underscore
+			outputCurrentWord = YES;
+			appendCurrentChar = NO;
+		}
+		
+		if (location == self.length - 1) {
+			// Last character. Out put current word.
+			outputCurrentWord = YES;
+		}
+		
+		if (appendCurrentChar && appendBeforeOutput == YES) {
+			[currentWord appendFormat:@"%c", currentChar];
+			appendCurrentChar = NO;
+		}
+		
+		if (outputCurrentWord) {
+			if (currentWord.length > 0) {
+				handlingBlock([currentWord copy], &stop);
+				currentWord = [@"" mutableCopy];
+			}
+			outputCurrentWord = NO;
+		}
+		
+		if (appendCurrentChar && appendBeforeOutput == NO) {
+			[currentWord appendFormat:@"%c", currentChar];
+			appendCurrentChar = NO;
+		}
 	}
-	
-	return string;
 }
 
 @end

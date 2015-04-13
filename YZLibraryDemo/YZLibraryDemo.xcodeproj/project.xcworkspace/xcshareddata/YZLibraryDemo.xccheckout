@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4B903328-87C1-4412-8233-A3FB1F8DA368</string>
 	<key>IDESourceControlProjectName</key>
-	<string>YZLibraryDemo</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>F111262485DAACE20F27840E580354EA6CFD593F</key>
 		<string>https://github.com/yichizhang/YZLibrary.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>YZLibraryDemo/YZLibraryDemo.xcodeproj</string>
+	<string>YZLibraryDemo/YZLibraryDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>F111262485DAACE20F27840E580354EA6CFD593F</key>
