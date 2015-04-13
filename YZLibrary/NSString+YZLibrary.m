@@ -160,15 +160,13 @@
 		
 		if ( [lowercaseSet characterIsMember:currentChar] ) {
 			// A lowercase letter
-			needToAppendUnderscore = NO;
 			needToBeAppended = YES;
 		} else if ( [uppercaseSet characterIsMember:currentChar] ) {
 			// An uppercase letter
-			needToAppendUnderscore = NO;
+			needToAppendUnderscore = YES;
 			needToBeAppended = YES;
 		} else if ( [ignoreSet characterIsMember:currentChar] ) {
 			// Symbols to be "ignored"
-			needToAppendUnderscore = NO;
 			needToBeAppended = NO;
 		} else {
 			// Symbols to be replaced with underscore
@@ -176,13 +174,14 @@
 			needToBeAppended = NO;
 		}
 		
-		if (needToAppendUnderscore) {
-			[newString appendString:@"_"];
-		}
-		
 		if (needToBeAppended) {
+			if (needToAppendUnderscore) {
+				if (newString.length > 0) {
+					[newString appendString:@"_"];
+				}
+				needToAppendUnderscore = NO;
+			}
 			NSString *charString = [[NSString stringWithFormat:@"%c", currentChar] lowercaseString];
-			
 			[newString appendString:charString];
 		}
 		

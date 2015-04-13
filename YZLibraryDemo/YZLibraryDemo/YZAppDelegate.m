@@ -73,6 +73,10 @@
 	}
 	NSLog(@" ");
 	for (NSString* str in demoStrings){
+		NSLog(@"%@", str);
+	}
+	NSLog(@" ");
+	for (NSString* str in demoStrings){
 		NSLog(@"%@", [str yz_underscoreCaseString]);
 	}
 	
