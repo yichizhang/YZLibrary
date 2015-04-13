@@ -145,9 +145,51 @@
 }
 
 - (NSString*)yz_underscoreCaseString{
-	NSMutableArray *separatedString = [[[[[self yz_humanReadableString] yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:YES] lowercaseString] componentsSeparatedByString:@" "] mutableCopy];
-	[separatedString removeObject:@""];
-	return [separatedString componentsJoinedByString:@"_"];
+	NSScanner *scanner = [NSScanner scannerWithString:self];
+	NSMutableString *newString = [NSMutableString new];
+	
+	NSCharacterSet *lowercaseSet = [NSCharacterSet lowercaseLetterCharacterSet];
+	NSCharacterSet *uppercaseSet = [NSCharacterSet uppercaseLetterCharacterSet];
+	NSCharacterSet *ignoreSet = [NSCharacterSet characterSetWithCharactersInString:@"\'\""];
+	
+	BOOL needToAppendUnderscore = NO;
+	BOOL needToBeAppended = NO;
+	
+	while (scanner.scanLocation < scanner.string.length) {
+		unichar currentChar = [scanner.string characterAtIndex:scanner.scanLocation];
+		
+		if ( [lowercaseSet characterIsMember:currentChar] ) {
+			// A lowercase letter
+			needToAppendUnderscore = NO;
+			needToBeAppended = YES;
+		} else if ( [uppercaseSet characterIsMember:currentChar] ) {
+			// An uppercase letter
+			needToAppendUnderscore = NO;
+			needToBeAppended = YES;
+		} else if ( [ignoreSet characterIsMember:currentChar] ) {
+			// Symbols to be "ignored"
+			needToAppendUnderscore = NO;
+			needToBeAppended = NO;
+		} else {
+			// Symbols to be replaced with underscore
+			needToAppendUnderscore = YES;
+			needToBeAppended = NO;
+		}
+		
+		if (needToAppendUnderscore) {
+			[newString appendString:@"_"];
+		}
+		
+		if (needToBeAppended) {
+			NSString *charString = [[NSString stringWithFormat:@"%c", currentChar] lowercaseString];
+			
+			[newString appendString:charString];
+		}
+		
+		scanner.scanLocation++;
+	}
+	
+	return newString;
 }
 
 - (NSString*)yz_camelCaseString{
