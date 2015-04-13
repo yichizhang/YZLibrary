@@ -177,7 +177,7 @@
 	BOOL appendBeforeOutput = NO;
 	BOOL stop = NO;
 	
-	for (NSInteger location = 0; location < self.length; location ++) {
+	for (NSInteger location = 0; location < self.length && stop == NO; location ++) {
 		unichar currentChar = [self characterAtIndex:location];
 		
 		appendCurrentChar = NO;
