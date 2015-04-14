@@ -109,56 +109,59 @@
 	return range.location == NSNotFound;
 }
 
-- (NSString*)yz_stringByRemovingNonAlphanumericCharacters{
-	return [self yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:NO];
-}
-
-- (NSString*)yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:(BOOL)keepSpaces{
-	NSMutableCharacterSet *set = [[NSCharacterSet alphanumericCharacterSet] mutableCopy];
-	if (keepSpaces){
-		[set addCharactersInString:@" "];
-	}
-	NSCharacterSet* setToRemove = [set invertedSet];
-	
-	NSString *joinByString = keepSpaces ? @" " : @"";
-	return [[self componentsSeparatedByCharactersInSet:setToRemove] componentsJoinedByString:joinByString];
-}
-
 - (NSString*)yz_humanReadableString
 {
-	NSString *string = [self stringByReplacingOccurrencesOfString:@"_" withString:@" "];
-	
-	if( [string rangeOfCharacterFromSet:[NSCharacterSet uppercaseLetterCharacterSet]].location != NSNotFound ){
-		
-		NSMutableString *tempString = [NSMutableString string];
-		for (NSInteger i=0; i<string.length; i++){
-			NSString *character = [string substringWithRange:NSMakeRange(i, 1)];
-			if ([character rangeOfCharacterFromSet:[NSCharacterSet uppercaseLetterCharacterSet]].location != NSNotFound) {
-				[tempString appendString:@" "];
-			}
-			[tempString appendString:character];
-		}
-		return [tempString capitalizedString];
-	}
-	
-	return [string capitalizedString];
-}
-
-- (NSString*)yz_underscoreCaseString{
 	NSMutableString *newString = [@"" mutableCopy];
 	[self yz_enumerateCVariableNameWordsUsingBlock:^(NSString *word, BOOL *stop) {
 		if (newString.length > 0) {
-			[newString appendString:@"_"];
+			[newString appendString:@" "];
 		}
 		[newString appendString:[word lowercaseString]];
 	}];
 	return [newString copy];
 }
 
-- (NSString*)yz_camelCaseString{
+- (NSString*)yz_underscoreCaseString {
+	return [self yz_underscoreCaseStringWithOptions:YZStringConversionNone];
+}
+
+- (NSString*)yz_underscoreCaseStringWithOptions:(YZStringConversion)options {
 	NSMutableString *newString = [@"" mutableCopy];
 	[self yz_enumerateCVariableNameWordsUsingBlock:^(NSString *word, BOOL *stop) {
-		[newString appendString:[word capitalizedString]];
+		if (newString.length > 0) {
+			[newString appendString:@"_"];
+		}
+		
+		if (options & YZStringConversionRetainOriginalLetterCase) {
+			[newString appendString:word];
+		} else {
+			[newString appendString:[word lowercaseString]];
+		}
+	}];
+	return [newString copy];
+}
+
+- (NSString*)yz_camelCaseString {
+	return [self yz_camelCaseStringWithOptions:YZStringConversionRetainOriginalLetterCase];
+}
+
+- (NSString*)yz_camelCaseStringWithOptions:(YZStringConversion)options {
+	NSMutableString *newString = [@"" mutableCopy];
+	[self yz_enumerateCVariableNameWordsUsingBlock:^(NSString *word, BOOL *stop) {
+
+		if (
+			(options & YZStringConversionRetainOriginalLetterCase) == YES &&
+			newString.length == 0
+			) {
+			// If option `RetainOriginalLetterCase` is YES, and it is the first word;
+			// do not change the word to `capitalizedString`.
+			// We have to change the word to `capitalizedString` if it is NOT the first word,
+			// even option `RetainOriginalLetterCase` is YES --- otherwise it wouldn't be
+			// camel case string would it?
+			[newString appendString:word];
+		} else {
+			[newString appendString:[word capitalizedString]];
+		}
 	}];
 	return [newString copy];
 }

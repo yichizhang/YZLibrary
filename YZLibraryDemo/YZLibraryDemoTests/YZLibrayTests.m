@@ -97,7 +97,7 @@
 	  @"{Test failed}, AA 12345",
 	  @"Location: #23406A",
 	  @"Use `objc_getAssociatedObject(self, &AssociatedKeys.DescriptiveName)`",
-	  @"My email is - me@email.com",
+	  @"my email is - me@email.com",
 	  ];
 	
 	NSInteger index;
@@ -112,12 +112,12 @@
 	  @"TestFailedAA12345",
 	  @"Location23406A",
 	  @"UseObjcGetAssociatedObjectSelfAssociatedKeysDescriptiveName",
-	  @"MyEmailIsMeEmailCom",
+	  @"myEmailIsMeEmailCom",
 	  ];
 	
 	index = 0;
 	for (NSString* expected in camelCaseExpectedStrings){
-		NSString *actual = [testStrings[index] yz_camelCaseString];
+		NSString *actual = [testStrings[index] yz_camelCaseStringWithOptions:YZStringConversionRetainOriginalLetterCase];
 		XCTAssertTrue([actual isEqualToString:expected],
 					  @"Strings are not equal. Expected: `%@`, actual: `%@`", expected, actual);
 		index++;
@@ -138,7 +138,7 @@
 	
 	index = 0;
 	for (NSString* expected in underscoreCaseExpectedStrings){
-		NSString *actual = [testStrings[index] yz_underscoreCaseString];
+		NSString *actual = [testStrings[index] yz_underscoreCaseStringWithOptions:YZStringConversionNone];
 		XCTAssertTrue([actual isEqualToString:expected],
 					  @"Strings are not equal. Expected: `%@`, actual: `%@`", expected, actual);
 		index++;

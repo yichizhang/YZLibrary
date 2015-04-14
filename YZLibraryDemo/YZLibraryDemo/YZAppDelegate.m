@@ -57,15 +57,6 @@
 	@"My email is - me@email.com",
 	];
 
-	
-	NSLog(@" ");
-	for (NSString* str in demoStrings){
-		NSLog(@"%@", [str yz_stringByRemovingNonAlphanumericCharacters]);
-	}
-	NSLog(@" ");
-	for (NSString* str in demoStrings){
-		NSLog(@"%@", [str yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:YES]);
-	}
 	NSLog(@" ");
 	for (NSString* str in demoStrings){
 		NSLog(@"%@", [str yz_humanReadableString]);

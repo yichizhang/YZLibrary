@@ -14,6 +14,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_OPTIONS(NSUInteger, YZStringConversion) {
+	YZStringConversionNone							= 0,
+	YZStringConversionRetainOriginalLetterCase		= 1 << 0,
+};
+
 @interface NSString (YZLibrary)
 
 /** Check if current string is a valid email address
@@ -52,28 +57,40 @@
  */
 - (BOOL)yz_isDigitsOnly;
 
-// TODO: Unnecessary. Remove
-- (NSString*)yz_stringByRemovingNonAlphanumericCharacters;
-
-// TODO: Unnecessary. Remove
-- (NSString*)yz_stringByRemovingNonAlphanumericCharactersKeepSpaces:(BOOL)keepSpaces;
-
-// FIXME: Needs to be fixed
-/** Example: converts "melbourne_dingo_show" or "melbourneDingoShow", or "mebourne_DingoShow" to "Melbourne Dingo Show"
+/** Converts a `C variable name` string to human readable string.
  
+ Example: converts "melbourne_dingo_show" or "melbourneDingoShow", or "mebourne_DingoShow" to "Melbourne Dingo Show"
  */
 - (NSString*)yz_humanReadableString;
 
-// FIXME: Needs to be fixed
-/** Example: converts "Melbourne Dingo Show" to "melbourne_dingo_show"
+/** Converts a string to a `C variable name` compatible underscore case string.
  
+ It calls `yz_underscoreCaseStringWithOptions:` with option `RetainOriginalLetterCase` NOT enabled.
+ For Example: it converts `MELBOURNE Dingo` to `melbourne_dingo`
  */
 - (NSString*)yz_underscoreCaseString;
 
-// FIXME: Needs to be fixed
-/** Example: converts "Melbourne Dingo Show" to "melbourneDingoShow"
+/** Converts a string to a `C variable name` compatible underscore case string.
  
+ Options: `RetainOriginalLetterCase`
+ If switched on, `melbourne Dingo SHOW` will be converted to `melbourne_Dingo_SHOW`
+ Otherwise, it will be converted to `melbourne_dingo_show`
+ */
+- (NSString*)yz_underscoreCaseStringWithOptions:(YZStringConversion)options;
+
+/** Converts a string to a `C variable name` compatible camel case string.
+ 
+ It calls `yz_camelCaseStringWithOptions:` with option `RetainOriginalLetterCase` enabled.
+ For Example: it converts `melbourne Dingo` to `melbourneDingo`
  */
 - (NSString*)yz_camelCaseString;
+
+/** Convert a string to a `C variable name` compatible camel case string.
+ 
+ Options: `RetainOriginalLetterCase`
+ If switched on, `melbourne Dingo` will be converted to `melbourneDingo`
+ Otherwise, it will be converted to `MelbourneDingo`
+ */
+- (NSString*)yz_camelCaseStringWithOptions:(YZStringConversion)options;
 
 @end
