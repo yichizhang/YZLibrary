@@ -167,37 +167,51 @@
 	
 	NSMutableString *currentWord = [NSMutableString new];
 	
-	NSMutableCharacterSet *lowercaseAndDigitsSet = [[NSCharacterSet lowercaseLetterCharacterSet] mutableCopy];
-	[lowercaseAndDigitsSet formUnionWithCharacterSet:[NSCharacterSet decimalDigitCharacterSet]];
+	NSCharacterSet *lowercaseSet = [NSCharacterSet lowercaseLetterCharacterSet];
+	NSCharacterSet *digitSet = [NSCharacterSet decimalDigitCharacterSet];
 	NSCharacterSet *uppercaseSet = [NSCharacterSet uppercaseLetterCharacterSet];
 	NSCharacterSet *ignoreSet = [NSCharacterSet characterSetWithCharactersInString:@"\'\""];
 	
 	BOOL outputCurrentWord = NO;
 	BOOL appendCurrentChar = NO;
 	BOOL appendBeforeOutput = NO;
+	unichar lastChar = '\0';
 	BOOL stop = NO;
 	
 	for (NSInteger location = 0; location < self.length && stop == NO; location ++) {
 		unichar currentChar = [self characterAtIndex:location];
-		
+	
 		appendCurrentChar = NO;
+		appendBeforeOutput = YES;
 		if ( [uppercaseSet characterIsMember:currentChar] ) {
 			// An uppercase letter
 			outputCurrentWord = YES;
 			appendCurrentChar = YES;
 			appendBeforeOutput = NO;
-		} else if ( [lowercaseAndDigitsSet characterIsMember:currentChar] ) {
+		} else if ( [lowercaseSet characterIsMember:currentChar] ) {
 			// A lowercase letter
-			appendCurrentChar = YES;
-			appendBeforeOutput = YES;
+			if ( [digitSet characterIsMember:lastChar] ) {
+				outputCurrentWord = YES;
+				appendCurrentChar = YES;
+				appendBeforeOutput = NO;
+			} else {
+				appendCurrentChar = YES;
+			}
+		} else if ( [digitSet characterIsMember:currentChar] ) {
+			// A digit
+			if ( [digitSet characterIsMember:lastChar] ) {
+				appendCurrentChar = YES;
+			} else {
+				outputCurrentWord = YES;
+				appendCurrentChar = YES;
+				appendBeforeOutput = NO;
+			}
 		} else if ( [ignoreSet characterIsMember:currentChar] ){
 			// Symbols to be "ignored"
 			outputCurrentWord = NO;
-			appendCurrentChar = NO;
 		} else {
 			// Symbols to be replaced with underscore
 			outputCurrentWord = YES;
-			appendCurrentChar = NO;
 		}
 		
 		if (location == self.length - 1) {
@@ -222,6 +236,17 @@
 			[currentWord appendFormat:@"%c", currentChar];
 			appendCurrentChar = NO;
 		}
+		
+		if (location == self.length - 1) {
+			// Handles the case if the last character is a "word"
+			// by itself
+			if (currentWord.length > 0) {
+				handlingBlock([currentWord copy], &stop);
+				currentWord = [@"" mutableCopy];
+			}
+		}
+		
+		lastChar = currentChar;
 	}
 }
 
