@@ -44,8 +44,11 @@
 		
 	}
 	
-	NSArray *demoStrings = @[
-	@"Balsamic vinegar flavoured Vegemite",
+	NSArray *demoStrings =
+  @[
+	@"1984.8.8 Dingo Show",
+	@"-Balsamic vinegar flavoured Vegemite-",
+	@"Python's secrets1111 23 44",
 	@"Objective-C coding convention",
 	@"UIViewController Secrets",
 	@"{Test failed}, AA 12345",
@@ -66,18 +69,6 @@
 	NSLog(@" ");
 	for (NSString* str in demoStrings){
 		NSLog(@"%@", [str yz_humanReadableString]);
-	}
-	NSLog(@" "); NSLog(@"Original"); NSLog(@" ");
-	for (NSString* str in demoStrings){
-		NSLog(@"%@", str);
-	}
-	NSLog(@" "); NSLog(@"Camel Case"); NSLog(@" ");
-	for (NSString* str in demoStrings){
-		NSLog(@"%@", [str yz_camelCaseString]);
-	}
-	NSLog(@" "); NSLog(@"Underscore case"); NSLog(@" ");
-	for (NSString* str in demoStrings){
-		NSLog(@"%@", [str yz_underscoreCaseString]);
 	}
 	
 	NSLog(@" "); NSLog(@" ");

@@ -85,4 +85,64 @@
 	XCTAssertEqual(rect.size.height, 50.f);
 }
 
+- (void)testCamelCaseAndUnderscoreCaseString {
+	
+	NSArray *testStrings =
+	@[
+	  @"1984.8.8 Dingo Show7b",
+	  @"-Balsamic vinegar flavoured Vegemite-",
+	  @"Python's secrets1111 23 44",
+	  @"Objective-C coding convention",
+	  @"UIViewController Secrets",
+	  @"{Test failed}, AA 12345",
+	  @"Location: #23406A",
+	  @"Use `objc_getAssociatedObject(self, &AssociatedKeys.DescriptiveName)`",
+	  @"My email is - me@email.com",
+	  ];
+	
+	NSInteger index;
+	
+	NSArray *camelCaseExpectedStrings =
+	@[
+	  @"198488DingoShow7B",
+	  @"BalsamicVinegarFlavouredVegemite",
+	  @"PythonsSecrets11112344",
+	  @"ObjectiveCCodingConvention",
+	  @"UIViewControllerSecrets",
+	  @"TestFailedAA12345",
+	  @"Location23406A",
+	  @"UseObjcGetAssociatedObjectSelfAssociatedKeysDescriptiveName",
+	  @"MyEmailIsMeEmailCom",
+	  ];
+	
+	index = 0;
+	for (NSString* expected in camelCaseExpectedStrings){
+		NSString *actual = [testStrings[index] yz_camelCaseString];
+		XCTAssertTrue([actual isEqualToString:expected],
+					  @"Strings are not equal. Expected: `%@`, actual: `%@`", expected, actual);
+		index++;
+	}
+	
+	NSArray *underscoreCaseExpectedStrings =
+	@[
+	  @"1984_8_8_dingo_show_7_b",
+	  @"balsamic_vinegar_flavoured_vegemite",
+	  @"pythons_secrets_1111_23_44",
+	  @"objective_c_coding_convention",
+	  @"u_i_view_controller_secrets",
+	  @"test_failed_a_a_12345",
+	  @"location_23406_a",
+	  @"use_objc_get_associated_object_self_associated_keys_descriptive_name",
+	  @"my_email_is_me_email_com",
+	  ];
+	
+	index = 0;
+	for (NSString* expected in underscoreCaseExpectedStrings){
+		NSString *actual = [testStrings[index] yz_underscoreCaseString];
+		XCTAssertTrue([actual isEqualToString:expected],
+					  @"Strings are not equal. Expected: `%@`, actual: `%@`", expected, actual);
+		index++;
+	}
+}
+
 @end
