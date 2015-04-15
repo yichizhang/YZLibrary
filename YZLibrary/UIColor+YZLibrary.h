@@ -16,10 +16,24 @@
 
 @interface UIColor (YZLibrary)
 
+/** Returns iOS 7's system blue color
+ */
 + (UIColor*)yz_iOS7BlueColor;
+
+/** Returns the tint color of the application's key window
+ */
 + (UIColor*)yz_appKeyWindowTintColor;
+
+/** Returns a random bright color
+ */
 + (UIColor*)yz_randomBrightColor;
+
+/** Creates and returns a color object that's the complement of the receiver.
+ */
 - (instancetype)yz_complementaryColor;
+
+/** Creates and returns a color object that has the component values as the receiver, but has the specified hue component.
+ */
 - (instancetype)yz_colorWithHueComponent:(CGFloat)hue;
 
 @end
