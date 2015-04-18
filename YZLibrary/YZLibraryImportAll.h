@@ -26,7 +26,6 @@
 #import "UICollectionViewCell+YZLibrary.h"
 #import "UIColor+YZLibrary.h"
 #import "UIImage+YZLibrary.h"
-#import "UIImageView+YZLibrary.h"
 #import "UITableViewCell+YZLibrary.h"
 #import "UIView+YZLibrary.h"
 #import "UIViewController+YZLibrary.h"

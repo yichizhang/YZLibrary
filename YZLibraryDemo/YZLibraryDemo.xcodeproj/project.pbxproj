@@ -34,7 +34,6 @@
 		1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */; };
 		1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */; };
 		1272010B19E821FC00E4CBFB /* UIImage+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */; };
-		1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */; };
 		1272010D19E821FC00E4CBFB /* UIView+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010119E821FC00E4CBFB /* UIView+YZLibrary.m */; };
 		1272010E19E821FC00E4CBFB /* UIViewController+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010319E821FC00E4CBFB /* UIViewController+YZLibrary.m */; };
 		1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 1272010719E821FC00E4CBFB /* YZLibrary.m */; };
@@ -116,8 +115,6 @@
 		127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YZLibrary.m"; sourceTree = "<group>"; };
 		127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YZLibrary.h"; sourceTree = "<group>"; };
 		127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YZLibrary.m"; sourceTree = "<group>"; };
-		127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YZLibrary.h"; sourceTree = "<group>"; };
-		127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YZLibrary.m"; sourceTree = "<group>"; };
 		1272010019E821FC00E4CBFB /* UIView+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YZLibrary.h"; sourceTree = "<group>"; };
 		1272010119E821FC00E4CBFB /* UIView+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YZLibrary.m"; sourceTree = "<group>"; };
 		1272010219E821FC00E4CBFB /* UIViewController+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YZLibrary.h"; sourceTree = "<group>"; };
@@ -310,8 +307,6 @@
 				127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */,
 				127200FC19E821FC00E4CBFB /* UIImage+YZLibrary.h */,
 				127200FD19E821FC00E4CBFB /* UIImage+YZLibrary.m */,
-				127200FE19E821FC00E4CBFB /* UIImageView+YZLibrary.h */,
-				127200FF19E821FC00E4CBFB /* UIImageView+YZLibrary.m */,
 				12EFEFF11A3EDFC10034B70D /* UITableViewCell+YZLibrary.h */,
 				12EFEFF21A3EDFC10034B70D /* UITableViewCell+YZLibrary.m */,
 				1272010019E821FC00E4CBFB /* UIView+YZLibrary.h */,
@@ -460,7 +455,6 @@
 				1220D2841967109800979E9A /* YZMainDemoViewController.m in Sources */,
 				12D3616D1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m in Sources */,
 				12A212B11AA3EC9D00C8D9BA /* UIAlertView+YZLibrary.m in Sources */,
-				1272010C19E821FC00E4CBFB /* UIImageView+YZLibrary.m in Sources */,
 				1272011019E821FC00E4CBFB /* YZLibrary.m in Sources */,
 				1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */,
 				1249B0C81A768FCC00F8244F /* YZLimitedArray.m in Sources */,

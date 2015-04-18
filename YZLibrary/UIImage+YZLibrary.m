@@ -17,42 +17,6 @@
 
 @implementation UIImage (YZLibrary)
 
-+ (UIImage *)yz_autoResolutionImageNamed:(NSString *)name{
-
-    if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
-        CGFloat scale = [[UIScreen mainScreen] scale];
-
-        if (scale > 2.0) {
-            
-            NSString *newName = [NSString stringWithFormat:@"%@@3x.%@",
-                                 [name stringByDeletingPathExtension],
-                                 [name pathExtension]
-                                 ];
-            return [UIImage imageNamed:newName];
-            
-        }else if (scale > 1.0) {
-            
-            NSString *newName = [NSString stringWithFormat:@"%@@2x.%@",
-                                 [name stringByDeletingPathExtension],
-                                 [name pathExtension]
-                                 ];
-            
-            return [UIImage imageNamed:newName];
-            
-        }else{
-            
-            return [UIImage imageNamed:name];
-        }
-        
-        
-    }else {
-        
-        
-        return [UIImage imageNamed:name];
-    }
-    
-}
-
 + (UIImage *)yz_imageWithColor:(UIColor*)color andSize:(CGSize)size{
 	
 	CGRect rect = CGRectMake(0, 0, size.width, size.height);
@@ -89,33 +53,6 @@
 - (CGSize)yz_sizeRequiredToAspectFitInBox:(CGSize)boxSize{
 
     return [YZLibrary sizeRequiredForSize:self.size toAspectFitInBox:boxSize];
-}
-
-- (CGRect)yz_frameRequiredToAspectFitInFrame:(CGRect)frame{
-    
-    CGSize size = [YZLibrary sizeRequiredForSize:self.size toAspectFitInBox:frame.size];
-    CGRect newFrame = CGRectMake(frame.origin.x,
-                                 frame.origin.y,
-                                 size.width,
-                                 size.height);
-    return newFrame;
-    
-}
-
-+ (CGSize)yz_scaleSizeAccordingToScreenScale:(CGSize)size{
-    
-    if ([UIScreen instancesRespondToSelector:@selector(scale)]) {
-        
-        CGFloat scale = [[UIScreen mainScreen] scale];
-            
-        CGSize newSize = CGSizeMake(size.width*scale, size.height*scale);
-        return newSize;
- 
-    }else {
-        
-        return size;
-    }
-    
 }
 
 @end
