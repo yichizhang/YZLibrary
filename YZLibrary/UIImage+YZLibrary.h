@@ -16,12 +16,30 @@
 
 @interface UIImage (YZLibrary)
 
+//FIXME: Deprecated
 + (UIImage *)yz_autoResolutionImageNamed:(NSString *)name;
+
+
+/** Returns an image created by filling a rectangle with the specified color
+ */
 + (UIImage *)yz_imageWithColor:(UIColor*)color andSize:(CGSize)size;
+
+/** Creates and returns an image object by resizing the receiver to the required size, not retaining original aspect ratio.
+ */
 - (UIImage *)yz_imageScaledToSize:(CGSize)newSize;
+
+/** Creates and returns an image object by resizing the receiver that fits in required size, retaining original aspect ratio.
+ */
 - (UIImage *)yz_imageScaledToSizeAspectFitsInBox:(CGSize)boxSize;
+
+/** Returns the size that the receiver will be if you wish to resize it to make it fit in required size, retaining original aspect ratio.
+ */
 - (CGSize)yz_sizeRequiredToAspectFitInBox:(CGSize)boxSize;
+
+//FIXME: Deprecated
 - (CGRect)yz_frameRequiredToAspectFitInFrame:(CGRect)frame;
+
+//FIXME: Deprecated
 + (CGSize)yz_scaleSizeAccordingToScreenScale:(CGSize)size;
 
 @end
