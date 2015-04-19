@@ -19,10 +19,8 @@ typedef NS_ENUM(NSInteger, YZLimitedArrayInsertMode) {
 	YZLimitedArrayInsertModeTail
 };
 
-@interface YZLimitedArray : NSObject <NSFastEnumeration>
+@interface YZLimitedArray : NSMutableArray
 
-@property (nonatomic, readonly, assign) NSInteger count;
-@property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, assign) BOOL uniqueElements;
 @property (nonatomic, assign) BOOL stopsInsertingWhenFull;
 @property (nonatomic, assign) YZLimitedArrayInsertMode insertMode;
@@ -31,15 +29,12 @@ typedef NS_ENUM(NSInteger, YZLimitedArrayInsertMode) {
 - (instancetype)initWithCapacity:(NSUInteger)numItems uniqueElements:(BOOL)unique;
 + (instancetype)arrayWithCapacity:(NSUInteger)numItems;
 
+- (NSUInteger)count;
+- (id)objectAtIndex:(NSUInteger)index;
 - (void)addObject:(id)anObject;
-- (void)addObjectsFromArray:(NSArray *)otherArray;
-
-- (void)removeObject:(id)anObject;
-- (void)removeObjectAtIndex:(NSUInteger)index;
-- (void)removeAllObjects;
-- (void)removeObjectsInArray:(NSArray *)otherArray;
+- (void)insertObject:(id)anObject atIndex:(NSUInteger)index;
 - (void)removeLastObject;
-- (void)removeObjectsInRange:(NSRange)range;
-- (void)removeObjectsAtIndexes:(NSIndexSet *)indexes;
+- (void)removeObjectAtIndex:(NSUInteger)index;
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject;
 
 @end

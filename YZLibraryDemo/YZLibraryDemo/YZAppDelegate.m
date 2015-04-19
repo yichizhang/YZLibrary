@@ -40,7 +40,7 @@
 	for (int i = 0; i < 100; i ++) {
 		[arr addObject:[NSString yz_stringFromInt:i%10]];
 		
-		NSLog(@"%@", [arr.array componentsJoinedByString:@","]);
+		NSLog(@"%@", [arr componentsJoinedByString:@","]);
 		
 	}
 	

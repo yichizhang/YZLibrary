@@ -16,14 +16,16 @@
 
 @interface YZLimitedArray()
 
+@property (nonatomic, strong) NSMutableArray *array;
 @property (nonatomic, assign) NSInteger maxCapacity;
 
 @end
 
 @implementation YZLimitedArray
 
+#pragma mark - Init
 - (instancetype)initWithCapacity:(NSUInteger)numItems{
-	self = [self init];
+	self = [super init];
 	if (self) {
 		self.maxCapacity = numItems;
 		self.array = [NSMutableArray arrayWithCapacity:numItems];
@@ -52,32 +54,21 @@
 	return arr;
 }
 
-#pragma mark - Other
-
-- (NSInteger)count{
-	
+#pragma mark - Main
+- (NSUInteger)count{
 	return self.array.count;
 }
 
-- (NSString *)description{
-	
-	return self.array.description;
+- (id)objectAtIndex:(NSUInteger)index{
+	return [self.array objectAtIndex:index];
 }
-
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id [])buffer count:(NSUInteger)len{
-	return [self.array countByEnumeratingWithState:state objects:buffer count:len];
-}
-
-#pragma mark - Add
 
 - (void)addObject:(id)anObject{
 	
 	if (self.uniqueElements) {
 		
-		id obj = [self hasObject:anObject];
-		if (obj) {
-			
-			[self.array removeObject:obj];
+		if ([self containsObject:anObject]) {
+			[self.array removeObject:anObject];
 		}
 		
 	}
@@ -104,54 +95,22 @@
 		
 		[self.array addObject:anObject];
 	}
-	
 }
 
-- (void)addObjectsFromArray:(NSArray *)otherArray{
-	
-	for (id obj in otherArray) {
-		[self addObject:obj];
-	}
-	
-}
-
-- (id)hasObject:(id)anObject{
-	for (id obj in self.array) {
-		if ([obj isEqual:anObject]) {
-			return obj;
-		}
-	}
-	return nil;
-}
-
-# pragma mark - Remove
-
-- (void)removeObject:(id)anObject{
-	[self.array removeObject:anObject];
-}
-
-- (void)removeObjectAtIndex:(NSUInteger)index{
-	[self.array removeObjectAtIndex:index];
-}
-
-- (void)removeAllObjects{
-	[self.array removeAllObjects];
-}
-
-- (void)removeObjectsInArray:(NSArray *)otherArray{
-	[self.array removeObjectsInArray:otherArray];
+- (void)insertObject:(id)anObject atIndex:(NSUInteger)index{
+	[self.array insertObject:anObject atIndex:index];
 }
 
 - (void)removeLastObject{
 	[self.array removeLastObject];
 }
 
-- (void)removeObjectsInRange:(NSRange)range{
-	[self.array removeObjectsInRange:range];
+- (void)removeObjectAtIndex:(NSUInteger)index{
+	[self.array removeObjectAtIndex:index];
 }
 
-- (void)removeObjectsAtIndexes:(NSIndexSet *)indexes{
-	[self.array removeObjectsAtIndexes:indexes];
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject{
+	[self.array replaceObjectAtIndex:index withObject:anObject];
 }
 
 @end
