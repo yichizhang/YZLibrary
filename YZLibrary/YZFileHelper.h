@@ -16,22 +16,35 @@
 
 @interface YZFileHelper : NSObject
 
+/** Returns the user's document directory
+ 
+ */
 + (NSString *)userDocumentDirectoryPath;
 
+//FIXME: Deprecated
 + (BOOL)quickCopyFileInBundle:(NSString*)fileName toDirectory:(NSString*)dirPath;
 
+//FIXME: Deprecated
 + (NSString *)pathForFileInDocumentDirectory:(NSString*)fileName;
 
+//FIXME: Deprecated
 + (void)copyFileFromBundleToDocumentDirectoryIfNeeded:(NSString*)fileName;
 
+//FIXME: Deprecated
 + (BOOL)createDirectoryInHomeDirectory:(NSString*)partialDirToCreate;
 
+/** Returns a human readable string of the size of the file, based on its byte count.
+ 
+ */
 + (NSString*)fileSizeStringFromByteCount:(int)value;
 
+//FIXME: Deprecated
 + (NSString*)homeDirectoryFilePathForFolder:(NSString*)folder file:(NSString*)file;
 
+//FIXME: Deprecated
 + (NSString*)tempHomeDirectoryFilePathForFolder:(NSString*)folder file:(NSString*)file;
 
+//FIXME: Deprecated
 + (NSString*)tempFileName:(NSString*)file;
 
 @end
