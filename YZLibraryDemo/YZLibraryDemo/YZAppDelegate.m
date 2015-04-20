@@ -41,7 +41,7 @@
 		[arr addObject:[NSString yz_stringFromInt:i%10]];
 		
 		NSLog(@"%@", [arr componentsJoinedByString:@","]);
-		
+		NSLog(@"%i", [YZRandom intBetweenLower:0 upper:2]);
 	}
 	
 	NSArray *demoStrings =

@@ -18,12 +18,15 @@
 
 + (NSString *)secondsToMinuteString:(int)seconds;
 
+//FIXME: Deprecated
 + (NSString *)monthNameFromNumber0To11:(NSUInteger)month;
+//FIXME: Deprecated
 + (NSString *)monthNameFromNumber1To12:(NSUInteger)month;
 
 + (NSString*)hmsTimeStringFromSecondsInt:(int)totalSeconds;
 + (NSString*)hmsTimeStringFromSecondsFloat:(float)totalSeconds;
 
+//FIXME: Deprecated
 + (int)numberOfDaysSince1970;
 
 @end
