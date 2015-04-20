@@ -21,9 +21,16 @@
  */
 BOOL YZ_IS_EMPTY(id obj);
 
+/** Build a CGRect with required size and center point.
+ 
+ */
 CGRect YZ_CGRectWithCenterAndSize(CGFloat centerX, CGFloat centerY, CGFloat width, CGFloat height);
 
 @interface YZLibrary : NSObject
+
+/** Calculates the new size for current size to fit in a required `box`, retaining original aspect ratio.
+ 
+ */
 + (CGSize)sizeRequiredForSize:(CGSize)size toAspectFitInBox:(CGSize)boxSize;
 
 @end
