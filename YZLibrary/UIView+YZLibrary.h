@@ -16,21 +16,43 @@
 
 @interface UIView (YZLibrary)
 
+/** Loads the view from the nib file located in main bundle that has the same name as the class.
+ 
+ */
 + (instancetype)yz_loadFromNib;
+
+/** Loads the view from a nib file.
+ 
+ */
 + (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle;
 
 /** Bring the view to the front by calling `bringSubviewToFront:` on its superview.
+ 
  */
 - (void)yz_bringToFront;
 
+/** Returns an image of the receiver. The scale factor of the image is equal to the scale factor of the main screen.
+ 
+ */
 - (UIImage*)yz_captureImage;
+
+/** Returns an image of the receiver. The image will be rendered to the required scale factor.
+ 
+ */
 - (UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor;
 
-- (UICollectionViewCell *)yz_parentCollectionViewCell;
-- (UITableViewCell *)yz_parentTableViewCell;
+/** Goes up the view hierarchy, returns the receiver's parent collection view cell, if there is one.
+ 
+ */
+- (UICollectionViewCell * __nullable)yz_parentCollectionViewCell;
 
-- (void)yz_addShadow;
-- (void)yz_addWhiteFrame;
+/** Goes up the view hierarchy, returns the receiver's parent table view cell, if there is one.
+ 
+ */
+- (UITableViewCell * __nullable)yz_parentTableViewCell;
+
+- (void)yz_addShadow __deprecated;
+- (void)yz_addWhiteFrame __deprecated;
 
 /**  Preload keyboard so that user won't feel the delay when typing for the first time.
  It is recommended to call this method on the key and visible window upon application start-up.
