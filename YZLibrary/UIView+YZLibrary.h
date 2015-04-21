@@ -51,9 +51,6 @@
  */
 - (UITableViewCell * __nullable)yz_parentTableViewCell;
 
-- (void)yz_addShadow __deprecated;
-- (void)yz_addWhiteFrame __deprecated;
-
 /**  Preload keyboard so that user won't feel the delay when typing for the first time.
  It is recommended to call this method on the key and visible window upon application start-up.
  

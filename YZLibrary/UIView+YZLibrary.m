@@ -24,15 +24,14 @@
 }
 
 + (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle{
-	
+
 	static UINib * __nib;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		__nib = [UINib nibWithNibName:nibName bundle:bundle];
 	});
 	
-	id view = [__nib instantiateWithOwner:nil options:nil][0];
-	return view;
+	return [[__nib instantiateWithOwner:nil options:nil] firstObject];
 }
 
 - (void)yz_bringToFront {
@@ -85,23 +84,6 @@
         }
     }
     return nil;
-}
-
-- (void)yz_addShadow{
-    
-    UIBezierPath *shadowPath =
-    [UIBezierPath bezierPathWithRect:self.bounds];
-    self.layer.masksToBounds = NO;
-    self.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
-    self.layer.shadowOpacity = 0.5f;
-    self.layer.shadowPath = shadowPath.CGPath;
-}
-
-- (void)yz_addWhiteFrame{
-
-    [self.layer setBorderColor: [[UIColor whiteColor] CGColor]];
-    [self.layer setBorderWidth: 5.0];
 }
 
 - (void)yz_preloadKeyboard{
