@@ -16,9 +16,21 @@
 
 @interface YZTimeHelper : NSObject
 
+
+/** TODO:
+ 
+ */
 + (NSString *)secondsToMinuteString:(int)seconds;
 
+
+/** TODO:
+ 
+ */
 + (NSString*)hmsTimeStringFromSecondsInt:(int)totalSeconds;
+
+/** TODO:
+ 
+ */
 + (NSString*)hmsTimeStringFromSecondsFloat:(float)totalSeconds;
 
 @end

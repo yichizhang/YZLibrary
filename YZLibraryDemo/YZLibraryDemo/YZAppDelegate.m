@@ -21,15 +21,17 @@
 {
 	[self.window yz_preloadKeyboard];
 	
-	NSLog(@"The version of current os: %@", [[YZProcessInfo processInfo] operatingSystemVersionString]);
+	YZProcessInfo *info = [YZProcessInfo processInfo];
 	
-	NSLog(@"Major version of current os: %i", [[YZProcessInfo processInfo] operatingSystemVersion].majorVersion);
-	NSLog(@"Minor version of current os: %i", [[YZProcessInfo processInfo] operatingSystemVersion].minorVersion);
-	NSLog(@"Patch version of current os: %i", [[YZProcessInfo processInfo] operatingSystemVersion].patchVersion);
+	NSLog(@"The version of current os: %@", info.operatingSystemVersionString);
+	
+	NSLog(@"Major version of current os: %li", (long)info.operatingSystemVersion.majorVersion);
+	NSLog(@"Minor version of current os: %li", (long)info.operatingSystemVersion.minorVersion);
+	NSLog(@"Patch version of current os: %li", (long)info.operatingSystemVersion.patchVersion);
 	for (int i=0; i < 10; i++) {
 		NSLog(@"Current os at least major version %i: %@",
 			  i,
-			  [NSString yz_stringFromBool: [[YZProcessInfo processInfo] isOperatingSystemAtLeastMajorVersion:i]]
+			  [NSString yz_stringFromBool: [info isOperatingSystemAtLeastMajorVersion:i]]
 			  );
 	}
 	
@@ -41,7 +43,6 @@
 		[arr addObject:[NSString yz_stringFromInt:i%10]];
 		
 		NSLog(@"%@", [arr componentsJoinedByString:@","]);
-		NSLog(@"%i", [YZRandom intBetweenLower:0 upper:2]);
 	}
 	
 	NSArray *demoStrings =

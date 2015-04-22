@@ -98,7 +98,10 @@
 }
 
 - (void)insertObject:(id)anObject atIndex:(NSUInteger)index{
-	[self.array insertObject:anObject atIndex:index];
+	
+	if (self.array.count < self.maxCapacity) {
+		[self.array insertObject:anObject atIndex:index];
+	}
 }
 
 - (void)removeLastObject{

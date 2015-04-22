@@ -25,8 +25,21 @@ typedef struct {
 @property (readonly, copy) NSString *operatingSystemVersionString;
 @property (readonly) YZOperatingSystemVersion operatingSystemVersion;
 
+
+/** TODO:
+ 
+ */
 + (YZProcessInfo *)processInfo;
+
+
+/** TODO:
+ 
+ */
 - (BOOL)isOperatingSystemAtLeastVersion:(YZOperatingSystemVersion)version;
+
+/** TODO:
+ 
+ */
 - (BOOL)isOperatingSystemAtLeastMajorVersion:(NSInteger)majorVersion;
 
 @end
