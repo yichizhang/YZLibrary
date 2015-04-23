@@ -17,20 +17,22 @@
 @interface YZTimeHelper : NSObject
 
 
-/** TODO:
+/** Converts the number of seconds to a string, in the format of `m:ss`.
  
+ For example,
+ `59` will be converted to `0:59`,
+ `60` will be converted to `1:00`.
  */
 + (NSString *)secondsToMinuteString:(int)seconds;
 
 
-/** TODO:
+/** Converts the number of seconds to a string, in the format of `H:mm:ss`.
  
+ The hour value will be omitted if the total time is less than 1 hour.
+ For example,
+ `3599` will be converted to `59:59`,
+ `3600` will be converted to `1:00:00`.
  */
 + (NSString*)hmsTimeStringFromSecondsInt:(int)totalSeconds;
-
-/** TODO:
- 
- */
-+ (NSString*)hmsTimeStringFromSecondsFloat:(float)totalSeconds;
 
 @end

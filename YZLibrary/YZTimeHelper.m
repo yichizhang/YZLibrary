@@ -45,9 +45,4 @@
     return durationString;
 }
 
-+ (NSString*)hmsTimeStringFromSecondsFloat:(float)totalSeconds{
-    
-    return [self hmsTimeStringFromSecondsInt: [[NSNumber numberWithFloat:totalSeconds] intValue] ];
-}
-
 @end
