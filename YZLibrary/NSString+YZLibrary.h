@@ -14,8 +14,14 @@
 
 #import <Foundation/Foundation.h>
 
+/** Type for string conversion options.
+ */
 typedef NS_OPTIONS(NSUInteger, YZStringConversion) {
+	/** No options.
+	 */
 	YZStringConversionNone							= 0,
+	/** Retains the letter case in orginal string.
+	 */
 	YZStringConversionRetainOriginalLetterCase		= 1 << 0,
 };
 
