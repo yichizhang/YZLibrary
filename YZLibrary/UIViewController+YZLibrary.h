@@ -16,6 +16,9 @@
 
 @interface UIViewController (YZLibrary)
 
+/** Sets the view controller's `automaticallyAdjustsScrollViewInsets` to NO, and `edgesForExtendedLayout` to `UIRectEdgeNone`
+ 
+ */
 - (void)yz_ios7EdgeForExtendedLayout;
 
 /** Shorthand for "[self presentViewController:vc animated:YES completion:nil];", presenting a view controller with animation but no completion block

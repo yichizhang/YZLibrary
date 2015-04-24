@@ -18,11 +18,11 @@
 
 - (void)yz_ios7EdgeForExtendedLayout{
 
-    self.automaticallyAdjustsScrollViewInsets = false;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
-    if ([self respondsToSelector:@selector(edgesForExtendedLayout)])
+	if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
-    
+	}
 }
 
 - (void)yz_presentViewController:(UIViewController*)vc{
