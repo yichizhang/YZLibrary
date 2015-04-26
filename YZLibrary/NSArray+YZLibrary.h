@@ -32,7 +32,7 @@
 /**
  Returns the object at the index. Returns `nil` if the index is out of bounds.
  
- @param The index of the object.
+ @param index The index of the object.
  */
 - (id)yz_objectAtIndex:(NSInteger)index;
 

@@ -32,14 +32,14 @@
 /**
  Returns the URL for a resource in the bundle. Pass in the full filename, with extension, e.g. `filename.ext`
  
- @param The file name, including the extension
+ @param fullFileName The file name, including the extension
  */
 - (NSURL*)yz_URLForResourceNamed:(NSString*)fullFileName;
 
 /**
  Returns the path for a resource in the bundle. Pass in the full filename, with extension, e.g. `filename.ext`
  
- @param The file name, including the extension
+ @param fullFileName The file name, including the extension
  */
 - (NSString*)yz_pathForResourceNamed:(NSString*)fullFileName;
 

@@ -41,7 +41,7 @@
 /**
  Dispatch on the main queue after delay. Shortcut for `dispatch_after(dispatch_time_t when, dispatch_queue_t queue, ^(void)block)`
  
- @param block The block object to dispatch.
+ @param block The block object to dispatch on the main queue.
  @param delay The time delay before the execution.
  */
 - (void)yz_dispatchOnMainQueue:(void (^)(void))block afterDelay:(NSTimeInterval)delay;
