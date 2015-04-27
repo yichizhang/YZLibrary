@@ -101,7 +101,7 @@
     [NSString
      stringWithFormat:@"%.1fs\n%@",
      self.timeSlider.value,
-     [YZTimeHelper hmsTimeStringFromSecondsFloat:self.timeSlider.value]
+     [YZTimeHelper hmsTimeStringFromSecondsInt:(int)self.timeSlider.value]
      ];
     
 }
