@@ -29,7 +29,12 @@
 
 @interface UIAlertView (YZLibrary)
 
-/** Show an alert view with title and message. Use when you just would like to show some information to the user and do not care about the response.
+/** 
+ Show an alert view with title and message. Use this method when you just wish to show some information to the user and do not care about the response.
+ 
+ @param title The string that appears in the alert view's title bar.
+ @param message Descriptive text that provides more details than the title.
+ @param cancelButtonTitle The title of the cancel button. If you pass in `nil` or an empty string, default value "OK" will be used.
  */
 + (void)yz_showWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle;
 
