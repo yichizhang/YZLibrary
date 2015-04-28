@@ -29,19 +29,32 @@
 
 @interface UIImage (YZLibrary)
 
-/** Returns an image created by filling a rectangle with the specified color
+/**
+ Returns an image created by filling a rectangle with the specified color
+ 
+ @param color	The color of the image you wish to generate.
+ @param size	The size of the image you wish to generate.
  */
 + (UIImage *)yz_imageWithColor:(UIColor*)color andSize:(CGSize)size;
 
-/** Creates and returns an image object by resizing the receiver to the required size, not retaining original aspect ratio.
+/**
+ Creates and returns an image object by resizing the receiver to the required size, not retaining original aspect ratio.
+ 
+ @param newSize	The size you wish to resize the image to.
  */
 - (UIImage *)yz_imageScaledToSize:(CGSize)newSize;
 
-/** Creates and returns an image object by resizing the receiver that fits in required size, retaining original aspect ratio.
+/**
+ Creates and returns an image object by resizing the receiver that fits in required size, retaining original aspect ratio.
+ 
+ @param boxSize		The size of the box that you wish to fit the image in.
  */
 - (UIImage *)yz_imageScaledToSizeAspectFitsInBox:(CGSize)boxSize;
 
-/** Returns the size that the receiver will be if you wish to resize it to make it fit in required size, retaining original aspect ratio.
+/** 
+ Returns the size that the receiver will be if you wish to resize it to make it fit in required size, retaining original aspect ratio.
+
+ @param boxSize		The size of the box that you wish to fit the image in.
  */
 - (CGSize)yz_sizeRequiredToAspectFitInBox:(CGSize)boxSize;
 
