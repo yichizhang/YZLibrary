@@ -36,12 +36,12 @@
 	
 }
 
-+ (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle{
++ (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundleOrNil{
 
 	static UINib * __nib;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		__nib = [UINib nibWithNibName:nibName bundle:bundle];
+		__nib = [UINib nibWithNibName:nibName bundle:bundleOrNil];
 	});
 	
 	return [[__nib instantiateWithOwner:nil options:nil] firstObject];

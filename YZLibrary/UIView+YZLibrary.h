@@ -29,38 +29,43 @@
 
 @interface UIView (YZLibrary)
 
-/** Loads the view from the nib file located in main bundle that has the same name as the class.
- 
+/** 
+ Loads the view from the nib file located in main bundle that has the same name as the class.
  */
 + (instancetype)yz_loadFromNib;
 
-/** Loads the view from a nib file.
+/**
+ Loads the view from a nib file.
  
+ @param nibName			The name of the nib file, without any leading path information.
+ @param bundleOrNil		The bundle in which to search for the nib file. If you specify nil, this method looks for the nib file in the main bundle.
  */
-+ (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundle;
++ (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundleOrNil;
 
-/** Bring the view to the front by calling `bringSubviewToFront:` on its superview.
- 
+/**
+ Bring the view to the front by calling `bringSubviewToFront:` on its superview.
  */
 - (void)yz_bringToFront;
 
-/** Returns an image of the receiver. The scale factor of the image is equal to the scale factor of the main screen.
- 
+/**
+ Returns an image of the receiver. The scale factor of the image is equal to the scale factor of the main screen.
  */
 - (UIImage*)yz_captureImage;
 
-/** Returns an image of the receiver. The image will be rendered to the required scale factor.
+/**
+ Returns an image of the receiver. The image will be rendered to the required scale factor.
  
+ @param scaleFactor		The scale factor you wish to render the image to.
  */
 - (UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor;
 
-/** Goes up the view hierarchy, returns the receiver's parent collection view cell, if there is one.
- 
+/**
+ Goes up the view hierarchy, returns the receiver's parent collection view cell, if there is one.
  */
 - (UICollectionViewCell * __nullable)yz_parentCollectionViewCell;
 
-/** Goes up the view hierarchy, returns the receiver's parent table view cell, if there is one.
- 
+/**
+ Goes up the view hierarchy, returns the receiver's parent table view cell, if there is one.
  */
 - (UITableViewCell * __nullable)yz_parentTableViewCell;
 
