@@ -38,19 +38,19 @@
 	}
 }
 
-- (void)yz_presentViewController:(UIViewController*)vc{
+- (void)yz_presentViewController:(UIViewController*)viewController{
 	
-	[self presentViewController:vc animated:YES completion:nil];
+	[self presentViewController:viewController animated:YES completion:nil];
 }
 
-- (void)yz_pushViewController:(UIViewController*)vc{
+- (void)yz_pushViewController:(UIViewController*)viewController{
 	
 	if ([self isKindOfClass:[UINavigationController class]]) {
 		
-		[(UINavigationController*)self pushViewController:vc animated:YES];
+		[(UINavigationController*)self pushViewController:viewController animated:YES];
 	}else {
 		
-		[self.navigationController pushViewController:vc animated:YES];
+		[self.navigationController pushViewController:viewController animated:YES];
 	}
 }
 
