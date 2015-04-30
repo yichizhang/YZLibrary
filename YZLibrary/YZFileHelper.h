@@ -29,13 +29,15 @@
 
 @interface YZFileHelper : NSObject
 
-/** Returns the user's document directory
- 
+/**
+ Returns the user's document directory
  */
 + (NSString *)userDocumentDirectoryPath;
 
-/** Returns a human readable string of the size of the file, based on its byte count.
+/**
+ Returns a human readable string of the size of the file, based on its byte count.
  
+ @param byteCount		The number of bytes.
  */
 + (NSString*)fileSizeStringFromByteCount:(int)byteCount;
 
