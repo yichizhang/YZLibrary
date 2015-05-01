@@ -30,13 +30,13 @@
 
 @implementation UIView (YZLibrary)
 
-+ (instancetype)yz_loadFromNib{
++ (nullable instancetype)yz_loadFromNib{
 	
 	return [[self class] yz_loadFromNibNamed:[self yz_className] bundle:nil];
 	
 }
 
-+ (instancetype)yz_loadFromNibNamed:(NSString*)nibName bundle:(NSBundle*)bundleOrNil{
++ (nullable instancetype)yz_loadFromNibNamed:(nonnull NSString*)nibName bundle:(nullable NSBundle*)bundleOrNil{
 
 	static UINib * __nib;
 	static dispatch_once_t onceToken;
@@ -51,14 +51,14 @@
 	[[self superview] bringSubviewToFront:self];
 }
 
-- (UIImage*)yz_captureImage{
+- (nonnull UIImage*)yz_captureImage{
 	
 	return [self yz_captureImageWithScaleFactor:
 			[UIScreen mainScreen].scale
 			];
 }
 
-- (UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor{
+- (nonnull UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor{
 	
 	UIGraphicsBeginImageContextWithOptions(self.bounds.size,
 										   NO,
@@ -71,7 +71,7 @@
     return image;
 }
 
-- (UICollectionViewCell *)yz_parentCollectionViewCell
+- (nullable UICollectionViewCell *)yz_parentCollectionViewCell
 {
     id viewSuperView = [self superview];
     while (viewSuperView != nil) {
@@ -85,7 +85,7 @@
     return nil;
 }
 
-- (UITableViewCell *)yz_parentTableViewCell
+- (nullable UITableViewCell *)yz_parentTableViewCell
 {
     id viewSuperView = [self superview];
     while (viewSuperView != nil) {

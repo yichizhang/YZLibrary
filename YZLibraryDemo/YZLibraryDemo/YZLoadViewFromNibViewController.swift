@@ -35,9 +35,10 @@ class YZLoadViewFromNibViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 		
-		let awesomeView = AwesomeNibView.yz_loadFromNib()
-		self.view.addSubview(awesomeView)
-		awesomeView.center = self.view.center
+		if let awesomeView = AwesomeNibView.yz_loadFromNib() {
+			self.view.addSubview(awesomeView)
+			awesomeView.center = self.view.center
+		}
 		
     }
 
