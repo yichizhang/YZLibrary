@@ -27,15 +27,15 @@
 
 #include "YZLibrary.h"
 
-BOOL YZ_IS_EMPTY(id obj) {
+BOOL YZ_IS_EMPTY(id object) {
 	
-	if (obj == nil) {
+	if (object == nil) {
 		return YES;
 	} else {
 		
 		return
-		([obj respondsToSelector:@selector(length)] && [(NSData*)obj length] == 0)
-		|| ([obj respondsToSelector:@selector(count)] && [(NSArray*)obj count] == 0);
+		([object respondsToSelector:@selector(length)] && [(NSData*)object length] == 0)
+		|| ([object respondsToSelector:@selector(count)] && [(NSArray*)object count] == 0);
 	}
 	
 }
