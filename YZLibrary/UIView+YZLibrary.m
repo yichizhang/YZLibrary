@@ -108,4 +108,53 @@
 	[tempTextField removeFromSuperview];
 }
 
+- (void)yz_setupConstraintsAdhereToEdgesOfSuperviewWithInsets:(UIEdgeInsets)inset {
+	
+	UIView *contentView = self.superview;
+	UIView *itemView = self;
+	
+	self.translatesAutoresizingMaskIntoConstraints = NO;
+	
+	NSLayoutConstraint *topConstraint =
+	[NSLayoutConstraint constraintWithItem:itemView
+								 attribute:NSLayoutAttributeTop
+								 relatedBy:NSLayoutRelationEqual
+									toItem:contentView
+								 attribute:NSLayoutAttributeTop
+								multiplier:1.0f
+								  constant:inset.top];
+	
+	NSLayoutConstraint *leadingConstraint =
+	[NSLayoutConstraint constraintWithItem:itemView
+								 attribute:NSLayoutAttributeLeading
+								 relatedBy:NSLayoutRelationEqual
+									toItem:contentView
+								 attribute:NSLayoutAttributeLeading
+								multiplier:1.0f
+								  constant:inset.left];
+	
+	NSLayoutConstraint *bottomConstraint =
+	[NSLayoutConstraint constraintWithItem:contentView
+								 attribute:NSLayoutAttributeBottom
+								 relatedBy:NSLayoutRelationEqual
+									toItem:itemView
+								 attribute:NSLayoutAttributeBottom
+								multiplier:1.0f
+								  constant:inset.bottom];
+	
+	NSLayoutConstraint *trailingConstraint =
+	[NSLayoutConstraint constraintWithItem:contentView
+								 attribute:NSLayoutAttributeTrailing
+								 relatedBy:NSLayoutRelationEqual
+									toItem:itemView
+								 attribute:NSLayoutAttributeTrailing
+								multiplier:1.0f
+								  constant:inset.right];
+	
+	[contentView addConstraint:topConstraint];
+	[contentView addConstraint:leadingConstraint];
+	[contentView addConstraint:bottomConstraint];
+	[contentView addConstraint:trailingConstraint];
+}
+
 @end

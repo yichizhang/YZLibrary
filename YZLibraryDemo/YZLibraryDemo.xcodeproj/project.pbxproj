@@ -30,6 +30,7 @@
 		1233DFB21A0A59FC00E1638D /* YZRandomControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1233DFB01A0A59FC00E1638D /* YZRandomControlCell.m */; };
 		1233DFB31A0A59FC00E1638D /* YZRandomControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1233DFB11A0A59FC00E1638D /* YZRandomControlCell.xib */; };
 		1249B0C81A768FCC00F8244F /* YZLimitedArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1249B0C71A768FCC00F8244F /* YZLimitedArray.m */; };
+		126260A91B45978600BD1F64 /* YZAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126260A81B45978600BD1F64 /* YZAutoLayoutViewController.swift */; };
 		126B5C371AB9975A0041652B /* YZProcessInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 126B5C361AB9975A0041652B /* YZProcessInfo.m */; };
 		1272010819E821FC00E4CBFB /* NSArray+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200F719E821FC00E4CBFB /* NSArray+YZLibrary.m */; };
 		1272010A19E821FC00E4CBFB /* UIColor+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 127200FB19E821FC00E4CBFB /* UIColor+YZLibrary.m */; };
@@ -107,6 +108,7 @@
 		1233DFB11A0A59FC00E1638D /* YZRandomControlCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZRandomControlCell.xib; sourceTree = "<group>"; };
 		1249B0C61A768FCC00F8244F /* YZLimitedArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZLimitedArray.h; sourceTree = "<group>"; };
 		1249B0C71A768FCC00F8244F /* YZLimitedArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZLimitedArray.m; sourceTree = "<group>"; };
+		126260A81B45978600BD1F64 /* YZAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		126B5C351AB9975A0041652B /* YZProcessInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZProcessInfo.h; sourceTree = "<group>"; };
 		126B5C361AB9975A0041652B /* YZProcessInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZProcessInfo.m; sourceTree = "<group>"; };
 		127200F619E821FC00E4CBFB /* NSArray+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YZLibrary.h"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				12EFEFF51A3EE1610034B70D /* YZLazyRegisterNibAndCellTableViewController.swift */,
 				128122CB1A5CD2550079B5C2 /* YZLoadViewFromNibViewController.swift */,
 				12980DDA1ACD530000B72B4D /* YZColorViewController.swift */,
+				126260A81B45978600BD1F64 /* YZAutoLayoutViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				1233DFB21A0A59FC00E1638D /* YZRandomControlCell.m in Sources */,
 				1220D27A1967109800979E9A /* main.m in Sources */,
 				1220D27E1967109800979E9A /* YZAppDelegate.m in Sources */,
+				126260A91B45978600BD1F64 /* YZAutoLayoutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

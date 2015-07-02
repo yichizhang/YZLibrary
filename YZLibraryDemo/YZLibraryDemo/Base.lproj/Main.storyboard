@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="78G-Wv-0AX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="78G-Wv-0AX">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -93,6 +93,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZmW-5x-Jpt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152" y="-864"/>
+        </scene>
+        <!--Auto Layout View Controller-->
+        <scene sceneID="cGp-Lm-wdP">
+            <objects>
+                <viewController id="1tH-5M-65E" customClass="YZAutoLayoutViewController" customModule="YZLibraryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LJh-8R-5WW"/>
+                        <viewControllerLayoutGuide type="bottom" id="d3t-O4-Fdg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AxS-UY-ZnX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IeJ-M4-kvM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bz-4J-fv2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="212" y="171"/>
         </scene>
         <!--Load View From Nib View Controller-->
         <scene sceneID="611-y7-rh9">
@@ -256,6 +275,23 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="KN9-vy-Vyj" kind="push" id="pJx-Lo-5as"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ghw-Fw-4di" style="IBUITableViewCellStyleDefault" id="aP6-cY-tnr">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aP6-cY-tnr" id="nZo-U5-kFe">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Autolayout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ghw-Fw-4di">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1tH-5M-65E" kind="push" id="91p-bb-JRc"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

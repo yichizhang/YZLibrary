@@ -81,4 +81,11 @@
  */
 - (void)yz_preloadKeyboard;
 
+/** Add Autolayout constraints, make current view's edges adhere to the edges of the superview, with spacing specified in `insets`.
+ 
+ @param insets		The edge insets between the receiver and its superview.
+ */
+- (void)yz_setupConstraintsAdhereToEdgesOfSuperviewWithInsets:(UIEdgeInsets)inset;
+
+
 @end
