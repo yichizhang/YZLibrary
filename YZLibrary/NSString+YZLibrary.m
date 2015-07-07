@@ -266,4 +266,22 @@
 	}
 }
 
+- (void)yz_drawAtCenterInRect:(CGRect)rect font:(UIFont*)font color:(UIColor*)color {
+	CGRect textRect = rect;
+	
+	NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+	paragraphStyle.alignment = NSTextAlignmentCenter;
+	
+	NSDictionary *attributes = @{
+								 NSFontAttributeName : font,
+								 NSForegroundColorAttributeName : color,
+								 NSParagraphStyleAttributeName : paragraphStyle
+								 };
+	CGSize textSize = [self sizeWithAttributes:attributes];
+	textRect.origin.y += (textRect.size.height - textSize.height) / 2;
+	
+	[self drawInRect:textRect withAttributes:attributes];
+}
+
+
 @end

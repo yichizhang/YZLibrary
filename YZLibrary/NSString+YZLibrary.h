@@ -26,6 +26,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /**
  Type for string conversion options.
@@ -138,5 +139,13 @@ typedef NS_OPTIONS(NSUInteger, YZStringConversion) {
  @param options Conversion options. 1.`RetainOriginalLetterCase` If switched on, `melbourne Dingo` will be converted to `melbourneDingo`; otherwise, it will be converted to `MelbourneDingo`
  */
 - (NSString*)yz_camelCaseStringWithOptions:(YZStringConversion)options;
+
+/** Draws the string, vertically and horizontally cetered inside the specified bounding rectangle in the current graphics context, using the font specified.
+ 
+ @param rect The bounding rectangle in the current graphics context, in which to draw the string.
+ @param font The font to use for rendering.
+ @param color The color to use for rendering.
+ */
+- (void)yz_drawAtCenterInRect:(CGRect)rect font:(UIFont*)font color:(UIColor*)color;
 
 @end

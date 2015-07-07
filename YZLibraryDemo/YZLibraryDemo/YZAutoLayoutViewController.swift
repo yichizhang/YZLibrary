@@ -14,9 +14,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 import UIKit
 
+class AAAView : UIView {
+	override func drawRect(rect: CGRect) {
+		
+		("DRAW\nAT\nCENTER" as NSString).yz_drawAtCenterInRect(rect, font: UIFont.boldSystemFontOfSize(30), color: UIColor.whiteColor())
+	}
+}
+
 class YZAutoLayoutViewController: UIViewController {
 
-	var testView = UIView(frame:CGRectZero)
+	var testView = AAAView(frame:CGRectZero)
 	
     override func viewDidLoad() {
         super.viewDidLoad()
