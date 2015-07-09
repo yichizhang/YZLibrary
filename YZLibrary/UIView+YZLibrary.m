@@ -108,6 +108,10 @@
 	[tempTextField removeFromSuperview];
 }
 
+- (void)yz_setupConstraintsAdhereToEdgesOfSuperview {
+	[self yz_setupConstraintsAdhereToEdgesOfSuperviewWithInsets:UIEdgeInsetsZero];
+}
+
 - (void)yz_setupConstraintsAdhereToEdgesOfSuperviewWithInsets:(UIEdgeInsets)inset {
 	
 	UIView *contentView = self.superview;
