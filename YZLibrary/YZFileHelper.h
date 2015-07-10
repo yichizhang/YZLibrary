@@ -35,6 +35,13 @@
 + (NSString *)userDocumentDirectoryPath;
 
 /**
+ Returns the first path string for the specified directories in user domain.
+ 
+ @param directory		The search path directory. The supported values are described in NSSearchPathDirectory.
+ */
++ (NSString *)pathForDirectoryInUserDomain:(NSSearchPathDirectory)directory;
+
+/**
  Returns a human readable string of the size of the file, based on its byte count.
  
  @param byteCount		The number of bytes.

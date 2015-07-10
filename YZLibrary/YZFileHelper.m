@@ -35,6 +35,11 @@
     return documentDir;
 }
 
++ (NSString *)pathForDirectoryInUserDomain:(NSSearchPathDirectory)directory {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES);
+	return [paths firstObject];
+}
+
 + (NSString*)fileSizeStringFromByteCount:(int)byteCount {
     //For converting file size to MB, Gb use below function
     double value = (double)byteCount;
