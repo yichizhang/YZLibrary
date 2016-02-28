@@ -42,7 +42,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
 		self.commonInit()
 	}
 	
-	required init(coder aDecoder: NSCoder) {
+	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		self.commonInit()
 	}
@@ -67,7 +67,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
 		
 		
 		self.yz_dispatchOnMainQueue({ () -> Void in
-			println("Disptaching on the main queue")
+			print("Disptaching on the main queue")
 		}, afterDelay: NSTimeInterval(1)
 		)
     }
@@ -124,7 +124,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
 			}
 		}
 		
-		let cell = tableView.dequeueReusableCellWithIdentifier(demoTableViewDefaultCell, forIndexPath: indexPath) as! UITableViewCell
+		let cell = tableView.dequeueReusableCellWithIdentifier(demoTableViewDefaultCell, forIndexPath: indexPath) 
 		
 		cell.textLabel?.numberOfLines = 0
 		cell.textLabel?.text =

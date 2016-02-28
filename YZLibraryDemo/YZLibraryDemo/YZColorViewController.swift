@@ -45,7 +45,7 @@ class YZColorViewController : UITableViewController {
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
-		if let cell = tableView.dequeueReusableCellWithIdentifier(CellId_ComplementaryColorsCell, forIndexPath: indexPath) as? UITableViewCell {
+		if let cell = tableView.dequeueReusableCellWithIdentifier(CellId_ComplementaryColorsCell, forIndexPath: indexPath) {
 			
 			let originalColor = colorArray[indexPath.row]
 			let complementaryColor = originalColor.yz_complementaryColor()
