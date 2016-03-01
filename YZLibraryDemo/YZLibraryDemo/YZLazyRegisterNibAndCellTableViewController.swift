@@ -11,138 +11,150 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  
  */
-let demoTableViewDefaultCell:String = "DefaultCell"
+let demoTableViewDefaultCell: String = "DefaultCell"
 
-enum DemoTableViewSection : Int {
-	case Images = 0
-	case Copyright = 1
-	case Count = 2
+enum DemoTableViewSection: Int
+{
+    case Images = 0
+    case Copyright = 1
+    case Count = 2
 }
 
 import UIKit
 
-class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
+class YZLazyRegisterNibAndCellTableViewController: UITableViewController
+{
 
-	let photoSourceArray:Array<String> =
-	[
-		"https://www.flickr.com/photos/fscholz/13540618215/",
-		"https://www.flickr.com/photos/fscholz/13540944634/",
-		"https://www.flickr.com/photos/fscholz/13540948104/",
-		"https://www.flickr.com/photos/fscholz/13540949594/",
-		"https://www.flickr.com/photos/fscholz/13540733933/",
-	 	"https://www.flickr.com/photos/fscholz/13540736793/"
-	]
-	
-	func commonInit(){
-		self.title = "Table View";
-	}
-	
-	override init(style: UITableViewStyle) {
-		super.init(style: style)
-		self.commonInit()
-	}
-	
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-		self.commonInit()
-	}
-	
-	
-    override func viewDidLoad() {
+    let photoSourceArray: Array<String> =
+    [
+        "https://www.flickr.com/photos/fscholz/13540618215/",
+        "https://www.flickr.com/photos/fscholz/13540944634/",
+        "https://www.flickr.com/photos/fscholz/13540948104/",
+        "https://www.flickr.com/photos/fscholz/13540949594/",
+        "https://www.flickr.com/photos/fscholz/13540733933/",
+        "https://www.flickr.com/photos/fscholz/13540736793/"
+    ]
+
+    func commonInit()
+    {
+        self.title = "Table View";
+    }
+
+    override init(style: UITableViewStyle)
+    {
+        super.init(style: style)
+        self.commonInit()
+    }
+
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        self.commonInit()
+    }
+
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-		
-		let info = YZProcessInfo()
-		if info.isOperatingSystemAtLeastMajorVersion(8) == false {
-			
-			UIAlertView.yz_showWithTitle("You are using iOS\(info.operatingSystemVersion.majorVersion)", message: "Table view auto layout/ auto cell height may not work properly in this version of iOS.", cancelButtonTitle: "OK")
-		}
 
-		YZDemoImageTableViewCell.yz_registerForTableView(self.tableView)
-		self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: demoTableViewDefaultCell)
+        let info = YZProcessInfo()
+        if info.isOperatingSystemAtLeastMajorVersion(8) == false {
+
+            UIAlertView.yz_showWithTitle("You are using iOS\(info.operatingSystemVersion.majorVersion)", message: "Table view auto layout/ auto cell height may not work properly in this version of iOS.", cancelButtonTitle: "OK")
+        }
+
+        YZDemoImageTableViewCell.yz_registerForTableView(self.tableView)
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: demoTableViewDefaultCell)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-		
-		
-		self.yz_dispatchOnMainQueue({ () -> Void in
-			print("Disptaching on the main queue")
-		}, afterDelay: NSTimeInterval(1)
-		)
+
+
+        self.yz_dispatchOnMainQueue({
+                                        () -> Void in
+                                        print("Disptaching on the main queue")
+                                    }, afterDelay: NSTimeInterval(1)
+        )
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return DemoTableViewSection.Count.rawValue
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-		if let s:DemoTableViewSection = DemoTableViewSection(rawValue: section){
-		
-			switch s {
-				case .Copyright:
-					return 1
-				case .Images:
-					return 6
-				default:
-					return 0
-			}
-		}
-		
-		return 0
+        if let s: DemoTableViewSection = DemoTableViewSection(rawValue: section) {
+
+            switch s {
+            case .Copyright:
+                return 1
+            case .Images:
+                return 6
+            default:
+                return 0
+            }
+        }
+
+        return 0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		
-		if let s:DemoTableViewSection = DemoTableViewSection(rawValue: indexPath.section){
-			
-			switch s {
-			case .Copyright:
-				break
-			case .Images:
-				let cell = YZDemoImageTableViewCell.yz_dequeueFromTableView(tableView, forIndexPath: indexPath)
-				
-				cell.mainImageView.image = UIImage(named: "demo-\(indexPath.row+1).jpg")
-				cell.mainImageView.clipsToBounds = true
-				cell.descriptionLabel.text = photoSourceArray[indexPath.row]
-				cell.selectionStyle = UITableViewCellSelectionStyle.None
-				
-				return cell
-			default:
-				break
-			}
-		}
-		
-		let cell = tableView.dequeueReusableCellWithIdentifier(demoTableViewDefaultCell, forIndexPath: indexPath) 
-		
-		cell.textLabel?.numberOfLines = 0
-		cell.textLabel?.text =
-		"Author of the photos: fscholz\n\n" +
-		"Link: \n" +
-		"https://www.flickr.com/photos/fscholz/\n\n" +
-		"Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)";
-		
-		cell.selectionStyle = UITableViewCellSelectionStyle.None
-		
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+
+        if let s: DemoTableViewSection = DemoTableViewSection(rawValue: indexPath.section) {
+
+            switch s {
+            case .Copyright:
+                break
+            case .Images:
+                let cell = YZDemoImageTableViewCell.yz_dequeueFromTableView(tableView, forIndexPath: indexPath)
+
+                cell.mainImageView.image = UIImage(named: "demo-\(indexPath.row + 1).jpg")
+                cell.mainImageView.clipsToBounds = true
+                cell.descriptionLabel.text = photoSourceArray[indexPath.row]
+                cell.selectionStyle = UITableViewCellSelectionStyle.None
+
+                return cell
+            default:
+                break
+            }
+        }
+
+        let cell = tableView.dequeueReusableCellWithIdentifier(demoTableViewDefaultCell, forIndexPath: indexPath)
+
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text =
+        "Author of the photos: fscholz\n\n" +
+        "Link: \n" +
+        "https://www.flickr.com/photos/fscholz/\n\n" +
+        "Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)";
+
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+
         return cell
     }
-	
-	override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-		
-		return UITableViewAutomaticDimension
-		
-	}
+
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+
+        return UITableViewAutomaticDimension
+
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -160,7 +172,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

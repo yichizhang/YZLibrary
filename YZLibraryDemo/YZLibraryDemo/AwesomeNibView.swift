@@ -14,7 +14,8 @@
 
 import UIKit
 
-class AwesomeNibView: UIView {
+class AwesomeNibView: UIView
+{
 
     /*
     // Only override drawRect: if you perform custom drawing.

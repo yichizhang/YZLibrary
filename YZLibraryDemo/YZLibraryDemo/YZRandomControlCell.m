@@ -16,8 +16,9 @@
 
 @implementation YZRandomControlCell
 
-- (void)setupCellWithData:(id)data{
-    
+- (void)setupCellWithData:(id)data
+{
+
 }
 
 @end

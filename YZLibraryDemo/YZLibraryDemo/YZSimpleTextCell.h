@@ -16,7 +16,7 @@
 
 @interface YZSimpleTextCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *mainLabel;
+@property(weak, nonatomic) IBOutlet UILabel *mainLabel;
 
 - (void)setupCellWithData:(id)data;
 

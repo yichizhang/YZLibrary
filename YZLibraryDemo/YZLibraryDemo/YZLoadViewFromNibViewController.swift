@@ -14,44 +14,51 @@
 
 import UIKit
 
-class YZLoadViewFromNibViewController: UIViewController {
+class YZLoadViewFromNibViewController: UIViewController
+{
 
-	func commonInit(){
-		self.title = "Load view from nib"
-	}
-	
-	required override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-		self.commonInit()
-	}
-	
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-		self.commonInit()
-	}
-	
-    override func viewDidLoad() {
+    func commonInit()
+    {
+        self.title = "Load view from nib"
+    }
+
+    required override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.commonInit()
+    }
+
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        self.commonInit()
+    }
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		
-		if let awesomeView = AwesomeNibView.yz_loadFromNib() {
-			self.view.addSubview(awesomeView)
-			awesomeView.center = self.view.center
-		}
-		
+
+        if let awesomeView = AwesomeNibView.yz_loadFromNib() {
+            self.view.addSubview(awesomeView)
+            awesomeView.center = self.view.center
+        }
+
     }
 
-	override func viewDidAppear(animated: Bool) {
-		super.viewDidAppear(animated)
-		
-	}
-	
-    override func didReceiveMemoryWarning() {
+    override func viewDidAppear(animated: Bool)
+    {
+        super.viewDidAppear(animated)
+
+    }
+
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation
