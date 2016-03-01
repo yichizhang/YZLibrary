@@ -46,6 +46,6 @@
  
  @param byteCount		The number of bytes.
  */
-+ (NSString*)fileSizeStringFromByteCount:(int)byteCount;
++ (NSString *)fileSizeStringFromByteCount:(int)byteCount;
 
 @end

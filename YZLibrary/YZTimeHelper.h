@@ -46,6 +46,6 @@
  `3599` will be converted to `59:59`,
  `3600` will be converted to `1:00:00`.
  */
-+ (NSString*)hmsTimeStringFromSecondsInt:(int)totalSeconds;
++ (NSString *)hmsTimeStringFromSecondsInt:(int)totalSeconds;
 
 @end

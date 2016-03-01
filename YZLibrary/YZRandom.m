@@ -29,58 +29,64 @@
 
 @implementation YZRandom
 
-+ (NSInteger)intBetweenZeroAnd:(NSInteger)upper{
++ (NSInteger)intBetweenZeroAnd:(NSInteger)upper
+{
     return [YZRandom intBetweenLower:0 upper:upper];
 }
 
-+ (NSInteger)intBetweenValueAndItsNegativeValue:(NSInteger)value{
++ (NSInteger)intBetweenValueAndItsNegativeValue:(NSInteger)value
+{
     return [YZRandom intBetweenLower:-value upper:value];
 }
 
-+ (NSInteger)intBetweenLower:(NSInteger)lower upper:(NSInteger)upper{
-    
++ (NSInteger)intBetweenLower:(NSInteger)lower upper:(NSInteger)upper
+{
+
     if (lower == upper) {
         return lower;
     }
-    
+
     if (lower > upper) {
-        
+
         NSInteger intermediate;
         intermediate = lower;
         lower = upper;
         upper = intermediate;
     }
-	
-	u_int32_t upperBound = (u_int32_t)upper - (u_int32_t)lower + 1;
-	
+
+    u_int32_t upperBound = (u_int32_t) upper - (u_int32_t) lower + 1;
+
     return lower + arc4random_uniform(upperBound);
 }
 
 
-+ (float)floatBetweenZeroAnd:(float)upper{
++ (float)floatBetweenZeroAnd:(float)upper
+{
     return [YZRandom floatBetweenLower:0 upper:upper];
 }
 
-+ (float)floatBetweenValueAndItsNegativeValue:(float)value{
++ (float)floatBetweenValueAndItsNegativeValue:(float)value
+{
     return [YZRandom floatBetweenLower:-value upper:value];
 }
 
-+ (float)floatBetweenLower:(float)lower upper:(float)upper{
-    
++ (float)floatBetweenLower:(float)lower upper:(float)upper
+{
+
     if (lower == upper) {
         return lower;
     }
-    
+
     if (lower > upper) {
-        
+
         float intermediate;
         intermediate = lower;
         lower = upper;
         upper = intermediate;
     }
-    
+
     float diff = upper - lower;
-    return (((float) (arc4random() % ((unsigned)RAND_MAX + 1)) / RAND_MAX) * diff) + lower;
+    return (((float) (arc4random() % ((unsigned) RAND_MAX + 1)) / RAND_MAX) * diff) + lower;
 }
 
 @end

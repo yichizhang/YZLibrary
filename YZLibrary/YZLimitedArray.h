@@ -27,16 +27,17 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, YZLimitedArrayInsertMode) {
-	YZLimitedArrayInsertModeHead = 0,
-	YZLimitedArrayInsertModeTail
+typedef NS_ENUM(NSInteger, YZLimitedArrayInsertMode)
+{
+    YZLimitedArrayInsertModeHead = 0,
+    YZLimitedArrayInsertModeTail
 };
 
 @interface YZLimitedArray : NSMutableArray
 
-@property (nonatomic, assign) BOOL uniqueElements;
-@property (nonatomic, assign) BOOL stopsInsertingWhenFull;
-@property (nonatomic, assign) YZLimitedArrayInsertMode insertMode;
+@property(nonatomic, assign) BOOL uniqueElements;
+@property(nonatomic, assign) BOOL stopsInsertingWhenFull;
+@property(nonatomic, assign) YZLimitedArrayInsertMode insertMode;
 
 /** Returns an array, initialized with the maximum number of objects allowed.
  

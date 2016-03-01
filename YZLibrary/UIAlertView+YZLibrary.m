@@ -29,9 +29,10 @@
 
 @implementation UIAlertView (YZLibrary)
 
-+ (void)yz_showWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle{
-	UIAlertView *av = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:(cancelButtonTitle.length > 0 ? cancelButtonTitle : @"OK") otherButtonTitles: nil];
-	[av show];
++ (void)yz_showWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle
+{
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:(cancelButtonTitle.length > 0 ? cancelButtonTitle : @"OK") otherButtonTitles:nil];
+    [av show];
 }
 
 @end

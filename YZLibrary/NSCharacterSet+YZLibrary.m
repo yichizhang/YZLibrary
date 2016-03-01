@@ -29,8 +29,9 @@
 
 @implementation NSCharacterSet (YZLibrary)
 
-+ (instancetype)yz_nonAlphanumericCharacterSet{
-	return [[[self class] alphanumericCharacterSet] invertedSet];
++ (instancetype)yz_nonAlphanumericCharacterSet
+{
+    return [[[self class] alphanumericCharacterSet] invertedSet];
 }
 
 @end

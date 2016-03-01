@@ -36,6 +36,6 @@
  @param message Descriptive text that provides more details than the title.
  @param cancelButtonTitle The title of the cancel button. If you pass in `nil` or an empty string, default value "OK" will be used.
  */
-+ (void)yz_showWithTitle:(NSString*)title message:(NSString*)message cancelButtonTitle:(NSString*)cancelButtonTitle;
++ (void)yz_showWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
 
 @end

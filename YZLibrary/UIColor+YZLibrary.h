@@ -32,17 +32,17 @@
 /**
  Returns iOS 7's system blue color
  */
-+ (UIColor*)yz_iOS7BlueColor;
++ (UIColor *)yz_iOS7BlueColor;
 
 /**
  Returns the tint color of the application's key window
  */
-+ (UIColor*)yz_appKeyWindowTintColor;
++ (UIColor *)yz_appKeyWindowTintColor;
 
 /**
  Returns a random bright color
  */
-+ (UIColor*)yz_randomBrightColor;
++ (UIColor *)yz_randomBrightColor;
 
 /**
  Creates and returns a color object that's the complement of the receiver.

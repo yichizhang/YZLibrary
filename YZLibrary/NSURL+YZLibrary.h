@@ -36,7 +36,7 @@
  
  Percent escapes will be added to the phone number string provided.
  */
-+ (NSURL*)yz_telURLWithPhoneNumber:(NSString *)phoneNumberString;
++ (NSURL *)yz_telURLWithPhoneNumber:(NSString *)phoneNumberString;
 
 /**
  Returns an email URL that starts with `mailto:`
@@ -45,6 +45,6 @@
  
  Percent escapes will be added to the email string provided.
  */
-+ (NSURL*)yz_mailtoURLWithEmail:(NSString *)emailString;
++ (NSURL *)yz_mailtoURLWithEmail:(NSString *)emailString;
 
 @end

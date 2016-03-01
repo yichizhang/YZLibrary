@@ -39,7 +39,7 @@
  
  @param viewController		The view controller to display over the current view controller's content. 
  */
-- (void)yz_presentViewController:(UIViewController*)viewController;
+- (void)yz_presentViewController:(UIViewController *)viewController;
 
 /**
  Push a view controller onto self (if self is a navigationController) or self's navigationController with animation
@@ -47,7 +47,7 @@
  @param viewController		The view controller to push onto the stack. This object cannot be a tab bar controller. If the view controller is already on the navigation stack, this method throws an exception.
  Shorthand for "[self.navigationController pushViewController:vc animated:YES];"
  */
-- (void)yz_pushViewController:(UIViewController*)viewController;
+- (void)yz_pushViewController:(UIViewController *)viewController;
 
 /**
  Dismiss a view controller with animation, but no completion block.

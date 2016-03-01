@@ -35,7 +35,7 @@
  @param color	The color of the image you wish to generate.
  @param size	The size of the image you wish to generate.
  */
-+ (UIImage *)yz_imageWithColor:(UIColor*)color andSize:(CGSize)size;
++ (UIImage *)yz_imageWithColor:(UIColor *)color andSize:(CGSize)size;
 
 /**
  Creates and returns an image object by resizing the receiver to the required size, not retaining original aspect ratio.

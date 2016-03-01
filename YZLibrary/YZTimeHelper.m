@@ -29,32 +29,34 @@
 
 @implementation YZTimeHelper
 
-+ (NSString *)secondsToMinuteString:(int)seconds{
-    
++ (NSString *)secondsToMinuteString:(int)seconds
+{
+
     return [NSString
             stringWithFormat:
-            @"%i:%02i",
-            seconds / 60,
-            seconds % 60
-            ];
+                    @"%i:%02i",
+                    seconds / 60,
+                    seconds % 60
+    ];
 }
 
-+ (NSString*)hmsTimeStringFromSecondsInt:(int)totalSeconds{
-    
++ (NSString *)hmsTimeStringFromSecondsInt:(int)totalSeconds
+{
+
     int hours = totalSeconds / 3600;
     totalSeconds -= hours * 3600;
-    int minutes = (totalSeconds / 60) ;
+    int minutes = (totalSeconds / 60);
     totalSeconds -= minutes * 60;
     int seconds = totalSeconds % 60;
-    
+
     NSMutableString *durationString = [NSMutableString stringWithCapacity:20];
-    
-    if (hours>0) {
+
+    if (hours > 0) {
         [durationString appendFormat:@"%d:", hours];
     }
-    
+
     [durationString appendFormat:@"%02d:%02d", minutes, seconds];
-    
+
     return durationString;
 }
 

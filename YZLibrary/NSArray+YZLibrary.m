@@ -26,29 +26,28 @@
 //
 
 #import "NSArray+YZLibrary.h"
-#import "YZRandom.h"
 
 @implementation NSArray (YZLibrary)
 
-- (id)yz_objectAtIndex:(NSInteger)index{
-    
+- (id)yz_objectAtIndex:(NSInteger)index
+{
     if (index >= 0 && index < [self count]) {
         return [self objectAtIndex:index];
     }
     return nil;
-    
 }
 
-- (id)yz_randomObject{
-    return [ self objectAtIndex: (int) ( arc4random() % [self count] ) ];
+- (id)yz_randomObject
+{
+    return [self objectAtIndex:(int) (arc4random() % [self count])];
 }
 
 - (NSArray *)yz_shuffledArray
 {
-	return [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-		// Return -1, 0, or 1
-		return arc4random()%3 - 1;
-	}];
+    return [self sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        // Return -1, 0, or 1
+        return arc4random() % 3 - 1;
+    }];
 }
 
 @end

@@ -29,16 +29,18 @@
 
 @implementation NSURL (YZLibrary)
 
-+ (NSURL*)yz_telURLWithPhoneNumber:(NSString *)phoneNumberString {
-	return [NSURL URLWithString:
-			[NSString stringWithFormat:@"tel:%@", [phoneNumberString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
-			];
++ (NSURL *)yz_telURLWithPhoneNumber:(NSString *)phoneNumberString
+{
+    return [NSURL URLWithString:
+            [NSString stringWithFormat:@"tel:%@", [phoneNumberString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+    ];
 }
 
-+ (NSURL*)yz_mailtoURLWithEmail:(NSString *)emailString {
-	return [NSURL URLWithString:
-			[NSString stringWithFormat:@"mailto:%@", [emailString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
-			];
++ (NSURL *)yz_mailtoURLWithEmail:(NSString *)emailString
+{
+    return [NSURL URLWithString:
+            [NSString stringWithFormat:@"mailto:%@", [emailString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
+    ];
 }
 
 @end

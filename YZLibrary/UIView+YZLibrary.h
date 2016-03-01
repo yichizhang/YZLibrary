@@ -40,7 +40,7 @@
  @param nibName			The name of the nib file, without any leading path information.
  @param bundleOrNil		The bundle in which to search for the nib file. If you specify nil, this method looks for the nib file in the main bundle.
  */
-+ (nullable instancetype)yz_loadFromNibNamed:(nonnull NSString*)nibName bundle:(nullable NSBundle*)bundleOrNil;
++ (nullable instancetype)yz_loadFromNibNamed:(nonnull NSString *)nibName bundle:(nullable NSBundle *)bundleOrNil;
 
 /**
  Bring the view to the front by calling `bringSubviewToFront:` on its superview.
@@ -50,14 +50,14 @@
 /**
  Returns an image of the receiver. The scale factor of the image is equal to the scale factor of the main screen.
  */
-- (nonnull UIImage*)yz_captureImage;
+- (nonnull UIImage *)yz_captureImage;
 
 /**
  Returns an image of the receiver. The image will be rendered to the required scale factor.
  
  @param scaleFactor		The scale factor you wish to render the image to.
  */
-- (nonnull UIImage*)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor;
+- (nonnull UIImage *)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor;
 
 /**
  Goes up the view hierarchy, returns the receiver's parent collection view cell, if there is one.

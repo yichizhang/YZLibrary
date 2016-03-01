@@ -35,8 +35,8 @@
  @param collectionView	The collection view you wish to dequeue the cell from.
  @param reuseIdentifier	The reuse identifier for the specified cell. This parameter must not be `nil`.
  */
-+ (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
-                                forIndexPath:(NSIndexPath*)indexPath;
++ (instancetype)yz_dequeueFromCollectionView:(UICollectionView *)collectionView
+                                forIndexPath:(NSIndexPath *)indexPath;
 
 /**
  Dequeue a collection view cell, using custom identifier.
@@ -45,16 +45,16 @@
  @param indexPath		The index path specifying the location of the cell.
  @param reuseIdentifier	The reuse identifier for the specified cell. This parameter must not be `nil`.
  */
-+ (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
-                                forIndexPath:(NSIndexPath*)indexPath
-                          andReuseIdentifier:(NSString*)reuseIdentifier;
++ (instancetype)yz_dequeueFromCollectionView:(UICollectionView *)collectionView
+                                forIndexPath:(NSIndexPath *)indexPath
+                          andReuseIdentifier:(NSString *)reuseIdentifier;
 
 /** 
  Register a collection view cell with the collection view, using the class name (without package name) as the identifier and the name of the nib file.
  
  @param collectionView	The collection view you wish to register the cell for.
  */
-+ (void)yz_registerForCollectionView:(UICollectionView*)collectionView;
++ (void)yz_registerForCollectionView:(UICollectionView *)collectionView;
 
 /**
  Register a collection view cell with the collection view, using custom identifier and custom nib file name.
@@ -63,9 +63,9 @@
  @param nibFileName		The name of the nib file, without any leading path information.
  @param reuseIdentifier	The reuse identifier for the specified cell. This parameter must not be `nil`.
  */
-+ (void)yz_registerForCollectionView:(UICollectionView*)collectionView
-                     withNibFileName:(NSString*)nibFileName
-                  andReuseIdentifier:(NSString*)reuseIdentifier;
++ (void)yz_registerForCollectionView:(UICollectionView *)collectionView
+                     withNibFileName:(NSString *)nibFileName
+                  andReuseIdentifier:(NSString *)reuseIdentifier;
 
 /** 
  Register a collection view cell with the collection view, using custom identifier the class name (without package name) as the name of the nib file.
@@ -73,6 +73,6 @@
  @param collectionView	The collection view you wish to register the cell for.
  @param reuseIdentifier	The reuse identifier for the specified cell. This parameter must not be `nil`.
  */
-+ (void)yz_registerForCollectionView:(UICollectionView*)collectionView
-                 withReuseIdentifier:(NSString*)reuseIdentifier;
++ (void)yz_registerForCollectionView:(UICollectionView *)collectionView
+                 withReuseIdentifier:(NSString *)reuseIdentifier;
 @end

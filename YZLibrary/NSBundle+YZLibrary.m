@@ -29,16 +29,18 @@
 
 @implementation NSBundle (YZLibrary)
 
-- (NSURL*)yz_URLForResourceNamed:(NSString*)fullFileName{
-	NSString* resource = [[fullFileName lastPathComponent] stringByDeletingPathExtension];
-	NSString* extension = [fullFileName pathExtension];
-	return [self URLForResource:resource withExtension:extension];
+- (NSURL *)yz_URLForResourceNamed:(NSString *)fullFileName
+{
+    NSString *resource = [[fullFileName lastPathComponent] stringByDeletingPathExtension];
+    NSString *extension = [fullFileName pathExtension];
+    return [self URLForResource:resource withExtension:extension];
 }
 
-- (NSString*)yz_pathForResourceNamed:(NSString*)fullFileName {
-	NSString* resource = [[fullFileName lastPathComponent] stringByDeletingPathExtension];
-	NSString* extension = [fullFileName pathExtension];
-	return [self pathForResource:resource ofType:extension];
+- (NSString *)yz_pathForResourceNamed:(NSString *)fullFileName
+{
+    NSString *resource = [[fullFileName lastPathComponent] stringByDeletingPathExtension];
+    NSString *extension = [fullFileName pathExtension];
+    return [self pathForResource:resource ofType:extension];
 }
 
 @end

@@ -29,33 +29,36 @@
 
 @implementation YZFileHelper
 
-+ (NSString *)userDocumentDirectoryPath {
++ (NSString *)userDocumentDirectoryPath
+{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [paths objectAtIndex:0];
     return documentDir;
 }
 
-+ (NSString *)pathForDirectoryInUserDomain:(NSSearchPathDirectory)directory {
-	NSArray *paths = NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES);
-	return [paths firstObject];
++ (NSString *)pathForDirectoryInUserDomain:(NSSearchPathDirectory)directory
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES);
+    return [paths firstObject];
 }
 
-+ (NSString*)fileSizeStringFromByteCount:(int)byteCount {
++ (NSString *)fileSizeStringFromByteCount:(int)byteCount
+{
     //For converting file size to MB, Gb use below function
-    double value = (double)byteCount;
+    double value = (double) byteCount;
     int multiplyFactor = 0;
-    
-    NSArray *units = [NSArray arrayWithObjects:@"bytes",@"KiB",@"MiB",@"GiB",@"TiB",nil];
-    
+
+    NSArray *units = [NSArray arrayWithObjects:@"bytes", @"KiB", @"MiB", @"GiB", @"TiB", nil];
+
     while (value > 1024) {
         value /= 1024;
         multiplyFactor++;
     }
-	
+
     return [NSString stringWithFormat:@"%4.1f %@",
-			value,
-			[units objectAtIndex:multiplyFactor]
-			];
+                                      value,
+                                      [units objectAtIndex:multiplyFactor]
+    ];
 }
 
 @end

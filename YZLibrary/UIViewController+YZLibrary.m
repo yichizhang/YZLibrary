@@ -29,47 +29,55 @@
 
 @implementation UIViewController (YZLibrary)
 
-- (void)yz_ios7EdgeForExtendedLayout{
+- (void)yz_ios7EdgeForExtendedLayout
+{
 
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-	if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
         self.edgesForExtendedLayout = UIRectEdgeNone;
-	}
+    }
 }
 
-- (void)yz_presentViewController:(UIViewController*)viewController{
-	
-	[self presentViewController:viewController animated:YES completion:nil];
+- (void)yz_presentViewController:(UIViewController *)viewController
+{
+
+    [self presentViewController:viewController animated:YES completion:nil];
 }
 
-- (void)yz_pushViewController:(UIViewController*)viewController{
-	
-	if ([self isKindOfClass:[UINavigationController class]]) {
-		
-		[(UINavigationController*)self pushViewController:viewController animated:YES];
-	}else {
-		
-		[self.navigationController pushViewController:viewController animated:YES];
-	}
+- (void)yz_pushViewController:(UIViewController *)viewController
+{
+
+    if ([self isKindOfClass:[UINavigationController class]]) {
+
+        [(UINavigationController *) self pushViewController:viewController animated:YES];
+    }
+    else {
+
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
-- (void)yz_dismissViewController{
-	
-	[self dismissViewControllerAnimated:YES completion:nil];
+- (void)yz_dismissViewController
+{
+
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)yz_autoDismissViewController{
-	
-	if (self.navigationController) {
-		if (self.navigationController.viewControllers.count > 1) {
-			[self.navigationController popViewControllerAnimated:YES];
-		}else{
-			[self yz_dismissViewController];
-		}
-	}else{
-		[self yz_dismissViewController];
-	}
+- (void)yz_autoDismissViewController
+{
+
+    if (self.navigationController) {
+        if (self.navigationController.viewControllers.count > 1) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        else {
+            [self yz_dismissViewController];
+        }
+    }
+    else {
+        [self yz_dismissViewController];
+    }
 }
 
 @end

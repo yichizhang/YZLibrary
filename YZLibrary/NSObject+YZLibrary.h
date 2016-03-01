@@ -36,7 +36,7 @@
  For example, if you have a module called "Legend" and a class called "AwesomeClass",
  it returns "Legend.AwesomeClass". If you are only interested in the "real" class name, use this method.
  */
-+ (NSString*)yz_className;
++ (NSString *)yz_className;
 
 /**
  Dispatch on the main queue after delay. Shortcut for `dispatch_after(dispatch_time_t when, dispatch_queue_t queue, ^(void)block)`

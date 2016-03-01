@@ -30,61 +30,61 @@
 
 @implementation UICollectionViewCell (YZLibrary)
 
-+ (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
-                                forIndexPath:(NSIndexPath*)indexPath
++ (instancetype)yz_dequeueFromCollectionView:(UICollectionView *)collectionView
+                                forIndexPath:(NSIndexPath *)indexPath
 {
 
     return
-        [self yz_dequeueFromCollectionView:collectionView
-                              forIndexPath:indexPath
-                        andReuseIdentifier:[self yz_className]];
+            [self yz_dequeueFromCollectionView:collectionView
+                                  forIndexPath:indexPath
+                            andReuseIdentifier:[self yz_className]];
 }
 
-+ (instancetype)yz_dequeueFromCollectionView:(UICollectionView*)collectionView
-                                forIndexPath:(NSIndexPath*)indexPath
-                          andReuseIdentifier:(NSString*)reuseIdentifier
++ (instancetype)yz_dequeueFromCollectionView:(UICollectionView *)collectionView
+                                forIndexPath:(NSIndexPath *)indexPath
+                          andReuseIdentifier:(NSString *)reuseIdentifier
 {
 
     return
-        [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
-                                                  forIndexPath:indexPath];
+            [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier
+                                                      forIndexPath:indexPath];
 }
 
-+ (void)yz_registerForCollectionView:(UICollectionView*)collectionView
++ (void)yz_registerForCollectionView:(UICollectionView *)collectionView
 {
-	NSString *defaultNibName = [self yz_className];
-	NSString *defaultReuseId = [self yz_className];
-	
-	if([[NSBundle mainBundle] pathForResource:defaultNibName ofType:@"nib"] != nil)
-	{
-		
-		[self yz_registerForCollectionView:collectionView
-						   withNibFileName:defaultNibName
-						andReuseIdentifier:defaultReuseId];
-	}else{
-		
-		[self yz_registerForCollectionView:collectionView
-					   withReuseIdentifier:defaultReuseId];
-	}
-	
+    NSString *defaultNibName = [self yz_className];
+    NSString *defaultReuseId = [self yz_className];
+
+    if ([[NSBundle mainBundle] pathForResource:defaultNibName ofType:@"nib"] != nil) {
+
+        [self yz_registerForCollectionView:collectionView
+                           withNibFileName:defaultNibName
+                        andReuseIdentifier:defaultReuseId];
+    }
+    else {
+
+        [self yz_registerForCollectionView:collectionView
+                       withReuseIdentifier:defaultReuseId];
+    }
+
 }
 
-+ (void)yz_registerForCollectionView:(UICollectionView*)collectionView
-                     withNibFileName:(NSString*)nibFileName
-                  andReuseIdentifier:(NSString*)reuseIdentifier
++ (void)yz_registerForCollectionView:(UICollectionView *)collectionView
+                     withNibFileName:(NSString *)nibFileName
+                  andReuseIdentifier:(NSString *)reuseIdentifier
 {
 
     [collectionView registerClass:[self class] forCellWithReuseIdentifier:reuseIdentifier];
 
-    UINib* nib = [UINib nibWithNibName:nibFileName bundle:nil];
- 
-	[collectionView registerNib:nib forCellWithReuseIdentifier:reuseIdentifier];
+    UINib *nib = [UINib nibWithNibName:nibFileName bundle:nil];
+
+    [collectionView registerNib:nib forCellWithReuseIdentifier:reuseIdentifier];
 }
 
-+ (void)yz_registerForCollectionView:(UICollectionView*)collectionView
-                 withReuseIdentifier:(NSString*)reuseIdentifier
++ (void)yz_registerForCollectionView:(UICollectionView *)collectionView
+                 withReuseIdentifier:(NSString *)reuseIdentifier
 {
-	
+
     [collectionView registerClass:[self class] forCellWithReuseIdentifier:reuseIdentifier];
 }
 

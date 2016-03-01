@@ -27,10 +27,11 @@
 
 #import <Foundation/Foundation.h>
 
-typedef struct {
-	NSInteger majorVersion;
-	NSInteger minorVersion;
-	NSInteger patchVersion;
+typedef struct
+{
+    NSInteger majorVersion;
+    NSInteger minorVersion;
+    NSInteger patchVersion;
 } YZOperatingSystemVersion;
 
 @interface YZProcessInfo : NSObject
@@ -38,12 +39,12 @@ typedef struct {
 /** A string containing the version of the current device. (read-only)
  
  */
-@property (readonly, copy) NSString *operatingSystemVersionString;
+@property(readonly, copy) NSString *operatingSystemVersionString;
 
 /** The version of the current device. (read-only)
  
  */
-@property (readonly) YZOperatingSystemVersion operatingSystemVersion;
+@property(readonly) YZOperatingSystemVersion operatingSystemVersion;
 
 
 /** Returns an instance of YZProcessInfo.
