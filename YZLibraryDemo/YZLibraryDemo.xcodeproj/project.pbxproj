@@ -59,6 +59,7 @@
 		12EFF0081A3EFD5A0034B70D /* demo-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12EFF0021A3EFD5A0034B70D /* demo-6.jpg */; };
 		12EFF00B1A3EFE040034B70D /* NSObject+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */; };
 		2CA203921C86407700E52596 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA203911C86407700E52596 /* Launch Screen.storyboard */; };
+		81E521D596D9A8F6DBDFA6C3 /* Pods_YZLibraryDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095F4CBB5C7D9F4EE56DAE67 /* Pods_YZLibraryDemoTests.framework */; };
 		AA79372DA0AEB10B9414689A /* NSData+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		095F4CBB5C7D9F4EE56DAE67 /* Pods_YZLibraryDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YZLibraryDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1203366C1A999200007B5A65 /* NSBundle+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+YZLibrary.h"; sourceTree = "<group>"; };
 		1203366D1A999200007B5A65 /* NSBundle+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+YZLibrary.m"; sourceTree = "<group>"; };
 		1220D26A1967109800979E9A /* YZLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,9 +157,11 @@
 		12EFF0021A3EFD5A0034B70D /* demo-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-6.jpg"; sourceTree = "<group>"; };
 		12EFF0091A3EFE040034B70D /* NSObject+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YZLibrary.h"; sourceTree = "<group>"; };
 		12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZLibrary.m"; sourceTree = "<group>"; };
+		1AB5C38D45FFA389C709CC3E /* Pods-YZLibraryDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZLibraryDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YZLibraryDemoTests/Pods-YZLibraryDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		2CA203911C86407700E52596 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YZLibrary.m"; sourceTree = "<group>"; };
 		AA79315A512A44BA649129BE /* NSData+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YZLibrary.h"; sourceTree = "<group>"; };
+		B4D585E614BFA40DF59F54DA /* Pods-YZLibraryDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZLibraryDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YZLibraryDemoTests/Pods-YZLibraryDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 				1220D28D1967109800979E9A /* XCTest.framework in Frameworks */,
 				1220D28F1967109800979E9A /* UIKit.framework in Frameworks */,
 				1220D28E1967109800979E9A /* Foundation.framework in Frameworks */,
+				81E521D596D9A8F6DBDFA6C3 /* Pods_YZLibraryDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +196,7 @@
 				1220D2921967109800979E9A /* YZLibraryDemoTests */,
 				1220D26C1967109800979E9A /* Frameworks */,
 				1220D26B1967109800979E9A /* Products */,
+				6FD65F65CA119F6A225128EB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,6 +216,7 @@
 				1220D26F1967109800979E9A /* CoreGraphics.framework */,
 				1220D2711967109800979E9A /* UIKit.framework */,
 				1220D28C1967109800979E9A /* XCTest.framework */,
+				095F4CBB5C7D9F4EE56DAE67 /* Pods_YZLibraryDemoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,6 +362,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		6FD65F65CA119F6A225128EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4D585E614BFA40DF59F54DA /* Pods-YZLibraryDemoTests.debug.xcconfig */,
+				1AB5C38D45FFA389C709CC3E /* Pods-YZLibraryDemoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -379,9 +395,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1220D29F1967109800979E9A /* Build configuration list for PBXNativeTarget "YZLibraryDemoTests" */;
 			buildPhases = (
+				6AAE3B61640DB5ED4F6C2BDD /* Check Pods Manifest.lock */,
 				1220D2871967109800979E9A /* Sources */,
 				1220D2881967109800979E9A /* Frameworks */,
 				1220D2891967109800979E9A /* Resources */,
+				64428ECA582DB2E978882B7B /* Embed Pods Frameworks */,
+				A388A4DFDA52DBAA703BFEEF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -460,6 +479,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		64428ECA582DB2E978882B7B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YZLibraryDemoTests/Pods-YZLibraryDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AAE3B61640DB5ED4F6C2BDD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A388A4DFDA52DBAA703BFEEF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YZLibraryDemoTests/Pods-YZLibraryDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1220D2661967109800979E9A /* Sources */ = {
@@ -655,6 +722,7 @@
 		};
 		1220D2A01967109800979E9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4D585E614BFA40DF59F54DA /* Pods-YZLibraryDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YZLibraryDemo.app/YZLibraryDemo";
 				CLANG_ENABLE_MODULES = YES;
@@ -682,6 +750,7 @@
 		};
 		1220D2A11967109800979E9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB5C38D45FFA389C709CC3E /* Pods-YZLibraryDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/YZLibraryDemo.app/YZLibraryDemo";
 				CLANG_ENABLE_MODULES = YES;
