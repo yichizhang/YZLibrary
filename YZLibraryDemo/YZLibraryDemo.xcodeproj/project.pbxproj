@@ -59,6 +59,7 @@
 		12EFF0081A3EFD5A0034B70D /* demo-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12EFF0021A3EFD5A0034B70D /* demo-6.jpg */; };
 		12EFF00B1A3EFE040034B70D /* NSObject+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */; };
 		2CA203921C86407700E52596 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA203911C86407700E52596 /* Launch Screen.storyboard */; };
+		AA79372DA0AEB10B9414689A /* NSData+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +156,8 @@
 		12EFF0091A3EFE040034B70D /* NSObject+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YZLibrary.h"; sourceTree = "<group>"; };
 		12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZLibrary.m"; sourceTree = "<group>"; };
 		2CA203911C86407700E52596 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YZLibrary.m"; sourceTree = "<group>"; };
+		AA79315A512A44BA649129BE /* NSData+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YZLibrary.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +302,8 @@
 				1203366D1A999200007B5A65 /* NSBundle+YZLibrary.m */,
 				12D3616B1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.h */,
 				12D3616C1A7FF8510007AE22 /* NSCharacterSet+YZLibrary.m */,
+				AA79315A512A44BA649129BE /* NSData+YZLibrary.h */,
+				AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */,
 				122941F01AAD52B200782A2C /* NSURL+YZLibrary.h */,
 				122941F11AAD52B200782A2C /* NSURL+YZLibrary.m */,
 				12EFF0091A3EFE040034B70D /* NSObject+YZLibrary.h */,
@@ -492,6 +497,7 @@
 				1220D27A1967109800979E9A /* main.m in Sources */,
 				1220D27E1967109800979E9A /* YZAppDelegate.m in Sources */,
 				126260A91B45978600BD1F64 /* YZAutoLayoutViewController.swift in Sources */,
+				AA79372DA0AEB10B9414689A /* NSData+YZLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
