@@ -2,7 +2,7 @@
 //  UIAlertView+YZLibrary.m
 //  YZLibrary
 //
-//  Copyright (c) 2015 Yichi Zhang
+//  Copyright (c) 2016 Yichi Zhang
 //  https://github.com/yichizhang
 //  zhang-yi-chi@hotmail.com
 //
