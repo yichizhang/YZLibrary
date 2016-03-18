@@ -58,6 +58,7 @@
 		12EFF0071A3EFD5A0034B70D /* demo-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12EFF0011A3EFD5A0034B70D /* demo-5.jpg */; };
 		12EFF0081A3EFD5A0034B70D /* demo-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12EFF0021A3EFD5A0034B70D /* demo-6.jpg */; };
 		12EFF00B1A3EFE040034B70D /* NSObject+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */; };
+		2C755C2C1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C755C2B1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift */; };
 		2CA203921C86407700E52596 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA203911C86407700E52596 /* Launch Screen.storyboard */; };
 		81E521D596D9A8F6DBDFA6C3 /* Pods_YZLibraryDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095F4CBB5C7D9F4EE56DAE67 /* Pods_YZLibraryDemoTests.framework */; };
 		AA79372DA0AEB10B9414689A /* NSData+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */; };
@@ -158,6 +159,7 @@
 		12EFF0091A3EFE040034B70D /* NSObject+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YZLibrary.h"; sourceTree = "<group>"; };
 		12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZLibrary.m"; sourceTree = "<group>"; };
 		1AB5C38D45FFA389C709CC3E /* Pods-YZLibraryDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZLibraryDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YZLibraryDemoTests/Pods-YZLibraryDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C755C2B1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+YZLibraryTests.swift"; sourceTree = "<group>"; };
 		2CA203911C86407700E52596 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YZLibrary.m"; sourceTree = "<group>"; };
 		AA79315A512A44BA649129BE /* NSData+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+YZLibrary.h"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				12BDB8C51AD1A94C00F394EB /* YZLibraryDemoTests-Bridging-Header.h */,
 				1220D2981967109800979E9A /* YZLibrayTests.m */,
+				2C755C2B1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift */,
 				1220D2931967109800979E9A /* Supporting Files */,
 			);
 			path = YZLibraryDemoTests;
@@ -573,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1220D2991967109800979E9A /* YZLibrayTests.m in Sources */,
+				2C755C2C1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
