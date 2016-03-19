@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YZLibrary"
-  s.version      = "1.2.0"
+  s.version      = "1.3.0"
   s.summary      = "Some code that helped me in the past few years of iOS development."
   s.homepage     = "https://github.com/yichizhang/YZLibrary"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,8 +14,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'YZLibrary/*.{h,m}'
-  #s.resources    = 'RES.bundle'
-
   s.framework  = 'Foundation', 'UIKit'
-
 end
