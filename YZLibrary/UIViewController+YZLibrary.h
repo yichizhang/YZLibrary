@@ -61,4 +61,25 @@
  */
 - (void)yz_autoDismissViewController;
 
+/**
+ *  Add a child view controller to the receiver's `view`, making necessary state transitioning calls.
+ *
+ *  @param viewController The child view controller
+ */
+- (void)yz_addChildViewController:(UIViewController *)viewController;
+
+/**
+ *  Add a child view controller to contentView (must be the receiver's `view`'s subview), making necessary state transitioning calls.
+ *
+ *  @param viewController The child view controller
+ *  @param contentView    Receiver's view's subview
+ */
+- (void)yz_addChildViewController:(UIViewController *)viewController
+                           toView:(UIView *)contentView;
+
+/**
+ *  Remove receiver from its parent view controller, making necessary state transitioning calls.
+ */
+- (void)yz_removeFromParentViewController;
+
 @end

@@ -75,4 +75,26 @@
     }
 }
 
+- (void)yz_addChildViewController:(UIViewController *)viewController
+{
+    [self yz_addChildViewController:viewController toView:self.view];
+}
+
+- (void)yz_addChildViewController:(UIViewController *)viewController
+                           toView:(UIView *)contentView
+{
+    [viewController willMoveToParentViewController:self];
+    [self addChildViewController:viewController];
+    [contentView addSubview:viewController.view];
+    [viewController didMoveToParentViewController:self];
+}
+
+- (void)yz_removeFromParentViewController
+{
+    [self willMoveToParentViewController:nil];
+    [self.view removeFromSuperview];
+    [self removeFromParentViewController];
+    [self didMoveToParentViewController:nil];
+}
+
 @end
