@@ -29,6 +29,9 @@
 
 @interface NSData (YZLibrary)
 
+/**
+ *  Returns the MD5 hash of data contained in the receiver.
+ */
 - (NSString *)yz_MD5String;
 
 @end
