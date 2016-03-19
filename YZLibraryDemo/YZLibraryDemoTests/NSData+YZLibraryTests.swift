@@ -32,9 +32,18 @@ class MD5Spec: QuickSpec {
     override func spec() {
         describe("MD5 method") {
             var data: NSData?
+            let bundle = NSBundle(forClass: self.dynamicType)
             it("returns correct result for strings") {
                 data = "Alice in Wonderland".dataUsingEncoding(NSUTF8StringEncoding)
                 expect(data?.yz_MD5String()).to(equal("50e9fcc3911994a2f84eaf8c12c49b5b"))
+            }
+            it("returns correct result for pdf files") {
+                data = NSData(contentsOfFile: bundle.pathForResource("test_pdf", ofType: "pdf")!)
+                expect(data?.yz_MD5String()).to(equal("61a72a52188553124e9bd01f63a6e1ca"))
+            }
+            it("returns correct result for png files") {
+                data = NSData(contentsOfFile: bundle.pathForResource("test_png", ofType: "png")!)
+                expect(data?.yz_MD5String()).to(equal("b6ad4c3fa0324262ef5eb9bffa17feab"))
             }
         }
     }

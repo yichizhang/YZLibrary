@@ -58,6 +58,8 @@
 		12EFF0071A3EFD5A0034B70D /* demo-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12EFF0011A3EFD5A0034B70D /* demo-5.jpg */; };
 		12EFF0081A3EFD5A0034B70D /* demo-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12EFF0021A3EFD5A0034B70D /* demo-6.jpg */; };
 		12EFF00B1A3EFE040034B70D /* NSObject+YZLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */; };
+		2C2AF5B31C9D083B004A1590 /* test_pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF5B11C9D083B004A1590 /* test_pdf.pdf */; };
+		2C2AF5B41C9D083B004A1590 /* test_png.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C2AF5B21C9D083B004A1590 /* test_png.png */; };
 		2C755C2C1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C755C2B1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift */; };
 		2CA203921C86407700E52596 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA203911C86407700E52596 /* Launch Screen.storyboard */; };
 		81E521D596D9A8F6DBDFA6C3 /* Pods_YZLibraryDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095F4CBB5C7D9F4EE56DAE67 /* Pods_YZLibraryDemoTests.framework */; };
@@ -159,6 +161,8 @@
 		12EFF0091A3EFE040034B70D /* NSObject+YZLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YZLibrary.h"; sourceTree = "<group>"; };
 		12EFF00A1A3EFE040034B70D /* NSObject+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZLibrary.m"; sourceTree = "<group>"; };
 		1AB5C38D45FFA389C709CC3E /* Pods-YZLibraryDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZLibraryDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YZLibraryDemoTests/Pods-YZLibraryDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C2AF5B11C9D083B004A1590 /* test_pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test_pdf.pdf; sourceTree = "<group>"; };
+		2C2AF5B21C9D083B004A1590 /* test_png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_png.png; sourceTree = "<group>"; };
 		2C755C2B1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+YZLibraryTests.swift"; sourceTree = "<group>"; };
 		2CA203911C86407700E52596 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		AA79311587472F14D1527AE8 /* NSData+YZLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+YZLibrary.m"; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 				12BDB8C51AD1A94C00F394EB /* YZLibraryDemoTests-Bridging-Header.h */,
 				1220D2981967109800979E9A /* YZLibrayTests.m */,
 				2C755C2B1C9C5B2700D600B6 /* NSData+YZLibraryTests.swift */,
+				2C2AF5B01C9D083B004A1590 /* TestDocuments */,
 				1220D2931967109800979E9A /* Supporting Files */,
 			);
 			path = YZLibraryDemoTests;
@@ -363,6 +368,15 @@
 				12EFF0021A3EFD5A0034B70D /* demo-6.jpg */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		2C2AF5B01C9D083B004A1590 /* TestDocuments */ = {
+			isa = PBXGroup;
+			children = (
+				2C2AF5B11C9D083B004A1590 /* test_pdf.pdf */,
+				2C2AF5B21C9D083B004A1590 /* test_png.png */,
+			);
+			path = TestDocuments;
 			sourceTree = "<group>";
 		};
 		6FD65F65CA119F6A225128EB /* Pods */ = {
@@ -477,7 +491,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2AF5B41C9D083B004A1590 /* test_png.png in Resources */,
 				1220D2971967109800979E9A /* InfoPlist.strings in Resources */,
+				2C2AF5B31C9D083B004A1590 /* test_pdf.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
