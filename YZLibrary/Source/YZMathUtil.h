@@ -1,5 +1,5 @@
 //
-//  YZLibraryImportAll.h
+//  YZLibrary.h
 //  YZLibrary
 //
 //  Copyright (c) 2016 Yichi Zhang
@@ -25,29 +25,36 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#ifndef YZLibrary_YZLibraryImportAll_h
-#define YZLibrary_YZLibraryImportAll_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-#import "NSArray+YZLibrary.h"
-#import "NSBundle+YZLibrary.h"
-#import "NSCharacterSet+YZLibrary.h"
-#import "NSData+YZLibrary.h"
-#import "NSDate+YZLibrary.h"
-#import "NSURL+YZLibrary.h"
-#import "NSObject+YZLibrary.h"
-#import "NSString+YZLibrary.h"
-#import "UIAlertView+YZLibrary.h"
-#import "UICollectionViewCell+YZLibrary.h"
-#import "UIColor+YZLibrary.h"
-#import "UIImage+YZLibrary.h"
-#import "UITableViewCell+YZLibrary.h"
-#import "UIView+YZLibrary.h"
-#import "UIViewController+YZLibrary.h"
-#import "YZFileHelper.h"
-#import "YZLibrary.h"
-#import "YZProcessInfo.h"
-#import "YZRandom.h"
-#import "YZLimitedArray.h"
-#import "YZTimeHelper.h"
+#define YZ_DEGREES_TO_RADIANS(x) (M_PI * (x) / 180.0)
 
-#endif
+/**
+ Check if an object is empty by checking its "count" or "length".
+ 
+ @param object		The object you wish to check.
+ */
+BOOL YZ_IS_EMPTY(id object);
+
+/**
+ Build a CGRect with required size and center point.
+ 
+ @param centerX		The x-coordinate of the rectangle's center point.
+ @param centerY		The y-coordinate of the rectangle's center point.
+ @param width		The width of the rectangle.
+ @param height		The height of the rectangle.
+ */
+CGRect YZ_CGRectWithCenterAndSize(CGFloat centerX, CGFloat centerY, CGFloat width, CGFloat height);
+
+@interface YZMathUtil : NSObject
+
+/**
+ Calculates the new size for current size to fit in a required `box`, retaining original aspect ratio.
+ 
+ @param size		The original size.
+ @param boxSize		The size of the box that you wish to fit the orginal size into.
+ */
++ (CGSize)sizeRequiredForSize:(CGSize)size toAspectFitInBox:(CGSize)boxSize;
+
+@end

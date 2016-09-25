@@ -26,7 +26,7 @@
 //
 
 #import "UIImage+YZLibrary.h"
-#import "YZLibrary.h"
+#import "YZMathUtil.h"
 
 @implementation UIImage (YZLibrary)
 
@@ -69,7 +69,7 @@
 - (CGSize)yz_sizeRequiredToAspectFitInBox:(CGSize)boxSize
 {
 
-    return [YZLibrary sizeRequiredForSize:self.size toAspectFitInBox:boxSize];
+    return [YZMathUtil sizeRequiredForSize:self.size toAspectFitInBox:boxSize];
 }
 
 @end

@@ -1,5 +1,5 @@
 //
-//  YZLibrary.h
+//  YZLibrary.m
 //  YZLibrary
 //
 //  Copyright (c) 2016 Yichi Zhang
@@ -25,35 +25,50 @@
 //  DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
+#include "YZMathUtil.h"
 
-#define YZ_DEGREES_TO_RADIANS(x) (M_PI * (x) / 180.0)
+BOOL YZ_IS_EMPTY(id object)
+{
 
-/**
- Check if an object is empty by checking its "count" or "length".
- 
- @param object		The object you wish to check.
- */
-BOOL YZ_IS_EMPTY(id object);
+    if (object == nil) {
+        return YES;
+    }
+    else {
 
-/**
- Build a CGRect with required size and center point.
- 
- @param centerX		The x-coordinate of the rectangle's center point.
- @param centerY		The y-coordinate of the rectangle's center point.
- @param width		The width of the rectangle.
- @param height		The height of the rectangle.
- */
-CGRect YZ_CGRectWithCenterAndSize(CGFloat centerX, CGFloat centerY, CGFloat width, CGFloat height);
+        return
+                ([object respondsToSelector:@selector(length)] && [(NSData *) object length] == 0)
+                        || ([object respondsToSelector:@selector(count)] && [(NSArray *) object count] == 0);
+    }
 
-@interface YZLibrary : NSObject
+}
 
-/**
- Calculates the new size for current size to fit in a required `box`, retaining original aspect ratio.
- 
- @param size		The original size.
- @param boxSize		The size of the box that you wish to fit the orginal size into.
- */
-+ (CGSize)sizeRequiredForSize:(CGSize)size toAspectFitInBox:(CGSize)boxSize;
+CGRect YZ_CGRectWithCenterAndSize(CGFloat centerX, CGFloat centerY, CGFloat width, CGFloat height)
+{
+    return CGRectMake(
+            centerX - width / 2,
+            centerY - height / 2,
+            width,
+            height
+    );
+}
+
+@implementation YZMathUtil
+
++ (CGSize)sizeRequiredForSize:(CGSize)size toAspectFitInBox:(CGSize)boxSize
+{
+
+    CGFloat w, h;
+
+    if (size.width / size.height < boxSize.width / boxSize.height) {
+
+        h = boxSize.height;
+        w = (size.width / size.height) * boxSize.height;
+    }
+    else {
+        w = boxSize.width;
+        h = (size.height / size.width) * boxSize.width;
+    }
+    return CGSizeMake(w, h);
+}
 
 @end

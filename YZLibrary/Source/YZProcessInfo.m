@@ -26,6 +26,7 @@
 //
 
 #import "YZProcessInfo.h"
+#import <UIKit/UIKit.h>
 
 @implementation YZProcessInfo
 
