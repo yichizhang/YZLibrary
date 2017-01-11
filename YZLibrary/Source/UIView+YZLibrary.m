@@ -32,14 +32,11 @@
 
 + (nullable instancetype)yz_loadFromNib
 {
-
     return [[self class] yz_loadFromNibNamed:[self yz_className] bundle:nil];
-
 }
 
 + (nullable instancetype)yz_loadFromNibNamed:(nonnull NSString *)nibName bundle:(nullable NSBundle *)bundleOrNil
 {
-
     static UINib *__nib;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -56,7 +53,6 @@
 
 - (nonnull UIImage *)yz_captureImage
 {
-
     return [self yz_captureImageWithScaleFactor:
             [UIScreen mainScreen].scale
     ];
@@ -64,7 +60,6 @@
 
 - (nonnull UIImage *)yz_captureImageWithScaleFactor:(CGFloat)scaleFactor
 {
-
     UIGraphicsBeginImageContextWithOptions(self.bounds.size,
             NO,
             scaleFactor
@@ -106,7 +101,6 @@
 
 - (void)yz_preloadKeyboard
 {
-
     UITextField *tempTextField = [[UITextField alloc] init];
     [self addSubview:tempTextField];
     [tempTextField becomeFirstResponder];
@@ -121,7 +115,6 @@
 
 - (void)yz_setupConstraintsAdhereToEdgesOfSuperviewWithInsets:(UIEdgeInsets)inset
 {
-
     UIView *contentView = self.superview;
     UIView *itemView = self;
 
