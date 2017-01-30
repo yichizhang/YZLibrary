@@ -35,6 +35,8 @@
 		12C1C4711E3F10F0003FBF84 /* YZSimpleTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4531E3F10F0003FBF84 /* YZSimpleTextCell.xib */; };
 		12C1C4721E3F10F0003FBF84 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4551E3F10F0003FBF84 /* Info.plist */; };
 		12C1C4731E3F112B003FBF84 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
+		12C1C4761E3F143D003FBF84 /* UIColor+YZModification.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C1C4741E3F143D003FBF84 /* UIColor+YZModification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C1C4771E3F143D003FBF84 /* UIColor+YZModification.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4751E3F143D003FBF84 /* UIColor+YZModification.m */; };
 		2C3F76711D97EECD00728B85 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
 		2C3F76761D97EECD00728B85 /* YZLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F76751D97EECD00728B85 /* YZLibraryTests.m */; };
 		2C3F76781D97EECD00728B85 /* YZLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3F766A1D97EECD00728B85 /* YZLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -127,6 +129,8 @@
 		12C1C4531E3F10F0003FBF84 /* YZSimpleTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZSimpleTextCell.xib; sourceTree = "<group>"; };
 		12C1C4551E3F10F0003FBF84 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12C1C4561E3F10F0003FBF84 /* YZLibraryDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YZLibraryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		12C1C4741E3F143D003FBF84 /* UIColor+YZModification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YZModification.h"; sourceTree = "<group>"; };
+		12C1C4751E3F143D003FBF84 /* UIColor+YZModification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YZModification.m"; sourceTree = "<group>"; };
 		2C3F76671D97EECD00728B85 /* YZLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YZLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3F766A1D97EECD00728B85 /* YZLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLibrary.h; sourceTree = "<group>"; };
 		2C3F766B1D97EECD00728B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -338,6 +342,8 @@
 				2C3F76931D97EF3A00728B85 /* UIAlertView+YZLibrary.m */,
 				2C3F76941D97EF3A00728B85 /* UICollectionViewCell+YZLibrary.h */,
 				2C3F76951D97EF3A00728B85 /* UICollectionViewCell+YZLibrary.m */,
+				12C1C4741E3F143D003FBF84 /* UIColor+YZModification.h */,
+				12C1C4751E3F143D003FBF84 /* UIColor+YZModification.m */,
 				2C3F76961D97EF3A00728B85 /* UIColor+YZLibrary.h */,
 				2C3F76971D97EF3A00728B85 /* UIColor+YZLibrary.m */,
 				2C3F76981D97EF3A00728B85 /* UIImage+YZLibrary.h */,
@@ -386,6 +392,7 @@
 				2C3F76C11D97EF3B00728B85 /* UIColor+YZLibrary.h in Headers */,
 				2C3F76C31D97EF3B00728B85 /* UIImage+YZLibrary.h in Headers */,
 				2C3F76D21D97EF3B00728B85 /* YZProcessInfo.h in Headers */,
+				12C1C4761E3F143D003FBF84 /* UIColor+YZModification.h in Headers */,
 				2C3F76BB1D97EF3B00728B85 /* NSURL+YZLibrary.h in Headers */,
 				2C3F76B71D97EF3B00728B85 /* NSObject+YZLibrary.h in Headers */,
 				2C3F76C51D97EF3B00728B85 /* UITableViewCell+YZLibrary.h in Headers */,
@@ -583,6 +590,7 @@
 				2C3F76C41D97EF3B00728B85 /* UIImage+YZLibrary.m in Sources */,
 				2C3F76D71D97EF3B00728B85 /* YZTimeHelper.m in Sources */,
 				2C3F76B61D97EF3B00728B85 /* NSDate+YZLibrary.m in Sources */,
+				12C1C4771E3F143D003FBF84 /* UIColor+YZModification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

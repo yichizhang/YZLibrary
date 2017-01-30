@@ -26,6 +26,7 @@ FOUNDATION_EXPORT const unsigned char YZLibraryVersionString[];
 #import <YZLibrary/NSString+YZLibrary.h>
 #import <YZLibrary/UIAlertView+YZLibrary.h>
 #import <YZLibrary/UICollectionViewCell+YZLibrary.h>
+#import <YZLibrary/UIColor+YZModification.h>
 #import <YZLibrary/UIColor+YZLibrary.h>
 #import <YZLibrary/UIImage+YZLibrary.h>
 #import <YZLibrary/UITableViewCell+YZLibrary.h>
