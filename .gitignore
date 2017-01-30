@@ -25,6 +25,9 @@ DerivedData
 #
 #Pods/
 
+# Carthage
+Carthage/
+
 # OS X Temporary files
 #
 ._*

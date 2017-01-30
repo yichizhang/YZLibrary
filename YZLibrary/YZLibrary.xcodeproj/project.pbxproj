@@ -37,6 +37,10 @@
 		12C1C4731E3F112B003FBF84 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
 		12C1C4761E3F143D003FBF84 /* UIColor+YZModification.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C1C4741E3F143D003FBF84 /* UIColor+YZModification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12C1C4771E3F143D003FBF84 /* UIColor+YZModification.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4751E3F143D003FBF84 /* UIColor+YZModification.m */; };
+		12C1C47E1E3F1747003FBF84 /* NSData+YZLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4791E3F1747003FBF84 /* NSData+YZLibraryTests.swift */; };
+		12C1C47F1E3F1747003FBF84 /* test_pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C47B1E3F1747003FBF84 /* test_pdf.pdf */; };
+		12C1C4851E3F1932003FBF84 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C1C4831E3F1932003FBF84 /* Nimble.framework */; };
+		12C1C4861E3F1932003FBF84 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C1C4841E3F1932003FBF84 /* Quick.framework */; };
 		2C3F76711D97EECD00728B85 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
 		2C3F76761D97EECD00728B85 /* YZLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F76751D97EECD00728B85 /* YZLibraryTests.m */; };
 		2C3F76781D97EECD00728B85 /* YZLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3F766A1D97EECD00728B85 /* YZLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -131,6 +135,11 @@
 		12C1C4561E3F10F0003FBF84 /* YZLibraryDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YZLibraryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		12C1C4741E3F143D003FBF84 /* UIColor+YZModification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YZModification.h"; sourceTree = "<group>"; };
 		12C1C4751E3F143D003FBF84 /* UIColor+YZModification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YZModification.m"; sourceTree = "<group>"; };
+		12C1C4791E3F1747003FBF84 /* NSData+YZLibraryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+YZLibraryTests.swift"; sourceTree = "<group>"; };
+		12C1C47B1E3F1747003FBF84 /* test_pdf.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = test_pdf.pdf; sourceTree = "<group>"; };
+		12C1C47D1E3F1747003FBF84 /* YZLibraryTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YZLibraryTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		12C1C4831E3F1932003FBF84 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		12C1C4841E3F1932003FBF84 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		2C3F76671D97EECD00728B85 /* YZLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YZLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3F766A1D97EECD00728B85 /* YZLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLibrary.h; sourceTree = "<group>"; };
 		2C3F766B1D97EECD00728B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,6 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C1C4851E3F1932003FBF84 /* Nimble.framework in Frameworks */,
+				12C1C4861E3F1932003FBF84 /* Quick.framework in Frameworks */,
 				2C3F76711D97EECD00728B85 /* YZLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +291,23 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		12C1C47A1E3F1747003FBF84 /* TestDocuments */ = {
+			isa = PBXGroup;
+			children = (
+				12C1C47B1E3F1747003FBF84 /* test_pdf.pdf */,
+			);
+			path = TestDocuments;
+			sourceTree = "<group>";
+		};
+		12C1C4821E3F1932003FBF84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				12C1C4831E3F1932003FBF84 /* Nimble.framework */,
+				12C1C4841E3F1932003FBF84 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2C3F765D1D97EECD00728B85 = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +316,7 @@
 				2C3F76741D97EECD00728B85 /* YZLibraryTests */,
 				12C1C41E1E3F0F82003FBF84 /* YZLibraryDemo */,
 				2C3F76681D97EECD00728B85 /* Products */,
+				12C1C4821E3F1932003FBF84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -314,6 +343,9 @@
 			isa = PBXGroup;
 			children = (
 				2C3F76751D97EECD00728B85 /* YZLibraryTests.m */,
+				12C1C4791E3F1747003FBF84 /* NSData+YZLibraryTests.swift */,
+				12C1C47A1E3F1747003FBF84 /* TestDocuments */,
+				12C1C47D1E3F1747003FBF84 /* YZLibraryTests-Bridging-Header.h */,
 				2C3F76771D97EECD00728B85 /* Info.plist */,
 			);
 			path = YZLibraryTests;
@@ -448,6 +480,7 @@
 				2C3F766C1D97EECD00728B85 /* Sources */,
 				2C3F766D1D97EECD00728B85 /* Frameworks */,
 				2C3F766E1D97EECD00728B85 /* Resources */,
+				12C1C4811E3F18D6003FBF84 /* Copy Carthage frameworks */,
 			);
 			buildRules = (
 			);
@@ -482,6 +515,7 @@
 					2C3F766F1D97EECD00728B85 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4E5Q3J5F8B;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -539,10 +573,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12C1C47F1E3F1747003FBF84 /* test_pdf.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12C1C4811E3F18D6003FBF84 /* Copy Carthage frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+			);
+			name = "Copy Carthage frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12C1C4191E3F0F82003FBF84 /* Sources */ = {
@@ -599,6 +653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3F76761D97EECD00728B85 /* YZLibraryTests.m in Sources */,
+				12C1C47E1E3F1747003FBF84 /* NSData+YZLibraryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,22 +857,37 @@
 		2C3F767F1D97EECD00728B85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4E5Q3J5F8B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = YZLibraryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yichizhang.YZLibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryTests/YZLibraryTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2C3F76801D97EECD00728B85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4E5Q3J5F8B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = YZLibraryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yichizhang.YZLibraryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryTests/YZLibraryTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
