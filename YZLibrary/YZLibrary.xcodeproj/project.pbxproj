@@ -7,6 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12C1C4581E3F10F0003FBF84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4311E3F10F0003FBF84 /* Assets.xcassets */; };
+		12C1C4591E3F10F0003FBF84 /* demo-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4321E3F10F0003FBF84 /* demo-1.jpg */; };
+		12C1C45A1E3F10F0003FBF84 /* demo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4331E3F10F0003FBF84 /* demo-2.jpg */; };
+		12C1C45B1E3F10F0003FBF84 /* demo-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4341E3F10F0003FBF84 /* demo-3.jpg */; };
+		12C1C45C1E3F10F0003FBF84 /* demo-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4351E3F10F0003FBF84 /* demo-4.jpg */; };
+		12C1C45D1E3F10F0003FBF84 /* demo-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4361E3F10F0003FBF84 /* demo-5.jpg */; };
+		12C1C45E1E3F10F0003FBF84 /* demo-6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4371E3F10F0003FBF84 /* demo-6.jpg */; };
+		12C1C45F1E3F10F0003FBF84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4391E3F10F0003FBF84 /* LaunchScreen.storyboard */; };
+		12C1C4601E3F10F0003FBF84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C43B1E3F10F0003FBF84 /* Main.storyboard */; };
+		12C1C4611E3F10F0003FBF84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C43D1E3F10F0003FBF84 /* main.m */; };
+		12C1C4621E3F10F0003FBF84 /* YZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C43F1E3F10F0003FBF84 /* YZAppDelegate.m */; };
+		12C1C4631E3F10F0003FBF84 /* AwesomeNibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4411E3F10F0003FBF84 /* AwesomeNibView.swift */; };
+		12C1C4641E3F10F0003FBF84 /* AwesomeNibView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4421E3F10F0003FBF84 /* AwesomeNibView.xib */; };
+		12C1C4651E3F10F0003FBF84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4431E3F10F0003FBF84 /* ViewController.swift */; };
+		12C1C4661E3F10F0003FBF84 /* YZAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4441E3F10F0003FBF84 /* YZAutoLayoutViewController.swift */; };
+		12C1C4671E3F10F0003FBF84 /* YZColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4451E3F10F0003FBF84 /* YZColorViewController.swift */; };
+		12C1C4681E3F10F0003FBF84 /* YZDemoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4461E3F10F0003FBF84 /* YZDemoImageTableViewCell.swift */; };
+		12C1C4691E3F10F0003FBF84 /* YZDemoImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4471E3F10F0003FBF84 /* YZDemoImageTableViewCell.xib */; };
+		12C1C46A1E3F10F0003FBF84 /* YZLazyRegisterNibAndCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4481E3F10F0003FBF84 /* YZLazyRegisterNibAndCellTableViewController.swift */; };
+		12C1C46B1E3F10F0003FBF84 /* YZLoadViewFromNibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4491E3F10F0003FBF84 /* YZLoadViewFromNibViewController.swift */; };
+		12C1C46C1E3F10F0003FBF84 /* YZMainDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C44B1E3F10F0003FBF84 /* YZMainDemoViewController.m */; };
+		12C1C46D1E3F10F0003FBF84 /* YZRandomControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C44D1E3F10F0003FBF84 /* YZRandomControlCell.m */; };
+		12C1C46E1E3F10F0003FBF84 /* YZRandomControlCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C44E1E3F10F0003FBF84 /* YZRandomControlCell.xib */; };
+		12C1C46F1E3F10F0003FBF84 /* YZRandomNumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4501E3F10F0003FBF84 /* YZRandomNumbersViewController.m */; };
+		12C1C4701E3F10F0003FBF84 /* YZSimpleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4521E3F10F0003FBF84 /* YZSimpleTextCell.m */; };
+		12C1C4711E3F10F0003FBF84 /* YZSimpleTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4531E3F10F0003FBF84 /* YZSimpleTextCell.xib */; };
+		12C1C4721E3F10F0003FBF84 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4551E3F10F0003FBF84 /* Info.plist */; };
+		12C1C4731E3F112B003FBF84 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
 		2C3F76711D97EECD00728B85 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
 		2C3F76761D97EECD00728B85 /* YZLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F76751D97EECD00728B85 /* YZLibraryTests.m */; };
 		2C3F76781D97EECD00728B85 /* YZLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3F766A1D97EECD00728B85 /* YZLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,6 +93,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12C1C41D1E3F0F82003FBF84 /* YZLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12C1C4311E3F10F0003FBF84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		12C1C4321E3F10F0003FBF84 /* demo-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-1.jpg"; sourceTree = "<group>"; };
+		12C1C4331E3F10F0003FBF84 /* demo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-2.jpg"; sourceTree = "<group>"; };
+		12C1C4341E3F10F0003FBF84 /* demo-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-3.jpg"; sourceTree = "<group>"; };
+		12C1C4351E3F10F0003FBF84 /* demo-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-4.jpg"; sourceTree = "<group>"; };
+		12C1C4361E3F10F0003FBF84 /* demo-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-5.jpg"; sourceTree = "<group>"; };
+		12C1C4371E3F10F0003FBF84 /* demo-6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-6.jpg"; sourceTree = "<group>"; };
+		12C1C43A1E3F10F0003FBF84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		12C1C43C1E3F10F0003FBF84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		12C1C43D1E3F10F0003FBF84 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		12C1C43E1E3F10F0003FBF84 /* YZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZAppDelegate.h; sourceTree = "<group>"; };
+		12C1C43F1E3F10F0003FBF84 /* YZAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZAppDelegate.m; sourceTree = "<group>"; };
+		12C1C4411E3F10F0003FBF84 /* AwesomeNibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeNibView.swift; sourceTree = "<group>"; };
+		12C1C4421E3F10F0003FBF84 /* AwesomeNibView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AwesomeNibView.xib; sourceTree = "<group>"; };
+		12C1C4431E3F10F0003FBF84 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12C1C4441E3F10F0003FBF84 /* YZAutoLayoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		12C1C4451E3F10F0003FBF84 /* YZColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZColorViewController.swift; sourceTree = "<group>"; };
+		12C1C4461E3F10F0003FBF84 /* YZDemoImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZDemoImageTableViewCell.swift; sourceTree = "<group>"; };
+		12C1C4471E3F10F0003FBF84 /* YZDemoImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZDemoImageTableViewCell.xib; sourceTree = "<group>"; };
+		12C1C4481E3F10F0003FBF84 /* YZLazyRegisterNibAndCellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZLazyRegisterNibAndCellTableViewController.swift; sourceTree = "<group>"; };
+		12C1C4491E3F10F0003FBF84 /* YZLoadViewFromNibViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZLoadViewFromNibViewController.swift; sourceTree = "<group>"; };
+		12C1C44A1E3F10F0003FBF84 /* YZMainDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZMainDemoViewController.h; sourceTree = "<group>"; };
+		12C1C44B1E3F10F0003FBF84 /* YZMainDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZMainDemoViewController.m; sourceTree = "<group>"; };
+		12C1C44C1E3F10F0003FBF84 /* YZRandomControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRandomControlCell.h; sourceTree = "<group>"; };
+		12C1C44D1E3F10F0003FBF84 /* YZRandomControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRandomControlCell.m; sourceTree = "<group>"; };
+		12C1C44E1E3F10F0003FBF84 /* YZRandomControlCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZRandomControlCell.xib; sourceTree = "<group>"; };
+		12C1C44F1E3F10F0003FBF84 /* YZRandomNumbersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZRandomNumbersViewController.h; sourceTree = "<group>"; };
+		12C1C4501E3F10F0003FBF84 /* YZRandomNumbersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZRandomNumbersViewController.m; sourceTree = "<group>"; };
+		12C1C4511E3F10F0003FBF84 /* YZSimpleTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSimpleTextCell.h; sourceTree = "<group>"; };
+		12C1C4521E3F10F0003FBF84 /* YZSimpleTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSimpleTextCell.m; sourceTree = "<group>"; };
+		12C1C4531E3F10F0003FBF84 /* YZSimpleTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YZSimpleTextCell.xib; sourceTree = "<group>"; };
+		12C1C4551E3F10F0003FBF84 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12C1C4561E3F10F0003FBF84 /* YZLibraryDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YZLibraryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C3F76671D97EECD00728B85 /* YZLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YZLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3F766A1D97EECD00728B85 /* YZLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLibrary.h; sourceTree = "<group>"; };
 		2C3F766B1D97EECD00728B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +178,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		12C1C41A1E3F0F82003FBF84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C1C4731E3F112B003FBF84 /* YZLibrary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2C3F76631D97EECD00728B85 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,12 +204,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12C1C41E1E3F0F82003FBF84 /* YZLibraryDemo */ = {
+			isa = PBXGroup;
+			children = (
+				12C1C4301E3F10F0003FBF84 /* Assets */,
+				12C1C4381E3F10F0003FBF84 /* Main */,
+				12C1C4401E3F10F0003FBF84 /* Source */,
+				12C1C4541E3F10F0003FBF84 /* SupportingFiles */,
+			);
+			path = YZLibraryDemo;
+			sourceTree = "<group>";
+		};
+		12C1C4301E3F10F0003FBF84 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				12C1C4311E3F10F0003FBF84 /* Assets.xcassets */,
+				12C1C4321E3F10F0003FBF84 /* demo-1.jpg */,
+				12C1C4331E3F10F0003FBF84 /* demo-2.jpg */,
+				12C1C4341E3F10F0003FBF84 /* demo-3.jpg */,
+				12C1C4351E3F10F0003FBF84 /* demo-4.jpg */,
+				12C1C4361E3F10F0003FBF84 /* demo-5.jpg */,
+				12C1C4371E3F10F0003FBF84 /* demo-6.jpg */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		12C1C4381E3F10F0003FBF84 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				12C1C4391E3F10F0003FBF84 /* LaunchScreen.storyboard */,
+				12C1C43B1E3F10F0003FBF84 /* Main.storyboard */,
+				12C1C43D1E3F10F0003FBF84 /* main.m */,
+				12C1C43E1E3F10F0003FBF84 /* YZAppDelegate.h */,
+				12C1C43F1E3F10F0003FBF84 /* YZAppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		12C1C4401E3F10F0003FBF84 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				12C1C4411E3F10F0003FBF84 /* AwesomeNibView.swift */,
+				12C1C4421E3F10F0003FBF84 /* AwesomeNibView.xib */,
+				12C1C4431E3F10F0003FBF84 /* ViewController.swift */,
+				12C1C4441E3F10F0003FBF84 /* YZAutoLayoutViewController.swift */,
+				12C1C4451E3F10F0003FBF84 /* YZColorViewController.swift */,
+				12C1C4461E3F10F0003FBF84 /* YZDemoImageTableViewCell.swift */,
+				12C1C4471E3F10F0003FBF84 /* YZDemoImageTableViewCell.xib */,
+				12C1C4481E3F10F0003FBF84 /* YZLazyRegisterNibAndCellTableViewController.swift */,
+				12C1C4491E3F10F0003FBF84 /* YZLoadViewFromNibViewController.swift */,
+				12C1C44A1E3F10F0003FBF84 /* YZMainDemoViewController.h */,
+				12C1C44B1E3F10F0003FBF84 /* YZMainDemoViewController.m */,
+				12C1C44C1E3F10F0003FBF84 /* YZRandomControlCell.h */,
+				12C1C44D1E3F10F0003FBF84 /* YZRandomControlCell.m */,
+				12C1C44E1E3F10F0003FBF84 /* YZRandomControlCell.xib */,
+				12C1C44F1E3F10F0003FBF84 /* YZRandomNumbersViewController.h */,
+				12C1C4501E3F10F0003FBF84 /* YZRandomNumbersViewController.m */,
+				12C1C4511E3F10F0003FBF84 /* YZSimpleTextCell.h */,
+				12C1C4521E3F10F0003FBF84 /* YZSimpleTextCell.m */,
+				12C1C4531E3F10F0003FBF84 /* YZSimpleTextCell.xib */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		12C1C4541E3F10F0003FBF84 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				12C1C4551E3F10F0003FBF84 /* Info.plist */,
+				12C1C4561E3F10F0003FBF84 /* YZLibraryDemo-Bridging-Header.h */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		2C3F765D1D97EECD00728B85 = {
 			isa = PBXGroup;
 			children = (
 				2C3F76811D97EF3A00728B85 /* Source */,
 				2C3F76691D97EECD00728B85 /* YZLibrary */,
 				2C3F76741D97EECD00728B85 /* YZLibraryTests */,
+				12C1C41E1E3F0F82003FBF84 /* YZLibraryDemo */,
 				2C3F76681D97EECD00728B85 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +292,7 @@
 			children = (
 				2C3F76671D97EECD00728B85 /* YZLibrary.framework */,
 				2C3F76701D97EECD00728B85 /* YZLibraryTests.xctest */,
+				12C1C41D1E3F0F82003FBF84 /* YZLibraryDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,6 +399,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		12C1C41C1E3F0F82003FBF84 /* YZLibraryDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12C1C42E1E3F0F82003FBF84 /* Build configuration list for PBXNativeTarget "YZLibraryDemo" */;
+			buildPhases = (
+				12C1C4191E3F0F82003FBF84 /* Sources */,
+				12C1C41A1E3F0F82003FBF84 /* Frameworks */,
+				12C1C41B1E3F0F82003FBF84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YZLibraryDemo;
+			productName = YZLibraryDemo;
+			productReference = 12C1C41D1E3F0F82003FBF84 /* YZLibraryDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2C3F76661D97EECD00728B85 /* YZLibrary */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C3F767B1D97EECD00728B85 /* Build configuration list for PBXNativeTarget "YZLibrary" */;
@@ -297,9 +458,15 @@
 		2C3F765E1D97EECD00728B85 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Yichi Zhang";
 				TargetAttributes = {
+					12C1C41C1E3F0F82003FBF84 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
 					2C3F76661D97EECD00728B85 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4E5Q3J5F8B;
@@ -318,6 +485,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2C3F765D1D97EECD00728B85;
 			productRefGroup = 2C3F76681D97EECD00728B85 /* Products */;
@@ -326,11 +494,33 @@
 			targets = (
 				2C3F76661D97EECD00728B85 /* YZLibrary */,
 				2C3F766F1D97EECD00728B85 /* YZLibraryTests */,
+				12C1C41C1E3F0F82003FBF84 /* YZLibraryDemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		12C1C41B1E3F0F82003FBF84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C1C45D1E3F10F0003FBF84 /* demo-5.jpg in Resources */,
+				12C1C45F1E3F10F0003FBF84 /* LaunchScreen.storyboard in Resources */,
+				12C1C45A1E3F10F0003FBF84 /* demo-2.jpg in Resources */,
+				12C1C4591E3F10F0003FBF84 /* demo-1.jpg in Resources */,
+				12C1C4711E3F10F0003FBF84 /* YZSimpleTextCell.xib in Resources */,
+				12C1C45B1E3F10F0003FBF84 /* demo-3.jpg in Resources */,
+				12C1C4721E3F10F0003FBF84 /* Info.plist in Resources */,
+				12C1C45E1E3F10F0003FBF84 /* demo-6.jpg in Resources */,
+				12C1C4641E3F10F0003FBF84 /* AwesomeNibView.xib in Resources */,
+				12C1C4601E3F10F0003FBF84 /* Main.storyboard in Resources */,
+				12C1C45C1E3F10F0003FBF84 /* demo-4.jpg in Resources */,
+				12C1C46E1E3F10F0003FBF84 /* YZRandomControlCell.xib in Resources */,
+				12C1C4691E3F10F0003FBF84 /* YZDemoImageTableViewCell.xib in Resources */,
+				12C1C4581E3F10F0003FBF84 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2C3F76651D97EECD00728B85 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,6 +538,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		12C1C4191E3F0F82003FBF84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C1C4611E3F10F0003FBF84 /* main.m in Sources */,
+				12C1C4681E3F10F0003FBF84 /* YZDemoImageTableViewCell.swift in Sources */,
+				12C1C4621E3F10F0003FBF84 /* YZAppDelegate.m in Sources */,
+				12C1C4651E3F10F0003FBF84 /* ViewController.swift in Sources */,
+				12C1C4631E3F10F0003FBF84 /* AwesomeNibView.swift in Sources */,
+				12C1C46F1E3F10F0003FBF84 /* YZRandomNumbersViewController.m in Sources */,
+				12C1C46D1E3F10F0003FBF84 /* YZRandomControlCell.m in Sources */,
+				12C1C46C1E3F10F0003FBF84 /* YZMainDemoViewController.m in Sources */,
+				12C1C4661E3F10F0003FBF84 /* YZAutoLayoutViewController.swift in Sources */,
+				12C1C4671E3F10F0003FBF84 /* YZColorViewController.swift in Sources */,
+				12C1C4701E3F10F0003FBF84 /* YZSimpleTextCell.m in Sources */,
+				12C1C46A1E3F10F0003FBF84 /* YZLazyRegisterNibAndCellTableViewController.swift in Sources */,
+				12C1C46B1E3F10F0003FBF84 /* YZLoadViewFromNibViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2C3F76621D97EECD00728B85 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -394,7 +604,61 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		12C1C4391E3F10F0003FBF84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12C1C43A1E3F10F0003FBF84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		12C1C43B1E3F10F0003FBF84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				12C1C43C1E3F10F0003FBF84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		12C1C42C1E3F0F82003FBF84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = YZLibraryDemo/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yichizhang.YZLibraryDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryDemo/SupportingFiles/YZLibraryDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		12C1C42D1E3F0F82003FBF84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = YZLibraryDemo/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yichizhang.YZLibraryDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YZLibraryDemo/SupportingFiles/YZLibraryDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		2C3F76791D97EECD00728B85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -552,6 +816,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12C1C42E1E3F0F82003FBF84 /* Build configuration list for PBXNativeTarget "YZLibraryDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12C1C42C1E3F0F82003FBF84 /* Debug */,
+				12C1C42D1E3F0F82003FBF84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2C3F76611D97EECD00728B85 /* Build configuration list for PBXProject "YZLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
