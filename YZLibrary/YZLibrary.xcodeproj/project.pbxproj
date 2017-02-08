@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120CF3071E4BB62100FB7678 /* NSObject+YZLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 120CF3061E4BB62100FB7678 /* NSObject+YZLibraryTests.m */; };
 		12C1C4581E3F10F0003FBF84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4311E3F10F0003FBF84 /* Assets.xcassets */; };
 		12C1C4591E3F10F0003FBF84 /* demo-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4321E3F10F0003FBF84 /* demo-1.jpg */; };
 		12C1C45A1E3F10F0003FBF84 /* demo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4331E3F10F0003FBF84 /* demo-2.jpg */; };
@@ -99,6 +100,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120CF3061E4BB62100FB7678 /* NSObject+YZLibraryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YZLibraryTests.m"; sourceTree = "<group>"; };
 		12C1C41D1E3F0F82003FBF84 /* YZLibraryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZLibraryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C1C4311E3F10F0003FBF84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12C1C4321E3F10F0003FBF84 /* demo-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "demo-1.jpg"; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			children = (
 				2C3F76751D97EECD00728B85 /* YZLibraryTests.m */,
 				12C1C4791E3F1747003FBF84 /* NSData+YZLibraryTests.swift */,
+				120CF3061E4BB62100FB7678 /* NSObject+YZLibraryTests.m */,
 				12C1C47A1E3F1747003FBF84 /* TestDocuments */,
 				12C1C47D1E3F1747003FBF84 /* YZLibraryTests-Bridging-Header.h */,
 				2C3F76771D97EECD00728B85 /* Info.plist */,
@@ -654,6 +657,7 @@
 			files = (
 				2C3F76761D97EECD00728B85 /* YZLibraryTests.m in Sources */,
 				12C1C47E1E3F1747003FBF84 /* NSData+YZLibraryTests.swift in Sources */,
+				120CF3071E4BB62100FB7678 /* NSObject+YZLibraryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

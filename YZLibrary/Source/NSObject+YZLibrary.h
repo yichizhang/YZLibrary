@@ -63,6 +63,11 @@
 + (void)yz_cancelPerformSelectorsWithTarget:(id)target selector:(SEL)selector object:(id)object;
 
 /**
+ Checks the receiver whether it receives the selector, if yes, the method would be invoked
+ */
+- (id)yz_performSelectorIfResponds:(SEL)aSelector;
+
+/**
  Swift access for NSObject's instance method `performSelector:withObject:afterDelay:`
  
  @param selector A selector that identifies the method to invoke. The method should not have a significant return value and should take a single argument of type id, or no arguments.

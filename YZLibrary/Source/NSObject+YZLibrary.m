@@ -53,6 +53,11 @@
     [NSObject cancelPreviousPerformRequestsWithTarget:target selector:selector object:object];
 }
 
+- (id)yz_performSelectorIfResponds:(SEL)aSelector
+{
+  return [self respondsToSelector:aSelector] ? [self performSelector:aSelector] : nil;
+}
+
 - (void)yz_performSelector:(SEL)selector withObject:(id)object afterDelay:(NSTimeInterval)delay
 {
     [self performSelector:selector withObject:object afterDelay:delay];
