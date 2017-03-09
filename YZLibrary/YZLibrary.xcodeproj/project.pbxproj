@@ -42,6 +42,9 @@
 		12C1C47F1E3F1747003FBF84 /* test_pdf.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C47B1E3F1747003FBF84 /* test_pdf.pdf */; };
 		12C1C4851E3F1932003FBF84 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C1C4831E3F1932003FBF84 /* Nimble.framework */; };
 		12C1C4861E3F1932003FBF84 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12C1C4841E3F1932003FBF84 /* Quick.framework */; };
+		12D646331E71D1DE009A6823 /* NSString+YZVersionComparision.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D646311E71D1DE009A6823 /* NSString+YZVersionComparision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D646341E71D1DE009A6823 /* NSString+YZVersionComparision.m in Sources */ = {isa = PBXBuildFile; fileRef = 12D646321E71D1DE009A6823 /* NSString+YZVersionComparision.m */; };
+		12D646361E71D5C0009A6823 /* NSString+YZVersionComparisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D646351E71D5C0009A6823 /* NSString+YZVersionComparisionTests.swift */; };
 		2C3F76711D97EECD00728B85 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
 		2C3F76761D97EECD00728B85 /* YZLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F76751D97EECD00728B85 /* YZLibraryTests.m */; };
 		2C3F76781D97EECD00728B85 /* YZLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C3F766A1D97EECD00728B85 /* YZLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -142,6 +145,9 @@
 		12C1C47D1E3F1747003FBF84 /* YZLibraryTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YZLibraryTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		12C1C4831E3F1932003FBF84 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		12C1C4841E3F1932003FBF84 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		12D646311E71D1DE009A6823 /* NSString+YZVersionComparision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YZVersionComparision.h"; sourceTree = "<group>"; };
+		12D646321E71D1DE009A6823 /* NSString+YZVersionComparision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YZVersionComparision.m"; sourceTree = "<group>"; };
+		12D646351E71D5C0009A6823 /* NSString+YZVersionComparisionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+YZVersionComparisionTests.swift"; sourceTree = "<group>"; };
 		2C3F76671D97EECD00728B85 /* YZLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YZLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3F766A1D97EECD00728B85 /* YZLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZLibrary.h; sourceTree = "<group>"; };
 		2C3F766B1D97EECD00728B85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -347,6 +353,7 @@
 				2C3F76751D97EECD00728B85 /* YZLibraryTests.m */,
 				12C1C4791E3F1747003FBF84 /* NSData+YZLibraryTests.swift */,
 				120CF3061E4BB62100FB7678 /* NSObject+YZLibraryTests.m */,
+				12D646351E71D5C0009A6823 /* NSString+YZVersionComparisionTests.swift */,
 				12C1C47A1E3F1747003FBF84 /* TestDocuments */,
 				12C1C47D1E3F1747003FBF84 /* YZLibraryTests-Bridging-Header.h */,
 				2C3F76771D97EECD00728B85 /* Info.plist */,
@@ -371,6 +378,8 @@
 				2C3F768D1D97EF3A00728B85 /* NSObject+YZLibrary.m */,
 				2C3F768E1D97EF3A00728B85 /* NSString+YZLibrary.h */,
 				2C3F768F1D97EF3A00728B85 /* NSString+YZLibrary.m */,
+				12D646311E71D1DE009A6823 /* NSString+YZVersionComparision.h */,
+				12D646321E71D1DE009A6823 /* NSString+YZVersionComparision.m */,
 				2C3F76901D97EF3A00728B85 /* NSURL+YZLibrary.h */,
 				2C3F76911D97EF3A00728B85 /* NSURL+YZLibrary.m */,
 				2C3F76921D97EF3A00728B85 /* UIAlertView+YZLibrary.h */,
@@ -425,6 +434,7 @@
 				2C3F76B11D97EF3B00728B85 /* NSCharacterSet+YZLibrary.h in Headers */,
 				2C3F76D41D97EF3B00728B85 /* YZRandom.h in Headers */,
 				2C3F76C11D97EF3B00728B85 /* UIColor+YZLibrary.h in Headers */,
+				12D646331E71D1DE009A6823 /* NSString+YZVersionComparision.h in Headers */,
 				2C3F76C31D97EF3B00728B85 /* UIImage+YZLibrary.h in Headers */,
 				2C3F76D21D97EF3B00728B85 /* YZProcessInfo.h in Headers */,
 				12C1C4761E3F143D003FBF84 /* UIColor+YZModification.h in Headers */,
@@ -638,6 +648,7 @@
 				2C3F76C81D97EF3B00728B85 /* UIView+YZLibrary.m in Sources */,
 				2C3F76BC1D97EF3B00728B85 /* NSURL+YZLibrary.m in Sources */,
 				2C3F76B21D97EF3B00728B85 /* NSCharacterSet+YZLibrary.m in Sources */,
+				12D646341E71D1DE009A6823 /* NSString+YZVersionComparision.m in Sources */,
 				2C3F76BA1D97EF3B00728B85 /* NSString+YZLibrary.m in Sources */,
 				2C3F76D31D97EF3B00728B85 /* YZProcessInfo.m in Sources */,
 				2C3F76CC1D97EF3B00728B85 /* YZFileHelper.m in Sources */,
@@ -657,6 +668,7 @@
 			files = (
 				2C3F76761D97EECD00728B85 /* YZLibraryTests.m in Sources */,
 				12C1C47E1E3F1747003FBF84 /* NSData+YZLibraryTests.swift in Sources */,
+				12D646361E71D5C0009A6823 /* NSString+YZVersionComparisionTests.swift in Sources */,
 				120CF3071E4BB62100FB7678 /* NSObject+YZLibraryTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
