@@ -32,8 +32,8 @@
 /** 
  Dequeue a collection view cell, using default identifier, which is identical to the class name (without package name) of the cell.
  
- @param collectionView	The collection view you wish to dequeue the cell from.
- @param reuseIdentifier	The reuse identifier for the specified cell. This parameter must not be `nil`.
+ @param collectionView  The collection view you wish to dequeue the cell from.
+ @param indexPath       The index path specifying the location of the cell.
  */
 + (instancetype)yz_dequeueFromCollectionView:(UICollectionView *)collectionView
                                 forIndexPath:(NSIndexPath *)indexPath;
@@ -41,8 +41,8 @@
 /**
  Dequeue a collection view cell, using custom identifier.
 
- @param collectionView	The collection view you wish to dequeue the cell from.
- @param indexPath		The index path specifying the location of the cell.
+ @param collectionView  The collection view you wish to dequeue the cell from.
+ @param indexPath       The index path specifying the location of the cell.
  @param reuseIdentifier	The reuse identifier for the specified cell. This parameter must not be `nil`.
  */
 + (instancetype)yz_dequeueFromCollectionView:(UICollectionView *)collectionView
