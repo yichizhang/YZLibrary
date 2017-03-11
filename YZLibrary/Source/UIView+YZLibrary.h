@@ -48,6 +48,11 @@
 - (void)yz_bringToFront;
 
 /**
+ Send the view to back by calling `sendSubviewToBack:` on its superview.
+ */
+- (void)yz_sendToBack;
+
+/**
  Returns an image of the receiver. The scale factor of the image is equal to the scale factor of the main screen.
  */
 - (nonnull UIImage *)yz_captureImage;

@@ -51,6 +51,11 @@
   [self.superview bringSubviewToFront:self];
 }
 
+- (void)yz_sendToBack
+{
+  [self.superview sendSubviewToBack:self];
+}
+
 - (nonnull UIImage *)yz_captureImage
 {
   return [self yz_captureImageWithScaleFactor:UIScreen.mainScreen.scale];
