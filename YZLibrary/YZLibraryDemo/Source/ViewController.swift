@@ -1,9 +1,10 @@
 //
-//  ViewController.swift
-//  YZLibraryDemo
+//  Copyright (c) 2017-present, Yichi Zhang.
+//  https://github.com/yichizhang
+//  zhang-yi-chi@hotmail.com
 //
-//  Created by Yichi Zhang on 30/1/17.
-//  Copyright © 2017 Yichi Zhang. All rights reserved.
+//  This source code is licensed under the MIT-style license found
+//  in the LICENSE file in the root directory of this source tree.
 //
 
 import UIKit
