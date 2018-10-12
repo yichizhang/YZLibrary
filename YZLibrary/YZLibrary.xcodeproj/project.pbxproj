@@ -34,7 +34,6 @@
 		12C1C46F1E3F10F0003FBF84 /* YZRandomNumbersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4501E3F10F0003FBF84 /* YZRandomNumbersViewController.m */; };
 		12C1C4701E3F10F0003FBF84 /* YZSimpleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4521E3F10F0003FBF84 /* YZSimpleTextCell.m */; };
 		12C1C4711E3F10F0003FBF84 /* YZSimpleTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4531E3F10F0003FBF84 /* YZSimpleTextCell.xib */; };
-		12C1C4721E3F10F0003FBF84 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12C1C4551E3F10F0003FBF84 /* Info.plist */; };
 		12C1C4731E3F112B003FBF84 /* YZLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3F76671D97EECD00728B85 /* YZLibrary.framework */; };
 		12C1C4761E3F143D003FBF84 /* UIColor+YZModification.h in Headers */ = {isa = PBXBuildFile; fileRef = 12C1C4741E3F143D003FBF84 /* UIColor+YZModification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12C1C4771E3F143D003FBF84 /* UIColor+YZModification.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C1C4751E3F143D003FBF84 /* UIColor+YZModification.m */; };
@@ -564,7 +563,6 @@
 				12C1C4591E3F10F0003FBF84 /* demo-1.jpg in Resources */,
 				12C1C4711E3F10F0003FBF84 /* YZSimpleTextCell.xib in Resources */,
 				12C1C45B1E3F10F0003FBF84 /* demo-3.jpg in Resources */,
-				12C1C4721E3F10F0003FBF84 /* Info.plist in Resources */,
 				12C1C45E1E3F10F0003FBF84 /* demo-6.jpg in Resources */,
 				12C1C4641E3F10F0003FBF84 /* AwesomeNibView.xib in Resources */,
 				12C1C4601E3F10F0003FBF84 /* Main.storyboard in Resources */,
