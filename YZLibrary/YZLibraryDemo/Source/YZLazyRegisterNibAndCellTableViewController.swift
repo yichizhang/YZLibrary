@@ -36,7 +36,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController
         self.title = "Table View";
     }
 
-    override init(style: UITableViewStyle)
+    override init(style: UITableView.Style)
     {
         super.init(style: style)
         self.commonInit()
@@ -123,7 +123,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController
                 cell?.mainImageView.image = UIImage(named: "demo-\(indexPath.row + 1).jpg")
                 cell?.mainImageView.clipsToBounds = true
                 cell?.descriptionLabel.text = photoSourceArray[indexPath.row]
-                cell?.selectionStyle = UITableViewCellSelectionStyle.none
+                cell?.selectionStyle = UITableViewCell.SelectionStyle.none
 
                 return cell!
             default:
@@ -140,7 +140,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController
         "https://www.flickr.com/photos/fscholz/\n\n" +
         "Licence: Creative Commons Attribution 4.0 International (CC BY 4.0)";
 
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
 
         return cell
     }
@@ -148,7 +148,7 @@ class YZLazyRegisterNibAndCellTableViewController: UITableViewController
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
 
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
 
     }
 
